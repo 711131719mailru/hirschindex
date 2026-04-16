@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Научный консалтинг — Индекс Хирша. Индивидуальное сопровождение: дизайн исследования, статистика, редактура, подача в журнал.">
+  <title>Консалтинг — Индекс Хирша</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .cons-hero {
+      padding: 130px 0 70px;
+      background: linear-gradient(135deg, #f8fafc, #eff6ff);
+    }
+    .cons-hero-grid {
+      display: flex; align-items: center; gap: 50px;
+    }
+    .cons-hero-text { flex: 1; }
+    .cons-hero-text h1 { font-size: 2.75rem; margin-bottom: 20px; }
+    .cons-hero-text h1 span { color: var(--brand); }
+    .cons-hero-text p { font-size: 1.1rem; color: var(--text-light); margin-bottom: 28px; max-width: 540px; }
+    .cons-hero-photo {
+      flex: 0 0 340px;
+    }
+    .cons-hero-photo img {
+      width: 100%; height: 420px; object-fit: cover;
+      border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);
+    }
+    @media (max-width: 900px) {
+      .cons-hero-grid { flex-direction: column; text-align: center; }
+      .cons-hero-photo { flex: none; width: 100%; max-width: 320px; }
+      .cons-hero-photo img { height: 300px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <img src="assets/logo-main.jpg" alt="[h]">
+        <span class="logo-text">Индекс Хирша</span>
+      </a>
+      <div style="display:flex; align-items:center; gap:28px;">
+        <div class="menu">
+          <a href="education.html">Обучение</a>
+          <a href="club.html">Клуб</a>
+          <a href="consulting.html" class="active">Консалтинг</a>
+          <a href="blog.html">Блог</a>
+          <a href="resources.html">Ресурсы</a>
+        </div>
+        <a href="https://t.me/hirsch_index_school" class="btn btn-primary btn-sm" style="white-space:nowrap;">
+          <i class="fab fa-telegram" style="margin-right:6px;"></i>Telegram
+        </a>
+        <button class="mobile-toggle" onclick="toggleMobile()" aria-label="Меню"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="education.html">Обучение</a><a href="club.html">Клуб</a>
+    <a href="consulting.html">Консалтинг</a><a href="blog.html">Блог</a><a href="resources.html">Ресурсы</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="cons-hero">
+    <div class="container">
+      <div class="cons-hero-grid">
+        <div class="cons-hero-text">
+          <span class="section-badge">Научный консалтинг</span>
+          <h1>Индивидуальное сопровождение <span>до публикации</span></h1>
+          <p>Помогаю врачам и исследователям проходить путь от идеи до публикации в Q1/Q2-журналах. Стратегия, статистика, редактура и безупречное оформление рукописей.</p>
+          <a href="https://t.me/+79854770449" class="btn btn-primary btn-lg">Обсудить проект</a>
+        </div>
+        <div class="cons-hero-photo">
+          <img src="assets/clinic.jpg" alt="Консалтинг">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Credentials -->
+  <section class="bg-white" style="padding:50px 0;">
+    <div class="container">
+      <div class="stats-row">
+        <div class="stat-item">
+          <div class="stat-number">78</div>
+          <div class="stat-label">публикаций</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">h-16</div>
+          <div class="stat-label">индекс Хирша (Scopus)</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">Charité</div>
+          <div class="stat-label">PhD, Berlin</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">3</div>
+          <div class="stat-label">рабочих языка</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <h2>Услуги</h2>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-icon blue"><i class="fas fa-brain"></i></div>
+          <h3 style="font-size:1.1rem; margin-bottom:10px;">Научный консалтинг</h3>
+          <p style="font-size:0.9rem; color:var(--text-light);">Архитектура исследования, дизайн, чек-листы EQUATOR, подбор целевого журнала, стратегия публикации.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon teal"><i class="fas fa-pen-nib"></i></div>
+          <h3 style="font-size:1.1rem; margin-bottom:10px;">Редактура</h3>
+          <p style="font-size:0.9rem; color:var(--text-light);">Академическое редактирование, перевод, Cover Letter, оформление по ГОСТ и требованиям журнала.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon gold"><i class="fas fa-chart-pie"></i></div>
+          <h3 style="font-size:1.1rem; margin-bottom:10px;">Биостатистика</h3>
+          <p style="font-size:0.9rem; color:var(--text-light);">Анализ данных в SPSS, визуализация графиков, расчёт выборки, статистический раздел рукописи.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="section-header">
+        <h2>Как строится работа</h2>
+      </div>
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="step-num">1</div>
+          <h4>Аудит</h4>
+          <p>Оценка материала, плана и текущего состояния проекта</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">2</div>
+          <h4>Анализ</h4>
+          <p>Статистическая обработка данных и оформление результатов</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">3</div>
+          <h4>Оформление</h4>
+          <p>Редактура, перевод, оформление по требованиям журнала</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">4</div>
+          <h4>Сабмит</h4>
+          <p>Загрузка в систему журнала и ведение переписки с редакцией</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scientometric Profiles -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <h2>Наукометрические профили</h2>
+      </div>
+      <div class="profiles-grid">
+        <a href="https://www.scopus.com/authid/detail.uri?authorId=57517490500" target="_blank" class="profile-card">
+          <div class="p-icon bg-scopus"><i class="fas fa-chart-line"></i></div>
+          <div class="p-info">
+            <span class="p-label">Scopus</span>
+            <span class="p-value">ID 57517490500</span>
+            <div class="p-stats">H-Index: <span class="h-badge">16</span></div>
+          </div>
+        </a>
+        <a href="https://scholar.google.com/citations?user=AgmsZFAAAAAJ&hl=ru&oi=ao" target="_blank" class="profile-card">
+          <div class="p-icon bg-scholar"><i class="fas fa-graduation-cap"></i></div>
+          <div class="p-info">
+            <span class="p-label">Google Scholar</span>
+            <span class="p-value">Konstantin Zhigalov</span>
+            <div class="p-stats">H-Index: <span class="h-badge">19</span></div>
+          </div>
+        </a>
+        <a href="https://orcid.org/0000-0002-6440-3736" target="_blank" class="profile-card">
+          <div class="p-icon bg-orcid"><i class="fab fa-orcid"></i></div>
+          <div class="p-info">
+            <span class="p-label">ORCID</span>
+            <span class="p-value">0000-0002-6440-3736</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificates -->
+  <section class="bg-white">
+    <div class="container" style="max-width:700px;">
+      <div class="section-header">
+        <h2>Сертификаты</h2>
+      </div>
+      <div class="cert-grid">
+        <div class="cert-item" onclick="openLb('assets/cert1.jpg')"><img src="assets/cert1_thumb.jpg" alt="Сертификат"></div>
+        <div class="cert-item" onclick="openLb('assets/cert2.jpg')"><img src="assets/cert2_thumb.jpg" alt="Сертификат"></div>
+        <div class="cert-item" onclick="openLb('assets/cert3.jpg')"><img src="assets/cert3_thumb.jpg" alt="Сертификат"></div>
+        <div class="cert-item" onclick="openLb('assets/cert4.jpg')"><img src="assets/cert4_thumb.jpg" alt="Сертификат"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partnership -->
+  <section style="text-align:center; border-top:1px solid var(--border); padding:60px 0;">
+    <div class="container" style="max-width:700px;">
+      <div style="width:50px; height:50px; background:#fff; border:1px solid var(--border); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 20px; color:var(--brand); font-size:20px;">
+        <i class="fas fa-handshake"></i>
+      </div>
+      <h3 style="margin-bottom:20px;">Партнёрство и рекомендации</h3>
+      <p style="color:var(--text-light); margin-bottom:12px;">Если вы порекомендуете мои услуги коллегам, в знак благодарности я выплачиваю <strong style="color:var(--brand);">5% от стоимости контракта</strong>.</p>
+      <p style="color:var(--text-light); margin-bottom:24px;">Открыт к партнёрству с маркетинговыми агентствами, центрами клинических исследований и образовательными платформами.</p>
+      <a href="https://t.me/+79854770449" style="color:var(--brand); font-weight:600; border-bottom:1px solid rgba(51,102,204,0.3); padding-bottom:2px;">Обсудить сотрудничество</a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-white" style="padding:60px 0;">
+    <div class="container text-center">
+      <h2 style="margin-bottom:16px;">Готовы обсудить проект?</h2>
+      <p style="color:var(--text-light); margin-bottom:28px;">Напишите в Telegram — отвечаю в течение дня</p>
+      <a href="https://t.me/+79854770449" class="btn btn-primary btn-lg">
+        <i class="fab fa-telegram" style="margin-right:8px;"></i>Написать
+      </a>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" onclick="closeLb()">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Индекс Хирша</h4>
+          <div class="footer-links">
+            <a href="education.html">Обучение</a><a href="club.html">Клуб</a>
+            <a href="consulting.html">Консалтинг</a><a href="blog.html">Блог</a><a href="resources.html">Ресурсы</a>
+          </div>
+        </div>
+        <div>
+          <h4>Контакты</h4>
+          <div class="footer-links">
+            <a href="https://t.me/+79854770449"><i class="fab fa-telegram" style="width:18px;"></i> Telegram</a>
+            <a href="https://wa.me/79854770449"><i class="fab fa-whatsapp" style="width:18px;"></i> WhatsApp</a>
+            <a href="mailto:zhigalovmd@yandex.ru"><i class="fas fa-envelope" style="width:18px;"></i> zhigalovmd@yandex.ru</a>
+          </div>
+        </div>
+        <div>
+          <h4>Соцсети</h4>
+          <div class="footer-links">
+            <a href="https://t.me/hirsch_index_school"><i class="fab fa-telegram" style="width:18px;"></i> Telegram-канал</a>
+            <a href="https://vk.com/club235429996" target="_blank"><i class="fab fa-vk" style="width:18px;"></i> ВКонтакте</a>
+            <a href="https://max.ru/join/TmlfyQ5T5BJu-iLZlOYbZolsFX2vrBDQ8t8jaKfz3P0" target="_blank"><i class="fas fa-comment-dots" style="width:18px;"></i> MAX</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Индекс Хирша. Все права защищены.</span>
+        <span><a href="offer.html">Публичная оферта</a> · <a href="privacy.html">Политика конфиденциальности</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobile(){document.getElementById('mobileMenu').classList.toggle('open');}
+    function openLb(src){var lb=document.getElementById('lightbox');document.getElementById('lightbox-img').src=src;lb.classList.add('active');}
+    function closeLb(){document.getElementById('lightbox').classList.remove('active');}
+  </script>
+</body>
+</html>

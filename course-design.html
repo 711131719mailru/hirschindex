@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Курс «Как подготовить хороший дизайн исследования» — 10 уроков. Индекс Хирша.">
+  <title>Курс: Дизайн исследования — Индекс Хирша</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .course-hero {
+      padding: 130px 0 60px;
+      background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+      text-align: center;
+    }
+    .course-hero img { width: 72px; height: 72px; border-radius: 16px; margin-bottom: 16px; }
+    .course-hero h1 { font-size: 2.5rem; margin-bottom: 16px; max-width: 700px; margin-left: auto; margin-right: auto; }
+    .course-hero p { font-size: 1.1rem; color: var(--text-light); max-width: 580px; margin: 0 auto 24px; }
+    .course-hero .meta { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 28px; }
+    .course-hero .meta span { margin: 0 8px; }
+    .result-box {
+      background: #fff; border: 2px solid var(--teal); border-radius: var(--radius-md);
+      padding: 28px; text-align: center; max-width: 600px; margin: 0 auto;
+    }
+    .result-box i { font-size: 2rem; color: var(--teal); margin-bottom: 12px; }
+    .result-box h3 { margin-bottom: 8px; }
+    .result-box p { color: var(--text-light); font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <img src="assets/logo-main.jpg" alt="[h]">
+        <span class="logo-text">Индекс Хирша</span>
+      </a>
+      <div style="display:flex; align-items:center; gap:28px;">
+        <div class="menu">
+          <a href="education.html" class="active">Обучение</a>
+          <a href="club.html">Клуб</a>
+          <a href="consulting.html">Консалтинг</a>
+          <a href="blog.html">Блог</a>
+          <a href="resources.html">Ресурсы</a>
+        </div>
+        <a href="https://t.me/hirsch_index_school" class="btn btn-primary btn-sm" style="white-space:nowrap;">
+          <i class="fab fa-telegram" style="margin-right:6px;"></i>Telegram
+        </a>
+        <button class="mobile-toggle" onclick="toggleMobile()" aria-label="Меню"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="education.html">Обучение</a><a href="club.html">Клуб</a>
+    <a href="consulting.html">Консалтинг</a><a href="blog.html">Блог</a><a href="resources.html">Ресурсы</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="course-hero">
+    <div class="container">
+      <img src="assets/logo-edu.jpg" alt="Курс">
+      <div class="meta">
+        <i class="fas fa-play-circle"></i> 10 уроков
+        <span>·</span> 10 рабочих дней
+      </div>
+      <h1>Как подготовить хороший дизайн исследования</h1>
+      <p>Практический навык проектирования клинического исследования: от наблюдения до готового раздела «Материалы и методы»</p>
+      <a href="#pricing" class="btn btn-teal btn-lg">Записаться</a>
+    </div>
+  </section>
+
+  <!-- Result -->
+  <section class="bg-white" style="padding:50px 0;">
+    <div class="container">
+      <div class="result-box">
+        <i class="fas fa-clipboard-check"></i>
+        <h3>Результат курса</h3>
+        <p>Готовый дизайн исследования и раздел «Материалы и методы», составленный по современным стандартам научного письма</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Course goals -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <h2>Цель курса</h2>
+      </div>
+      <div class="grid-3">
+        <div class="card" style="text-align:center;">
+          <div class="card-icon teal" style="margin:0 auto 16px;"><i class="fas fa-drafting-compass"></i></div>
+          <h4 style="margin-bottom:8px;">Навык проектирования</h4>
+          <p style="font-size:0.9rem; color:var(--text-light);">Получить практический навык проектирования клинического исследования</p>
+        </div>
+        <div class="card" style="text-align:center;">
+          <div class="card-icon blue" style="margin:0 auto 16px;"><i class="fas fa-file-medical"></i></div>
+          <h4 style="margin-bottom:8px;">Дизайн исследования</h4>
+          <p style="font-size:0.9rem; color:var(--text-light);">Подготовить дизайн вашего исследования с корректной выборкой и конечными точками</p>
+        </div>
+        <div class="card" style="text-align:center;">
+          <div class="card-icon gold" style="margin:0 auto 16px;"><i class="fas fa-pen-fancy"></i></div>
+          <h4 style="margin-bottom:8px;">Материалы и методы</h4>
+          <p style="font-size:0.9rem; color:var(--text-light);">Подготовить готовый раздел «Материалы и методы» для статьи или диссертации</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="section-header">
+        <h2>Как проходит обучение</h2>
+      </div>
+      <div class="grid-3">
+        <div class="card" style="text-align:center;">
+          <div class="card-icon teal" style="margin:0 auto 16px;"><i class="fas fa-calendar-day"></i></div>
+          <h4 style="margin-bottom:8px;">10 шагов за 10 дней</h4>
+          <p style="font-size:0.9rem; color:var(--text-light);">Каждое утро — методические материалы и практические задания</p>
+        </div>
+        <div class="card" style="text-align:center;">
+          <div class="card-icon blue" style="margin:0 auto 16px;"><i class="fab fa-telegram"></i></div>
+          <h4 style="margin-bottom:8px;">Работа в чате 24/7</h4>
+          <p style="font-size:0.9rem; color:var(--text-light);">Обратная связь каждому участнику по его работе в закрытом Telegram-чате</p>
+        </div>
+        <div class="card" style="text-align:center;">
+          <div class="card-icon gold" style="margin:0 auto 16px;"><i class="fas fa-users"></i></div>
+          <h4 style="margin-bottom:8px;">Командная работа</h4>
+          <p style="font-size:0.9rem; color:var(--text-light);">Работа в группе единомышленников — новый круг коллег</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Program -->
+  <section id="program">
+    <div class="container">
+      <div class="section-header">
+        <h2>Программа курса</h2>
+        <p>10 уроков — от наблюдения до готового раздела «Материалы и методы»</p>
+      </div>
+      <div class="module-list">
+        <div class="module-block">
+          <div class="module-header">
+            <span><strong>01</strong> От наблюдения к вопросу</span>
+          </div>
+        </div>
+        <div class="module-block">
+          <div class="module-header">
+            <span><strong>02</strong> Формула исследовательского вопроса</span>
+          </div>
+        </div>
+        <div class="module-block">
+          <div class="module-header">
+            <span><strong>03</strong> Какой дизайн выбрать</span>
+          </div>
+        </div>
+        <div class="module-block">
+          <div class="module-header">
+            <span><strong>04</strong> Границы исследования</span>
+          </div>
+        </div>
+        <div class="module-block">
+          <div class="module-header">
+            <span><strong>05</strong> Популяция исследования</span>
+          </div>
+        </div>
+        <div class="module-block">
+          <div class="module-header">
+            <span><strong>06</strong> Критерии включения и исключения</span>
+          </div>
+        </div>
+        <div class="module-block">
+          <div class="module-header">
+            <span><strong>07</strong> Конечные точки</span>
+          </div>
+        </div>
+        <div class="module-block">
+          <div class="module-header">
+            <span><strong>08</strong> Период наблюдения и размер выборки</span>
+          </div>
+        </div>
+        <div class="module-block">
+          <div class="module-header">
+            <span><strong>09</strong> Систематические ошибки, этика и регистрация</span>
+          </div>
+        </div>
+        <div class="module-block">
+          <div class="module-header">
+            <span><strong>10</strong> Оформление раздела «Материалы и методы»</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="bg-white" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <h2>Форматы обучения</h2>
+        <p>Выберите подходящий тариф</p>
+        <p style="font-size:0.85rem; color:var(--text-muted); margin-top:12px;">
+          <i class="fas fa-info-circle" style="margin-right:4px;"></i>
+          Материалы курса размещены на платформе <a href="https://hirschindex.getcourse.ru" target="_blank" style="color:var(--teal); font-weight:500;">GetCourse</a>.
+          При первой покупке аккаунт создаётся автоматически.
+        </p>
+      </div>
+      <div class="pricing-grid">
+
+        <!-- Tier 1 -->
+        <div class="pricing-card">
+          <div class="pricing-name">Самостоятельный</div>
+          <div class="pricing-price">9 900 <span>₽</span></div>
+          <ul class="pricing-features">
+            <li><span class="check"><i class="fas fa-check"></i></span> Уроки 1–10</li>
+            <li><span class="check"><i class="fas fa-check"></i></span> Видеоуроки</li>
+            <li><span class="check"><i class="fas fa-check"></i></span> Методические материалы</li>
+            <li><span class="check"><i class="fas fa-check"></i></span> Практические задания</li>
+            <li><span class="check"><i class="fas fa-check"></i></span> Вспомогательные документы</li>
+            <li><span class="dash">—</span> <span style="opacity:0.4;">Работа в групповом чате</span></li>
+            <li><span class="dash">—</span> <span style="opacity:0.4;">Проверка домашних заданий</span></li>
+            <li><span class="dash">—</span> <span style="opacity:0.4;">Рецензия дизайна исследования</span></li>
+            <li><span class="dash">—</span> <span style="opacity:0.4;">Персональная консультация</span></li>
+          </ul>
+          <button class="btn btn-outline" style="width:100%;" onclick="openGcModal('gc-modal-1')">Записаться</button>
+        </div>
+
+        <!-- Tier 2 -->
+        <div class="pricing-card featured">
+          <div class="pricing-name">Стандартный</div>
+          <div class="pricing-price">14 900 <span>₽</span></div>
+          <ul class="pricing-features">
+            <li><span class="check"><i class="fas fa-check"></i></span> Уроки 1–10</li>
+            <li><span class="check"><i class="fas fa-check"></i></span> Видеоуроки</li>
+            <li><span class="check"><i class="fas fa-check"></i></span> Методические материалы</li>
+            <li><span class="check"><i class="fas fa-check"></i></span> Практические задания</li>
+            <li><span class="check"><i class="fas fa-check"></i></span> Вспомогательные документы</li>
+            <li><span class="check"><i class="fas fa-check"></i></span> Работа в групповом чате</li>
+            <li><span class="check"><i class="fas fa-check"></i></span> Проверка домашних заданий</li>
+            <li><span class="check"><i class="fas fa-check"></i></span> Рецензия дизайна исследования</li>
+            <li><span class="dash">—</span> <span style="opacity:0.4;">Персональная консультация</span></li>
+          </ul>
+          <button class="btn btn-teal" style="width:100%;" onclick="openGcModal('gc-modal-2')">Записаться</button>
+        </div>
+
+        <!-- Tier 3 -->
+        <div class="pricing-card">
+          <div class="pricing-name">Расширенный</div>
+          <div class="pricing-price">19 900 <span>₽</span></div>
+          <ul class="pricing-features">
+            <li><span class="check"><i class="fas fa-check"></i></span> Уроки 1–10</li>
+            <li><span class="check"><i class="fas fa-check"></i></span> Видеоуроки</li>
+            <li><span class="check"><i class="fas fa-check"></i></span> Методические материалы</li>
+            <li><span class="check"><i class="fas fa-check"></i></span> Практические задания</li>
+            <li><span class="check"><i class="fas fa-check"></i></span> Вспомогательные документы</li>
+            <li><span class="check"><i class="fas fa-check"></i></span> Работа в групповом чате</li>
+            <li><span class="check"><i class="fas fa-check"></i></span> Проверка домашних заданий</li>
+            <li><span class="check"><i class="fas fa-check"></i></span> Рецензия дизайна исследования</li>
+            <li><span class="check"><i class="fas fa-check"></i></span> Персональная консультация</li>
+          </ul>
+          <button class="btn btn-outline" style="width:100%;" onclick="openGcModal('gc-modal-3')">Записаться</button>
+        </div>
+
+      </div>
+
+      <!-- Club cross-sell -->
+      <div class="club-crosssell" style="margin-top:50px;">
+        <img src="assets/logo-club.jpg" alt="Клуб">
+        <div style="flex:1;">
+          <p style="margin-bottom:8px;">Или вступите в научный клуб «Индекс Хирша» и получите доступ ко всем курсам в формате самостоятельного прохождения.</p>
+          <div style="display:flex; align-items:center; gap:20px; flex-wrap:wrap;">
+            <span class="price-highlight">990 ₽/мес</span>
+            <span style="opacity:0.7; font-size:0.9rem;">вместо 9 900 ₽ за курс</span>
+            <a href="https://web.tribute.tg/s/RvF" class="btn btn-gold btn-sm">Вступить в клуб</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <div class="container" style="max-width:750px;">
+      <div class="section-header">
+        <h2>Часто задаваемые вопросы</h2>
+      </div>
+      <div class="module-list">
+        <div class="module-block">
+          <div class="module-header" onclick="this.nextElementSibling.classList.toggle('open');">
+            <span>Нужен ли опыт проведения исследований?</span>
+            <i class="fas fa-chevron-down" style="font-size:0.8rem; color:var(--text-muted);"></i>
+          </div>
+          <div class="module-body">
+            <p style="font-size:0.9rem; color:var(--text-light); padding:8px 0;">Нет. Курс рассчитан на тех, кто планирует исследование впервые. Опытные авторы смогут систематизировать процесс.</p>
+          </div>
+        </div>
+        <div class="module-block">
+          <div class="module-header" onclick="this.nextElementSibling.classList.toggle('open');">
+            <span>Сколько времени займёт прохождение?</span>
+            <i class="fas fa-chevron-down" style="font-size:0.8rem; color:var(--text-muted);"></i>
+          </div>
+          <div class="module-body">
+            <p style="font-size:0.9rem; color:var(--text-light); padding:8px 0;">Один урок в день, пять уроков в неделю, две недели.</p>
+          </div>
+        </div>
+        <div class="module-block">
+          <div class="module-header" onclick="this.nextElementSibling.classList.toggle('open');">
+            <span>Какой результат после курса?</span>
+            <i class="fas fa-chevron-down" style="font-size:0.8rem; color:var(--text-muted);"></i>
+          </div>
+          <div class="module-body">
+            <p style="font-size:0.9rem; color:var(--text-light); padding:8px 0;">Готовый дизайн исследования и раздел «Материалы и методы», составленный по современным стандартам.</p>
+          </div>
+        </div>
+        <div class="module-block">
+          <div class="module-header" onclick="this.nextElementSibling.classList.toggle('open');">
+            <span>Чем отличаются форматы?</span>
+            <i class="fas fa-chevron-down" style="font-size:0.8rem; color:var(--text-muted);"></i>
+          </div>
+          <div class="module-body">
+            <p style="font-size:0.9rem; color:var(--text-light); padding:8px 0;">«Самостоятельный» — материалы и задания без обратной связи. «Стандартный» — с проверкой заданий и рецензией дизайна. «Расширенный» — с персональной консультацией с автором курса.</p>
+          </div>
+        </div>
+        <div class="module-block">
+          <div class="module-header" onclick="this.nextElementSibling.classList.toggle('open');">
+            <span>Могу ли я вернуть деньги?</span>
+            <i class="fas fa-chevron-down" style="font-size:0.8rem; color:var(--text-muted);"></i>
+          </div>
+          <div class="module-body">
+            <p style="font-size:0.9rem; color:var(--text-light); padding:8px 0;">Да, в течение 14 дней с момента оплаты, если вы прошли не более 3 уроков.</p>
+          </div>
+        </div>
+        <div class="module-block">
+          <div class="module-header" onclick="this.nextElementSibling.classList.toggle('open');">
+            <span>Как долго сохраняется доступ к видеоурокам?</span>
+            <i class="fas fa-chevron-down" style="font-size:0.8rem; color:var(--text-muted);"></i>
+          </div>
+          <div class="module-body">
+            <p style="font-size:0.9rem; color:var(--text-light); padding:8px 0;">12 месяцев с момента покупки.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Индекс Хирша</h4>
+          <div class="footer-links">
+            <a href="education.html">Обучение</a><a href="club.html">Клуб</a>
+            <a href="consulting.html">Консалтинг</a><a href="blog.html">Блог</a><a href="resources.html">Ресурсы</a>
+          </div>
+        </div>
+        <div>
+          <h4>Контакты</h4>
+          <div class="footer-links">
+            <a href="https://t.me/+79854770449"><i class="fab fa-telegram" style="width:18px;"></i> Telegram</a>
+            <a href="https://wa.me/79854770449"><i class="fab fa-whatsapp" style="width:18px;"></i> WhatsApp</a>
+            <a href="mailto:zhigalovmd@yandex.ru"><i class="fas fa-envelope" style="width:18px;"></i> zhigalovmd@yandex.ru</a>
+          </div>
+        </div>
+        <div>
+          <h4>Соцсети</h4>
+          <div class="footer-links">
+            <a href="https://t.me/hirsch_index_school"><i class="fab fa-telegram" style="width:18px;"></i> Telegram-канал</a>
+            <a href="https://vk.com/club235429996" target="_blank"><i class="fab fa-vk" style="width:18px;"></i> ВКонтакте</a>
+            <a href="https://max.ru/join/TmlfyQ5T5BJu-iLZlOYbZolsFX2vrBDQ8t8jaKfz3P0" target="_blank"><i class="fas fa-comment-dots" style="width:18px;"></i> MAX</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Индекс Хирша. Все права защищены.</span>
+        <span><a href="offer.html">Публичная оферта</a> · <a href="privacy.html">Политика конфиденциальности</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Getcourse widget modals (placeholder — widget IDs pending) -->
+  <div class="gc-modal-overlay" id="gc-modal-1" onclick="closeGcModal(event, 'gc-modal-1')">
+    <div class="gc-modal-box" onclick="event.stopPropagation();">
+      <button class="gc-modal-close" onclick="closeGcModal(event, 'gc-modal-1')">&times;</button>
+      <h3 class="gc-modal-title">Самостоятельный — 9 900 ₽</h3>
+      <script id="f53287fd4881452f76dce71895b4988ac507c7cc" src="https://hirschindex.getcourse.ru/pl/lite/widget/script?id=1591444"></script>
+    </div>
+  </div>
+  <div class="gc-modal-overlay" id="gc-modal-2" onclick="closeGcModal(event, 'gc-modal-2')">
+    <div class="gc-modal-box" onclick="event.stopPropagation();">
+      <button class="gc-modal-close" onclick="closeGcModal(event, 'gc-modal-2')">&times;</button>
+      <h3 class="gc-modal-title">Стандартный — 14 900 ₽</h3>
+      <script id="2208bfa7eeb71317ddce0dcef6e6afdeb25ed165" src="https://hirschindex.getcourse.ru/pl/lite/widget/script?id=1591447"></script>
+    </div>
+  </div>
+  <div class="gc-modal-overlay" id="gc-modal-3" onclick="closeGcModal(event, 'gc-modal-3')">
+    <div class="gc-modal-box" onclick="event.stopPropagation();">
+      <button class="gc-modal-close" onclick="closeGcModal(event, 'gc-modal-3')">&times;</button>
+      <h3 class="gc-modal-title">Расширенный — 19 900 ₽</h3>
+      <script id="4cf560f115e833a639bd2ef61384d847f7bd98ab" src="https://hirschindex.getcourse.ru/pl/lite/widget/script?id=1591448"></script>
+    </div>
+  </div>
+
+  <script>
+    function toggleMobile() { document.getElementById('mobileMenu').classList.toggle('open'); }
+    function openGcModal(id) {
+      document.getElementById(id).classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeGcModal(e, id) {
+      document.getElementById(id).classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  </script>
+</body>
+</html>
