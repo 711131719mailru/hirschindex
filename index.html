@@ -34,69 +34,111 @@
                 font-family: 'Playfair Display', serif;
             }
 
-            /* Header — completely override template's style3 positioning */
-            header.style3 {
-                background: #fff;
-                border-bottom: 1px solid #e2e8f0;
-                height: 70px;
-                display: flex;
-                align-items: center;
+            /* Custom nav — bypasses all template header styles */
+            .hi-nav {
                 position: fixed;
                 top: 0;
-                width: 100%;
-                z-index: 1000;
-            }
-            header.style3 .logo-menu-inner {
-                padding-left: 0 !important;
-            }
-            header.style3 .logo {
-                position: relative !important;
-                margin: 0 !important;
-            }
-            header.style3 .logo:before,
-            header.style3 .logo:after {
-                display: none !important;
-            }
-            header.style3 .logo h1 { margin: 0; }
-            header.style3 nav > div > ul > li {
-                line-height: 70px;
-            }
-            header.style3 nav > div > ul > li > a {
-                font-family: 'Inter', sans-serif;
-                font-weight: 500;
-                font-size: 0.95rem;
-                color: #333;
-            }
-            header.style3 nav > div > ul > li > a:after {
-                display: none;
-            }
-            header.style3 .header-right {
-                margin-left: 30px;
-            }
-            /* Telegram button — smaller, not uppercase */
-            header.style3 .header-right .thm-btn {
-                padding: 8px 20px;
-                font-size: 0.85rem;
-                text-transform: none;
-                font-weight: 500;
-                letter-spacing: 0;
-            }
-            .sticky-menu {
+                left: 0;
+                right: 0;
+                height: 70px;
                 background: #fff;
                 border-bottom: 1px solid #e2e8f0;
+                z-index: 9999;
+                display: flex;
+                align-items: center;
             }
-            .sticky-menu .logo:before,
-            .sticky-menu .logo:after {
-                display: none !important;
+            .hi-nav-inner {
+                max-width: 1150px;
+                margin: 0 auto;
+                padding: 0 20px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
             }
-            .sticky-menu .logo { position: relative !important; margin: 0 !important; }
-            .sticky-menu nav > div > ul > li > a {
+            .hi-nav-logo {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                text-decoration: none;
+            }
+            .hi-nav-logo img {
+                width: 36px;
+                height: 36px;
+                border-radius: 6px;
+            }
+            .hi-nav-menu {
+                display: flex;
+                align-items: center;
+                gap: 28px;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+            .hi-nav-menu a {
                 font-family: 'Inter', sans-serif;
+                font-size: 0.9rem;
                 font-weight: 500;
-                font-size: 0.95rem;
+                color: #475569;
+                text-decoration: none;
+                transition: color 0.2s;
             }
-            .sticky-menu .sticky-menu-inner {
-                padding-left: 0 !important;
+            .hi-nav-menu a:hover { color: #3366CC; }
+            .hi-nav-tg {
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                background: #3366CC;
+                color: #fff;
+                padding: 9px 20px;
+                border-radius: 8px;
+                font-family: 'Inter', sans-serif;
+                font-size: 0.85rem;
+                font-weight: 500;
+                text-decoration: none;
+                transition: background 0.2s;
+                white-space: nowrap;
+            }
+            .hi-nav-tg:hover { background: #2952a3; color: #fff; }
+            .hi-nav-right {
+                display: flex;
+                align-items: center;
+                gap: 28px;
+            }
+            .hi-burger {
+                display: none;
+                background: none;
+                border: none;
+                font-size: 1.5rem;
+                color: #1e293b;
+                cursor: pointer;
+            }
+            .hi-mobile-menu {
+                display: none;
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: #fff;
+                border-bottom: 1px solid #e2e8f0;
+                padding: 20px;
+                z-index: 9998;
+                flex-direction: column;
+                gap: 16px;
+            }
+            .hi-mobile-menu.open { display: flex; }
+            .hi-mobile-menu a {
+                font-family: 'Inter', sans-serif;
+                font-size: 1rem;
+                font-weight: 500;
+                color: #1e293b;
+                text-decoration: none;
+                padding: 8px 0;
+            }
+            .hi-mobile-menu a:hover { color: #3366CC; }
+            @media (max-width: 768px) {
+                .hi-nav-menu { display: none; }
+                .hi-burger { display: block; }
             }
             .logo-text-hi {
                 font-family: 'Playfair Display', serif;
@@ -349,91 +391,37 @@
     </head>
     <body>
         <main>
-            <!-- ===== Header (style3 — clean nav) ===== -->
-            <header class="style3 w-100">
-                <div class="logo-menu-wrap position-relative w-100">
-                    <div class="container">
-                        <div class="logo-menu-inner d-flex flex-wrap align-items-center justify-content-between position-relative w-100">
-                            <div class="logo d-flex align-items-center">
-                                <h1 class="mb-0">
-                                    <a class="d-flex align-items-center" href="index.html" title="Главная">
-                                        <img style="width:36px;height:36px;border-radius:6px;" src="assets/logo-main.jpg" alt="Индекс Хирша">
-                                        <span class="logo-text-hi">Индекс Хирша</span>
-                                    </a>
-                                </h1>
-                            </div>
-                            <nav class="d-flex flex-wrap align-items-center">
-                                <div class="header-left">
-                                    <ul class="mb-0 list-unstyled d-inline-flex">
-                                        <li><a href="education.html" title="Обучение">Обучение</a></li>
-                                        <li><a href="club.html" title="Клуб">Клуб</a></li>
-                                        <li><a href="consulting.html" title="Консалтинг">Консалтинг</a></li>
-                                        <li><a href="blog.html" title="Блог">Блог</a></li>
-                                        <li><a href="resources.html" title="Ресурсы">Ресурсы</a></li>
-                                    </ul>
-                                </div>
-                                <div class="header-right d-inline-flex flex-wrap align-items-center">
-                                    <a class="thm-btn v2 thm-bg brd-rd5 d-inline-block position-relative overflow-hidden" href="https://t.me/hirsch_index_school" target="_blank" title="Telegram">
-                                        <i class="fab fa-telegram" style="margin-right:6px;"></i>Telegram
-                                    </a>
-                                </div>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </header>
-
-            <!-- Sticky Menu -->
-            <div class="sticky-menu">
-                <div class="container">
-                    <div class="sticky-menu-inner d-flex flex-wrap align-items-center justify-content-between w-100">
-                        <div class="logo d-flex align-items-center">
-                            <h1 class="mb-0">
-                                <a class="d-flex align-items-center" href="index.html" title="Главная">
-                                    <img style="width:36px;height:36px;border-radius:6px;" src="assets/logo-main.jpg" alt="Индекс Хирша">
-                                    <span class="logo-text-hi">Индекс Хирша</span>
-                                </a>
-                            </h1>
-                        </div>
-                        <nav class="d-flex flex-wrap align-items-center justify-content-between">
-                            <div class="header-left">
-                                <ul class="mb-0 list-unstyled d-inline-flex">
-                                    <li><a href="education.html" title="Обучение">Обучение</a></li>
-                                    <li><a href="club.html" title="Клуб">Клуб</a></li>
-                                    <li><a href="consulting.html" title="Консалтинг">Консалтинг</a></li>
-                                    <li><a href="blog.html" title="Блог">Блог</a></li>
-                                    <li><a href="resources.html" title="Ресурсы">Ресурсы</a></li>
-                                </ul>
-                            </div>
-                        </nav>
+            <!-- ===== Navigation ===== -->
+            <div class="hi-nav">
+                <div class="hi-nav-inner">
+                    <a href="index.html" class="hi-nav-logo">
+                        <img src="assets/logo-main.jpg" alt="Индекс Хирша">
+                        <span class="logo-text-hi">Индекс Хирша</span>
+                    </a>
+                    <div class="hi-nav-right">
+                        <ul class="hi-nav-menu">
+                            <li><a href="education.html">Обучение</a></li>
+                            <li><a href="club.html">Клуб</a></li>
+                            <li><a href="consulting.html">Консалтинг</a></li>
+                            <li><a href="blog.html">Блог</a></li>
+                            <li><a href="resources.html">Ресурсы</a></li>
+                        </ul>
+                        <a href="https://t.me/hirsch_index_school" target="_blank" class="hi-nav-tg">
+                            <i class="fab fa-telegram"></i>Telegram
+                        </a>
+                        <button class="hi-burger" onclick="document.getElementById('hiMobile').classList.toggle('open')" aria-label="Меню">
+                            <i class="fas fa-bars"></i>
+                        </button>
                     </div>
                 </div>
             </div>
-
-            <!-- Responsive Header -->
-            <div class="rspn-hdr">
-                <div class="lg-mn">
-                    <div class="logo d-flex align-items-center">
-                        <h1 class="mb-0 d-block">
-                            <a class="d-flex align-items-center" href="index.html" title="Главная">
-                                <img style="width:36px;height:36px;border-radius:6px;" src="assets/logo-main.jpg" alt="Индекс Хирша">
-                                <span class="logo-text-hi">Индекс Хирша</span>
-                            </a>
-                        </h1>
-                    </div>
-                    <span class="rspn-mnu-btn"><i class="fa fa-list-ul"></i></span>
-                </div>
-                <div class="rsnp-mnu">
-                    <span class="rspn-mnu-cls"><i class="fa fa-times"></i></span>
-                    <ul class="mb-0 list-unstyled w-100">
-                        <li><a href="education.html" title="">Обучение</a></li>
-                        <li><a href="club.html" title="">Клуб</a></li>
-                        <li><a href="consulting.html" title="">Консалтинг</a></li>
-                        <li><a href="blog.html" title="">Блог</a></li>
-                        <li><a href="resources.html" title="">Ресурсы</a></li>
-                        <li><a href="https://t.me/hirsch_index_school" title=""><i class="fab fa-telegram"></i> Telegram</a></li>
-                    </ul>
-                </div>
+            <div class="hi-mobile-menu" id="hiMobile">
+                <a href="education.html">Обучение</a>
+                <a href="club.html">Клуб</a>
+                <a href="consulting.html">Консалтинг</a>
+                <a href="blog.html">Блог</a>
+                <a href="resources.html">Ресурсы</a>
+                <a href="https://t.me/hirsch_index_school"><i class="fab fa-telegram"></i> Telegram</a>
             </div>
 
             <!-- ===== Hero ===== -->
@@ -462,7 +450,7 @@
                         <div class="sec-title v2 text-center w-100 wow fadeInUp">
                             <div class="sec-title-inner d-inline-block">
                                 <h2 class="mb-0 text-color3">Экосистема «Индекс Хирша»</h2>
-                                <p class="mb-0" style="font-family:'Inter',sans-serif; color:#475569;">Четыре направления, одна цель — ваша публикация в международном журнале</p>
+                                <p class="mb-0" style="font-family:'Inter',sans-serif; color:#475569;">Четыре направления, одна цель — ваша публикация в рецензируемом журнале</p>
                             </div>
                         </div>
                         <div class="row mrg30">
