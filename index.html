@@ -34,19 +34,32 @@
                 font-family: 'Playfair Display', serif;
             }
 
-            /* Header style overrides */
+            /* Header — completely override template's style3 positioning */
             header.style3 {
                 background: #fff;
                 border-bottom: 1px solid #e2e8f0;
                 height: 70px;
                 display: flex;
                 align-items: center;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                z-index: 1000;
             }
-            header.style3 .header-right {
-                margin-left: 40px;
+            header.style3 .logo-menu-inner {
+                padding-left: 0 !important;
             }
-            header.style3 .topbar {
-                font-size: 0.85rem;
+            header.style3 .logo {
+                position: relative !important;
+                margin: 0 !important;
+            }
+            header.style3 .logo:before,
+            header.style3 .logo:after {
+                display: none !important;
+            }
+            header.style3 .logo h1 { margin: 0; }
+            header.style3 nav > div > ul > li {
+                line-height: 70px;
             }
             header.style3 nav > div > ul > li > a {
                 font-family: 'Inter', sans-serif;
@@ -54,14 +67,36 @@
                 font-size: 0.95rem;
                 color: #333;
             }
+            header.style3 nav > div > ul > li > a:after {
+                display: none;
+            }
+            header.style3 .header-right {
+                margin-left: 30px;
+            }
+            /* Telegram button — smaller, not uppercase */
+            header.style3 .header-right .thm-btn {
+                padding: 8px 20px;
+                font-size: 0.85rem;
+                text-transform: none;
+                font-weight: 500;
+                letter-spacing: 0;
+            }
             .sticky-menu {
                 background: #fff;
                 border-bottom: 1px solid #e2e8f0;
             }
+            .sticky-menu .logo:before,
+            .sticky-menu .logo:after {
+                display: none !important;
+            }
+            .sticky-menu .logo { position: relative !important; margin: 0 !important; }
             .sticky-menu nav > div > ul > li > a {
                 font-family: 'Inter', sans-serif;
                 font-weight: 500;
                 font-size: 0.95rem;
+            }
+            .sticky-menu .sticky-menu-inner {
+                padding-left: 0 !important;
             }
             .logo-text-hi {
                 font-family: 'Playfair Display', serif;
