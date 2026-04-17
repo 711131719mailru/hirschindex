@@ -38,6 +38,12 @@
             header.style3 {
                 background: #fff;
                 border-bottom: 1px solid #e2e8f0;
+                height: 70px;
+                display: flex;
+                align-items: center;
+            }
+            header.style3 .header-right {
+                margin-left: 40px;
             }
             header.style3 .topbar {
                 font-size: 0.85rem;
@@ -413,42 +419,6 @@
                 </div>
             </section>
 
-            <!-- ===== 3 Special Boxes (Pillars) ===== -->
-            <section>
-                <div class="w-100 position-relative" style="margin-top:-60px; z-index:2;">
-                    <div class="container">
-                        <div class="row mrg30">
-                            <div class="col-md-6 col-sm-6 col-lg-4">
-                                <div class="special-box z1 scndry-bg grad-bg2 d-flex position-relative flex-wrap w-100 brd-rd10 wow fadeInUp" data-wow-delay="0.1s">
-                                    <i class="fas fa-graduation-cap d-inline-block" style="font-size:2.5rem;"></i>
-                                    <div class="special-box-inner">
-                                        <h4 class="mb-0">Обучение</h4>
-                                        <p class="mb-0">Видеокурсы и интенсивы с проверкой заданий</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-lg-4">
-                                <div class="special-box z1 scndry-bg grad-bg2 d-flex position-relative flex-wrap w-100 brd-rd10 wow fadeInUp" data-wow-delay="0.2s">
-                                    <i class="fas fa-users d-inline-block" style="font-size:2.5rem;"></i>
-                                    <div class="special-box-inner">
-                                        <h4 class="mb-0">Научный клуб</h4>
-                                        <p class="mb-0">Сообщество, соавторство, доступ ко всем курсам</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-lg-4">
-                                <div class="special-box z1 scndry-bg grad-bg2 d-flex position-relative flex-wrap w-100 brd-rd10 wow fadeInUp" data-wow-delay="0.3s">
-                                    <i class="fas fa-hands-helping d-inline-block" style="font-size:2.5rem;"></i>
-                                    <div class="special-box-inner">
-                                        <h4 class="mb-0">Консалтинг</h4>
-                                        <p class="mb-0">Индивидуальное сопровождение до публикации</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             <!-- ===== Ecosystem (4 Pillars) ===== -->
             <section>
@@ -500,8 +470,7 @@
 
             <!-- ===== About / Founder ===== -->
             <section>
-                <div class="w-100 pt-100 gray-layer opc95 pb-100 position-relative">
-                    <div class="fixed-bg" style="background-image: url(assets/images/parallax-bg6.jpg);"></div>
+                <div class="w-100 pt-100 pb-100 position-relative" style="background:#f8fafc;">
                     <div class="container">
                         <div class="row mrg30 align-items-center">
                             <div class="col-md-12 col-lg-6 wow fadeInLeft">
@@ -552,47 +521,6 @@
                 </div>
             </section>
 
-            <!-- ===== Stats (Facts) ===== -->
-            <section>
-                <div class="w-100 pt-20 thm-bg pb-70 position-relative">
-                    <div class="container">
-                        <div class="facts-wrap v2 position-relative w-100">
-                            <ul class="facts-list d-flex flex-wrap align-items-center justify-content-between position-relative mb-0 list-unstyled">
-                                <li class="wow fadeInUp" data-wow-delay="0.1s">
-                                    <div class="fact-box v2 position-relative d-flex flex-wrap w-100">
-                                        <i class="fas fa-file-alt d-inline-block" style="font-size:3rem;"></i>
-                                        <div class="fact-box-inner">
-                                            <span class="scndry-clr d-block"><i class="counter">70</i>+</span>
-                                            <h4 class="mb-0">Публикаций</h4>
-                                            <p class="mb-0" style="font-family:'Inter',sans-serif;">в международных журналах</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="wow fadeInUp" data-wow-delay="0.2s">
-                                    <div class="fact-box v2 position-relative d-flex flex-wrap w-100">
-                                        <i class="fas fa-users d-inline-block" style="font-size:3rem;"></i>
-                                        <div class="fact-box-inner">
-                                            <span class="scndry-clr d-block"><i class="counter">200</i>+</span>
-                                            <h4 class="mb-0">Выпускников</h4>
-                                            <p class="mb-0" style="font-family:'Inter',sans-serif;">курсов и интенсивов</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="wow fadeInUp" data-wow-delay="0.3s">
-                                    <div class="fact-box v2 position-relative d-flex flex-wrap w-100">
-                                        <i class="fas fa-book-open d-inline-block" style="font-size:3rem;"></i>
-                                        <div class="fact-box-inner">
-                                            <span class="scndry-clr d-block"><i class="counter">3</i></span>
-                                            <h4 class="mb-0">Курса</h4>
-                                            <p class="mb-0" style="font-family:'Inter',sans-serif;">от дизайна до публикации</p>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             <!-- ===== Social Channels ===== -->
             <section>
@@ -635,8 +563,8 @@
             <section>
                 <div class="w-100 pt-70 scndry-bg pb-70 position-relative text-center">
                     <div class="container wow fadeInUp">
-                        <h2 class="mb-0" style="color:#fff; margin-bottom:16px;">Готовы начать?</h2>
-                        <p class="mb-0" style="color:rgba(255,255,255,0.7); margin-bottom:28px; max-width:500px; margin-left:auto; margin-right:auto; font-family:'Inter',sans-serif;">Присоединяйтесь к сообществу врачей-исследователей</p>
+                        <h2 style="color:#fff; margin-bottom:24px;">Готовы начать?</h2>
+                        <p style="color:rgba(255,255,255,0.7); margin-bottom:40px; max-width:500px; margin-left:auto; margin-right:auto; font-family:'Inter',sans-serif;">Присоединяйтесь к сообществу врачей-исследователей</p>
                         <div class="d-flex gap-3 justify-content-center flex-wrap">
                             <a class="thm-btn v2 thm-bg brd-rd5 d-inline-block position-relative overflow-hidden" href="education.html" title="">Начать обучение</a>
                             <a class="thm-btn v2 brd-rd5 d-inline-block position-relative overflow-hidden" href="club.html" title="" style="background-color:#c5a065;">Вступить в клуб — 990 ₽/мес</a>
