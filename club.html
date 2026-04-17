@@ -1,305 +1,361 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Научный клуб «Индекс Хирша» — закрытое сообщество врачей-исследователей. Доступ ко всем курсам, поиск соавторов, совместные проекты.">
-  <title>Клуб — Индекс Хирша</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Научный клуб «Индекс Хирша» — закрытое сообщество врачей-исследователей. Доступ ко всем курсам, поиск соавторов, совместные проекты.">
+    <link rel="icon" href="assets/logo-main.jpg" sizes="35x35" type="image/jpeg">
+    <title>Клуб — Индекс Хирша</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    .club-hero {
-      padding: 130px 0 70px;
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      color: #fff; text-align: center;
-    }
-    .club-hero img { width: 80px; height: 80px; border-radius: 18px; margin-bottom: 20px; }
-    .club-hero h1 { font-size: 2.75rem; color: #fff; margin-bottom: 16px; }
-    .club-hero p { font-size: 1.1rem; opacity: 0.85; max-width: 560px; margin: 0 auto 12px; }
-    .club-hero .price-big {
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem; font-weight: 700; color: var(--gold); margin: 24px 0 8px;
-    }
-    .club-hero .price-sub { font-size: 0.9rem; opacity: 0.6; margin-bottom: 28px; }
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/color-hirsch.css">
 
-    .benefit-card {
-      background: #fff; border: 1px solid var(--border); border-radius: var(--radius-md);
-      padding: 28px; display: flex; gap: 20px; align-items: flex-start; transition: 0.3s;
-    }
-    .benefit-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
-    .benefit-icon {
-      width: 48px; height: 48px; border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 20px; flex-shrink: 0;
-    }
-    .benefit-card h4 { margin-bottom: 6px; font-size: 1.05rem; }
-    .benefit-card p { font-size: 0.9rem; color: var(--text-light); }
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
 
-    .compare-table {
-      width: 100%; border-collapse: collapse; font-size: 0.9rem;
-    }
-    .compare-table th {
-      padding: 14px 16px; text-align: left; font-weight: 600;
-      border-bottom: 2px solid var(--border); background: var(--bg-light);
-    }
-    .compare-table td {
-      padding: 12px 16px; border-bottom: 1px solid var(--border-light);
-    }
-    .compare-table td:not(:first-child) { text-align: center; }
-    .compare-table th:not(:first-child) { text-align: center; }
-    .compare-table .check-icon { color: var(--teal); font-size: 1.1rem; }
-    .compare-table .cross-icon { color: var(--text-muted); }
-    .compare-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 40px;
-    }
-    @media (max-width: 768px) {
-      .compare-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+        /* Nav */
+        .hi-nav { position:fixed; top:0; left:0; right:0; height:70px; background:#fff; border-bottom:1px solid #e2e8f0; z-index:9999; display:flex; align-items:center; }
+        .hi-nav-inner { max-width:1150px; margin:0 auto; padding:0 20px; width:100%; display:flex; align-items:center; justify-content:space-between; }
+        .hi-nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+        .hi-nav-logo img { width:36px; height:36px; border-radius:6px; }
+        .logo-text-hi { font-family:'Playfair Display',serif; font-size:1.15rem; font-weight:bold; color:#3366CC; margin-left:10px; }
+        .hi-nav-menu { display:flex; align-items:center; gap:28px; list-style:none; margin:0; padding:0; }
+        .hi-nav-menu a { font-family:'Inter',sans-serif; font-size:0.9rem; font-weight:500; color:#475569; text-decoration:none; transition:color 0.2s; }
+        .hi-nav-menu a:hover, .hi-nav-menu a.active { color:#3366CC; }
+        .hi-nav-tg { display:inline-flex; align-items:center; gap:6px; background:#3366CC; color:#fff; padding:9px 20px; border-radius:8px; font-family:'Inter',sans-serif; font-size:0.85rem; font-weight:500; text-decoration:none; transition:background 0.2s; white-space:nowrap; }
+        .hi-nav-tg:hover { background:#2952a3; color:#fff; }
+        .hi-nav-right { display:flex; align-items:center; gap:28px; }
+        .hi-burger { display:none; background:none; border:none; font-size:1.5rem; color:#1e293b; cursor:pointer; }
+        .hi-mobile-menu { display:none; position:fixed; top:70px; left:0; right:0; background:#fff; border-bottom:1px solid #e2e8f0; padding:20px; z-index:9998; flex-direction:column; gap:16px; }
+        .hi-mobile-menu.open { display:flex; }
+        .hi-mobile-menu a { font-family:'Inter',sans-serif; font-size:1rem; font-weight:500; color:#1e293b; text-decoration:none; padding:8px 0; }
+        .hi-mobile-menu a:hover { color:#3366CC; }
+        @media (max-width:768px) { .hi-nav-menu { display:none; } .hi-burger { display:block; } }
+
+        /* Club hero - dark theme */
+        .hi-club-hero { padding:140px 0 70px; background:linear-gradient(135deg, #0f172a, #1e293b); color:#fff; text-align:center; }
+        .hi-club-hero img { width:80px; height:80px; border-radius:18px; margin-bottom:20px; }
+        .hi-club-hero h1 { font-size:2.75rem; color:#fff; margin-bottom:16px; }
+        .hi-club-hero p { font-size:1.1rem; opacity:0.85; max-width:560px; margin:0 auto 12px; font-family:'Inter',sans-serif; }
+        .hi-club-hero .price-big { font-family:'Playfair Display',serif; font-size:3rem; font-weight:700; color:#c5a065; margin:24px 0 8px; }
+        .hi-club-hero .price-sub { font-size:0.9rem; opacity:0.6; margin-bottom:28px; font-family:'Inter',sans-serif; }
+
+        /* Buttons */
+        .hi-btn { display:inline-block; padding:13px 28px; border-radius:8px; font-weight:500; font-size:0.95rem; font-family:'Inter',sans-serif; text-decoration:none; transition:all 0.3s; cursor:pointer; border:none; }
+        .hi-btn-gold { background:#c5a065; color:#fff; }
+        .hi-btn-gold:hover { background:#b8944d; color:#fff; }
+        .hi-btn-lg { padding:16px 36px; font-size:1.05rem; }
+
+        /* Benefit cards */
+        .hi-benefit-card { background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:28px; display:flex; gap:20px; align-items:flex-start; transition:0.3s; height:100%; }
+        .hi-benefit-card:hover { box-shadow:0 4px 12px rgba(0,0,0,0.08); transform:translateY(-2px); }
+        .hi-benefit-icon { width:48px; height:48px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:20px; flex-shrink:0; }
+        .hi-benefit-card h4 { margin-bottom:6px; font-size:1.05rem; }
+        .hi-benefit-card p { font-size:0.9rem; color:#475569; margin:0; font-family:'Inter',sans-serif; }
+
+        /* Compare grid */
+        .hi-compare-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-bottom:40px; }
+        @media (max-width:768px) { .hi-compare-grid { grid-template-columns:1fr; } }
+
+        /* Cards */
+        .hi-card { background:#fff; padding:32px; border-radius:12px; border:1px solid #e2e8f0; transition:0.3s; height:100%; }
+        .hi-card:hover { transform:translateY(-4px); box-shadow:0 10px 25px rgba(0,0,0,0.1); }
+        .hi-card-icon { width:56px; height:56px; border-radius:8px; display:flex; align-items:center; justify-content:center; margin:0 auto 16px; font-size:24px; }
+        .hi-card-icon.gold { background:#fef9ee; color:#c5a065; }
+        .hi-card-icon.teal { background:#ecfdf5; color:#2BB5A0; }
+        .hi-card-icon.blue { background:#eff6ff; color:#3366CC; }
+
+        /* Footer */
+        .hi-footer a { color:#94a3b8; text-decoration:none; }
+        .hi-footer a:hover { color:#fff; }
+        .hi-footer h4 { color:#fff; margin-bottom:16px; font-size:0.95rem; }
+        .hi-footer-links { display:flex; flex-direction:column; gap:8px; font-size:0.9rem; }
+        .hi-footer-bottom { border-top:1px solid rgba(255,255,255,0.1); margin-top:40px; padding-top:20px; display:flex; justify-content:space-between; font-size:0.8rem; color:#94a3b8; flex-wrap:wrap; gap:10px; }
+        @media (max-width:768px) { .hi-footer-bottom { flex-direction:column; text-align:center; } }
+    </style>
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav>
-    <div class="container nav-inner">
-      <a href="index.html" class="logo">
-        <img src="assets/logo-main.jpg" alt="[h]">
-        <span class="logo-text">Индекс Хирша</span>
-      </a>
-      <div style="display:flex; align-items:center; gap:28px;">
-        <div class="menu">
-          <a href="education.html">Обучение</a>
-          <a href="club.html" class="active">Клуб</a>
-          <a href="consulting.html">Консалтинг</a>
-          <a href="blog.html">Блог</a>
-          <a href="resources.html">Ресурсы</a>
+    <!-- Navigation -->
+    <div class="hi-nav">
+        <div class="hi-nav-inner">
+            <a href="index.html" class="hi-nav-logo">
+                <img src="assets/logo-main.jpg" alt="Индекс Хирша">
+                <span class="logo-text-hi">Индекс Хирша</span>
+            </a>
+            <div class="hi-nav-right">
+                <ul class="hi-nav-menu">
+                    <li><a href="education.html">Обучение</a></li>
+                    <li><a href="club.html" class="active">Клуб</a></li>
+                    <li><a href="consulting.html">Консалтинг</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="resources.html">Ресурсы</a></li>
+                </ul>
+                <a href="https://t.me/hirsch_index_school" target="_blank" class="hi-nav-tg">
+                    <i class="fab fa-telegram"></i>Telegram
+                </a>
+                <button class="hi-burger" onclick="document.getElementById('hiMobile').classList.toggle('open')" aria-label="Меню">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
-        <a href="https://t.me/hirsch_index_school" class="btn btn-primary btn-sm" style="white-space:nowrap;">
-          <i class="fab fa-telegram" style="margin-right:6px;"></i>Telegram
-        </a>
-        <button class="mobile-toggle" onclick="toggleMobile()" aria-label="Меню"><i class="fas fa-bars"></i></button>
-      </div>
     </div>
-  </nav>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="education.html">Обучение</a><a href="club.html">Клуб</a>
-    <a href="consulting.html">Консалтинг</a><a href="blog.html">Блог</a><a href="resources.html">Ресурсы</a>
-  </div>
-
-  <!-- Hero -->
-  <section class="club-hero">
-    <div class="container">
-      <img src="assets/logo-club.jpg" alt="Клуб">
-      <h1>Научный клуб <br>«Индекс Хирша»</h1>
-      <p>Сообщество врачей и исследователей.<br>Публикации, соавторство, совместные проекты.</p>
-      <div class="price-big">990 ₽/мес</div>
-      <div class="price-sub">Доступ ко всем курсам включён</div>
-      <a href="https://web.tribute.tg/s/RvF" class="btn btn-gold btn-lg">Вступить в клуб</a>
+    <div class="hi-mobile-menu" id="hiMobile">
+        <a href="education.html">Обучение</a>
+        <a href="club.html">Клуб</a>
+        <a href="consulting.html">Консалтинг</a>
+        <a href="blog.html">Блог</a>
+        <a href="resources.html">Ресурсы</a>
+        <a href="https://t.me/hirsch_index_school"><i class="fab fa-telegram"></i> Telegram</a>
     </div>
-  </section>
 
-  <!-- Problem -->
-  <section class="bg-white" style="padding:50px 0;">
-    <div class="container" style="max-width:700px; text-align:center;">
-      <p style="font-size:1.1rem; color:var(--text-light); line-height:1.7;">Врачам сложно публиковаться в&nbsp;одиночку. Нет соавторов, нет наставника, нет среды. Рукопись некому показать, а&nbsp;коллеги наукой не&nbsp;интересуются.</p>
-      <p style="font-size:1.1rem; font-weight:500; margin-top:16px;">Клуб «Индекс Хирша» — это среда, в которой врачи проводят исследования и публикуют статьи вместе.</p>
-    </div>
-  </section>
+    <!-- Hero -->
+    <section class="hi-club-hero">
+        <div class="container">
+            <img src="assets/logo-club.jpg" alt="Клуб" class="wow fadeInUp">
+            <h1 class="wow fadeInUp" data-wow-delay="0.1s">Научный клуб <br>«Индекс Хирша»</h1>
+            <p class="wow fadeInUp" data-wow-delay="0.2s">Сообщество врачей и исследователей.<br>Публикации, соавторство, совместные проекты.</p>
+            <div class="price-big wow fadeInUp" data-wow-delay="0.3s">990 ₽/мес</div>
+            <div class="price-sub">Доступ ко всем курсам включён</div>
+            <a href="https://web.tribute.tg/s/RvF" class="hi-btn hi-btn-gold hi-btn-lg wow fadeInUp" data-wow-delay="0.4s">Вступить в клуб</a>
+        </div>
+    </section>
 
-  <!-- Benefits -->
-  <section>
-    <div class="container">
-      <div class="section-header">
-        <h2>Что входит в клуб</h2>
-      </div>
-      <div class="grid-2">
-        <div class="benefit-card">
-          <div class="benefit-icon" style="background:#eff6ff; color:var(--brand);"><i class="fas fa-play-circle"></i></div>
-          <div>
-            <h4>Все курсы и интенсивы</h4>
-            <p>Все видеокурсы для самостоятельного прохождения + запись в группы интенсивов с проверкой заданий</p>
-          </div>
+    <!-- Problem -->
+    <section style="padding:50px 0; background:#fff;">
+        <div class="container" style="max-width:700px; text-align:center;">
+            <p class="wow fadeInUp" style="font-size:1.1rem; color:#475569; line-height:1.7; font-family:'Inter',sans-serif;">Врачам сложно публиковаться в&nbsp;одиночку. Нет соавторов, нет наставника, нет среды. Рукопись некому показать, а&nbsp;коллеги наукой не&nbsp;интересуются.</p>
+            <p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size:1.1rem; font-weight:500; margin-top:16px; font-family:'Inter',sans-serif;">Клуб «Индекс Хирша» — это среда, в которой врачи проводят исследования и публикуют статьи вместе.</p>
         </div>
-        <div class="benefit-card">
-          <div class="benefit-icon" style="background:#ecfdf5; color:var(--teal);"><i class="fas fa-users"></i></div>
-          <div>
-            <h4>Совместные проекты</h4>
-            <p>Поиск соавторов, запуск совместных исследований и сопровождение до публикации</p>
-          </div>
-        </div>
-        <div class="benefit-card">
-          <div class="benefit-icon" style="background:#fef9ee; color:var(--gold);"><i class="fas fa-video"></i></div>
-          <div>
-            <h4>Ежемесячные сессии</h4>
-            <p>Разбор кейсов, ответы на вопросы, консультации с основателем школы</p>
-          </div>
-        </div>
-        <div class="benefit-card">
-          <div class="benefit-icon" style="background:#f1f5f9; color:var(--navy);"><i class="fas fa-newspaper"></i></div>
-          <div>
-            <h4>Еженедельный контент</h4>
-            <p>Эксклюзивные материалы, разборы статей, чек-листы и шаблоны</p>
-          </div>
-        </div>
-        <div class="benefit-card">
-          <div class="benefit-icon" style="background:#eff6ff; color:var(--brand);"><i class="fas fa-comments"></i></div>
-          <div>
-            <h4>Закрытый чат</h4>
-            <p>Общение с единомышленниками, обмен опытом, взаимная поддержка</p>
-          </div>
-        </div>
-        <div class="benefit-card">
-          <div class="benefit-icon" style="background:#ecfdf5; color:var(--teal);"><i class="fas fa-percent"></i></div>
-          <div>
-            <h4>Скидки на консалтинг</h4>
-            <p>Участники клуба получают приоритет и специальные условия на индивидуальные услуги</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Comparison: Club vs Course -->
-  <section class="bg-white">
-    <div class="container">
-      <div class="section-header">
-        <h2>Сравнение стоимости</h2>
-        <p>Клуб или отдельные курсы — что выгоднее?</p>
-      </div>
+    <!-- Benefits -->
+    <section style="padding:60px 0;">
+        <div class="container">
+            <div style="text-align:center; margin-bottom:40px;">
+                <h2 class="wow fadeInUp">Что входит в клуб</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="hi-benefit-card wow fadeInUp">
+                        <div class="hi-benefit-icon" style="background:#eff6ff; color:#3366CC;"><i class="fas fa-play-circle"></i></div>
+                        <div>
+                            <h4>Все курсы и интенсивы</h4>
+                            <p>Все видеокурсы для самостоятельного прохождения + запись в группы интенсивов с проверкой заданий</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="hi-benefit-card wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="hi-benefit-icon" style="background:#ecfdf5; color:#2BB5A0;"><i class="fas fa-users"></i></div>
+                        <div>
+                            <h4>Совместные проекты</h4>
+                            <p>Поиск соавторов, запуск совместных исследований и сопровождение до публикации</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="hi-benefit-card wow fadeInUp">
+                        <div class="hi-benefit-icon" style="background:#fef9ee; color:#c5a065;"><i class="fas fa-video"></i></div>
+                        <div>
+                            <h4>Ежемесячные сессии</h4>
+                            <p>Разбор кейсов, ответы на вопросы, консультации с основателем школы</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="hi-benefit-card wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="hi-benefit-icon" style="background:#f1f5f9; color:#0f172a;"><i class="fas fa-newspaper"></i></div>
+                        <div>
+                            <h4>Еженедельный контент</h4>
+                            <p>Эксклюзивные материалы, разборы статей, чек-листы и шаблоны</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="hi-benefit-card wow fadeInUp">
+                        <div class="hi-benefit-icon" style="background:#eff6ff; color:#3366CC;"><i class="fas fa-comments"></i></div>
+                        <div>
+                            <h4>Закрытый чат</h4>
+                            <p>Общение с единомышленниками, обмен опытом, взаимная поддержка</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="hi-benefit-card wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="hi-benefit-icon" style="background:#ecfdf5; color:#2BB5A0;"><i class="fas fa-percent"></i></div>
+                        <div>
+                            <h4>Скидки на консалтинг</h4>
+                            <p>Участники клуба получают приоритет и специальные условия на индивидуальные услуги</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <!-- Savings math -->
-      <div class="compare-grid">
-        <div style="background:#f8fafc; border:1px solid var(--border); border-radius:12px; padding:28px;">
-          <div style="font-size:0.85rem; font-weight:600; color:var(--text-muted); margin-bottom:16px;">ПОКУПКА КУРСОВ ОТДЕЛЬНО</div>
-          <div style="font-size:0.9rem; color:var(--text-light); margin-bottom:8px;">Дизайн исследования (самост.) <span style="float:right; font-weight:600;">9 900 ₽</span></div>
-          <div style="font-size:0.9rem; color:var(--text-light); margin-bottom:8px;">Обзорная статья (самост.) <span style="float:right; font-weight:600;">14 900 ₽</span></div>
-          <div style="border-top:1px solid var(--border); margin-top:12px; padding-top:12px; font-weight:600;">Итого: <span style="float:right; font-size:1.1rem;">24 800 ₽</span></div>
-          <div style="font-size:0.8rem; color:var(--text-muted); margin-top:8px;">Только самостоятельный формат, без сообщества и сопровождения</div>
-        </div>
-        <div style="background:linear-gradient(135deg,#0f172a,#1e293b); border-radius:12px; padding:28px; color:#fff;">
-          <div style="font-size:0.85rem; font-weight:600; color:var(--gold); margin-bottom:16px;">КЛУБ «ИНДЕКС ХИРША»</div>
-          <div style="font-size:0.9rem; opacity:0.85; margin-bottom:8px;">Все курсы <span style="float:right; font-weight:600;">✓</span></div>
-          <div style="font-size:0.9rem; opacity:0.85; margin-bottom:8px;">Интенсивы с проверкой ДЗ <span style="float:right; font-weight:600;">✓</span></div>
-          <div style="font-size:0.9rem; opacity:0.85; margin-bottom:8px;">Сообщество и соавторство <span style="float:right; font-weight:600;">✓</span></div>
-          <div style="font-size:0.9rem; opacity:0.85; margin-bottom:8px;">Ежемесячные сессии <span style="float:right; font-weight:600;">✓</span></div>
-          <div style="border-top:1px solid rgba(255,255,255,0.2); margin-top:12px; padding-top:12px;">
-            <span style="font-weight:600;">За год:</span> <span style="float:right; font-size:1.1rem; font-weight:700; color:var(--gold);">9 990 ₽</span>
-          </div>
-          <div style="font-size:0.8rem; opacity:0.6; margin-top:4px;">или 990 ₽/мес — всё включено</div>
-        </div>
-      </div>
+    <!-- Comparison: Club vs Course -->
+    <section style="padding:60px 0; background:#fff;">
+        <div class="container">
+            <div style="text-align:center; margin-bottom:40px;">
+                <h2 class="wow fadeInUp">Сравнение стоимости</h2>
+                <p style="color:#475569; font-family:'Inter',sans-serif;">Клуб или отдельные курсы — что выгоднее?</p>
+            </div>
 
-      <div style="text-align:center; margin-bottom:40px;">
-        <span style="font-size:1.1rem; font-weight:600; color:var(--teal);">Экономия: 14 810 ₽ при годовой подписке</span>
-        <span style="font-size:0.9rem; color:var(--text-muted); display:block; margin-top:4px;">по сравнению с покупкой двух курсов в самостоятельном формате</span>
-      </div>
+            <!-- Savings math -->
+            <div class="hi-compare-grid wow fadeInUp">
+                <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:28px;">
+                    <div style="font-size:0.85rem; font-weight:600; color:#94a3b8; margin-bottom:16px;">ПОКУПКА КУРСОВ ОТДЕЛЬНО</div>
+                    <div style="font-size:0.9rem; color:#475569; margin-bottom:8px;">Дизайн исследования (самост.) <span style="float:right; font-weight:600;">9 900 ₽</span></div>
+                    <div style="font-size:0.9rem; color:#475569; margin-bottom:8px;">Обзорная статья (самост.) <span style="float:right; font-weight:600;">14 900 ₽</span></div>
+                    <div style="border-top:1px solid #e2e8f0; margin-top:12px; padding-top:12px; font-weight:600;">Итого: <span style="float:right; font-size:1.1rem;">24 800 ₽</span></div>
+                    <div style="font-size:0.8rem; color:#94a3b8; margin-top:8px;">Только самостоятельный формат, без сообщества и сопровождения</div>
+                </div>
+                <div style="background:linear-gradient(135deg,#0f172a,#1e293b); border-radius:12px; padding:28px; color:#fff;">
+                    <div style="font-size:0.85rem; font-weight:600; color:#c5a065; margin-bottom:16px;">КЛУБ «ИНДЕКС ХИРША»</div>
+                    <div style="font-size:0.9rem; opacity:0.85; margin-bottom:8px;">Все курсы <span style="float:right; font-weight:600;">✓</span></div>
+                    <div style="font-size:0.9rem; opacity:0.85; margin-bottom:8px;">Интенсивы с проверкой ДЗ <span style="float:right; font-weight:600;">✓</span></div>
+                    <div style="font-size:0.9rem; opacity:0.85; margin-bottom:8px;">Сообщество и соавторство <span style="float:right; font-weight:600;">✓</span></div>
+                    <div style="font-size:0.9rem; opacity:0.85; margin-bottom:8px;">Ежемесячные сессии <span style="float:right; font-weight:600;">✓</span></div>
+                    <div style="border-top:1px solid rgba(255,255,255,0.2); margin-top:12px; padding-top:12px;">
+                        <span style="font-weight:600;">За год:</span> <span style="float:right; font-size:1.1rem; font-weight:700; color:#c5a065;">9 990 ₽</span>
+                    </div>
+                    <div style="font-size:0.8rem; opacity:0.6; margin-top:4px;">или 990 ₽/мес — всё включено</div>
+                </div>
+            </div>
 
-      <!-- Comparison 2: Intensives -->
-      <div class="compare-grid">
-        <div style="background:#f8fafc; border:1px solid var(--border); border-radius:12px; padding:28px;">
-          <div style="font-size:0.85rem; font-weight:600; color:var(--text-muted); margin-bottom:16px;">ИНТЕНСИВЫ С ОБРАТНОЙ СВЯЗЬЮ</div>
-          <div style="font-size:0.9rem; color:var(--text-light); margin-bottom:8px;">Дизайн исследования (стандарт.) <span style="float:right; font-weight:600;">14 900 ₽</span></div>
-          <div style="font-size:0.9rem; color:var(--text-light); margin-bottom:8px;">Обзорная статья (стандарт.) <span style="float:right; font-weight:600;">24 900 ₽</span></div>
-          <div style="border-top:1px solid var(--border); margin-top:12px; padding-top:12px; font-weight:600;">Итого: <span style="float:right; font-size:1.1rem;">39 800 ₽</span></div>
-          <div style="font-size:0.8rem; color:var(--text-muted); margin-top:8px;">Два курса с проверкой ДЗ и рецензией, без сообщества</div>
-        </div>
-        <div style="background:linear-gradient(135deg,#0f172a,#1e293b); border-radius:12px; padding:28px; color:#fff;">
-          <div style="font-size:0.85rem; font-weight:600; color:var(--gold); margin-bottom:16px;">КЛУБ «ИНДЕКС ХИРША»</div>
-          <div style="font-size:0.9rem; opacity:0.85; margin-bottom:8px;">Все курсы <span style="float:right; font-weight:600;">✓</span></div>
-          <div style="font-size:0.9rem; opacity:0.85; margin-bottom:8px;">Интенсивы с проверкой ДЗ <span style="float:right; font-weight:600;">✓</span></div>
-          <div style="font-size:0.9rem; opacity:0.85; margin-bottom:8px;">Сообщество и соавторство <span style="float:right; font-weight:600;">✓</span></div>
-          <div style="font-size:0.9rem; opacity:0.85; margin-bottom:8px;">Ежемесячные сессии <span style="float:right; font-weight:600;">✓</span></div>
-          <div style="border-top:1px solid rgba(255,255,255,0.2); margin-top:12px; padding-top:12px;">
-            <span style="font-weight:600;">За год:</span> <span style="float:right; font-size:1.1rem; font-weight:700; color:var(--gold);">9 990 ₽</span>
-          </div>
-          <div style="font-size:0.8rem; opacity:0.6; margin-top:4px;">или 990 ₽/мес — всё включено</div>
-        </div>
-      </div>
+            <div class="wow fadeInUp" style="text-align:center; margin-bottom:40px;">
+                <span style="font-size:1.1rem; font-weight:600; color:#2BB5A0;">Экономия: 14 810 ₽ при годовой подписке</span>
+                <span style="font-size:0.9rem; color:#94a3b8; display:block; margin-top:4px;">по сравнению с покупкой двух курсов в самостоятельном формате</span>
+            </div>
 
-      <div style="text-align:center; margin-bottom:20px;">
-        <span style="font-size:1.1rem; font-weight:600; color:var(--teal);">Экономия: 29 810 ₽ при годовой подписке</span>
-        <span style="font-size:0.9rem; color:var(--text-muted); display:block; margin-top:4px;">по сравнению с покупкой двух интенсивов с обратной связью</span>
-      </div>
-      <div style="text-align:center; margin-top:40px;">
-        <a href="https://web.tribute.tg/s/RvF" class="btn btn-gold btn-lg">Вступить в клуб — 990 ₽/мес</a>
-      </div>
-    </div>
-  </section>
+            <!-- Comparison 2: Intensives -->
+            <div class="hi-compare-grid wow fadeInUp">
+                <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:28px;">
+                    <div style="font-size:0.85rem; font-weight:600; color:#94a3b8; margin-bottom:16px;">ИНТЕНСИВЫ С ОБРАТНОЙ СВЯЗЬЮ</div>
+                    <div style="font-size:0.9rem; color:#475569; margin-bottom:8px;">Дизайн исследования (стандарт.) <span style="float:right; font-weight:600;">14 900 ₽</span></div>
+                    <div style="font-size:0.9rem; color:#475569; margin-bottom:8px;">Обзорная статья (стандарт.) <span style="float:right; font-weight:600;">24 900 ₽</span></div>
+                    <div style="border-top:1px solid #e2e8f0; margin-top:12px; padding-top:12px; font-weight:600;">Итого: <span style="float:right; font-size:1.1rem;">39 800 ₽</span></div>
+                    <div style="font-size:0.8rem; color:#94a3b8; margin-top:8px;">Два курса с проверкой ДЗ и рецензией, без сообщества</div>
+                </div>
+                <div style="background:linear-gradient(135deg,#0f172a,#1e293b); border-radius:12px; padding:28px; color:#fff;">
+                    <div style="font-size:0.85rem; font-weight:600; color:#c5a065; margin-bottom:16px;">КЛУБ «ИНДЕКС ХИРША»</div>
+                    <div style="font-size:0.9rem; opacity:0.85; margin-bottom:8px;">Все курсы <span style="float:right; font-weight:600;">✓</span></div>
+                    <div style="font-size:0.9rem; opacity:0.85; margin-bottom:8px;">Интенсивы с проверкой ДЗ <span style="float:right; font-weight:600;">✓</span></div>
+                    <div style="font-size:0.9rem; opacity:0.85; margin-bottom:8px;">Сообщество и соавторство <span style="float:right; font-weight:600;">✓</span></div>
+                    <div style="font-size:0.9rem; opacity:0.85; margin-bottom:8px;">Ежемесячные сессии <span style="float:right; font-weight:600;">✓</span></div>
+                    <div style="border-top:1px solid rgba(255,255,255,0.2); margin-top:12px; padding-top:12px;">
+                        <span style="font-weight:600;">За год:</span> <span style="float:right; font-size:1.1rem; font-weight:700; color:#c5a065;">9 990 ₽</span>
+                    </div>
+                    <div style="font-size:0.8rem; opacity:0.6; margin-top:4px;">или 990 ₽/мес — всё включено</div>
+                </div>
+            </div>
 
-  <!-- For whom -->
-  <section>
-    <div class="container">
-      <div class="section-header">
-        <h2>Для кого клуб</h2>
-      </div>
-      <div class="grid-3">
-        <div class="card" style="text-align:center;">
-          <div class="card-icon gold" style="margin:0 auto 16px;"><i class="fas fa-search"></i></div>
-          <h4 style="margin-bottom:8px;">Ищете соавторов</h4>
-          <p style="font-size:0.9rem; color:var(--text-light);">Хотите найти коллег для совместной публикации, но не знаете где искать</p>
+            <div class="wow fadeInUp" style="text-align:center; margin-bottom:20px;">
+                <span style="font-size:1.1rem; font-weight:600; color:#2BB5A0;">Экономия: 29 810 ₽ при годовой подписке</span>
+                <span style="font-size:0.9rem; color:#94a3b8; display:block; margin-top:4px;">по сравнению с покупкой двух интенсивов с обратной связью</span>
+            </div>
+            <div style="text-align:center; margin-top:40px;">
+                <a href="https://web.tribute.tg/s/RvF" class="hi-btn hi-btn-gold hi-btn-lg">Вступить в клуб — 990 ₽/мес</a>
+            </div>
         </div>
-        <div class="card" style="text-align:center;">
-          <div class="card-icon teal" style="margin:0 auto 16px;"><i class="fas fa-rocket"></i></div>
-          <h4 style="margin-bottom:8px;">Хотите начать обучение</h4>
-          <p style="font-size:0.9rem; color:var(--text-light);">Недорогой старт: все курсы + сообщество дешевле одного учебника.</p>
-        </div>
-        <div class="card" style="text-align:center;">
-          <div class="card-icon blue" style="margin:0 auto 16px;"><i class="fas fa-sync-alt"></i></div>
-          <h4 style="margin-bottom:8px;">Выпускник курса</h4>
-          <p style="font-size:0.9rem; color:var(--text-light);">Хотите продолжать расти, получать доступ к новым курсам и оставаться в среде</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA -->
-  <section class="bg-white" style="padding: 60px 0;">
-    <div class="container text-center">
-      <h2 style="margin-bottom:16px;">Готовы начать?</h2>
-      <p style="color:var(--text-light); margin-bottom:28px; max-width:500px; margin-left:auto; margin-right:auto;">Подписка через Telegram.<br>Отменить можно в любой момент.</p>
-      <a href="https://web.tribute.tg/s/RvF" class="btn btn-gold btn-lg">Вступить в клуб — 990 ₽/мес</a>
-    </div>
-  </section>
+    <!-- For whom -->
+    <section style="padding:60px 0;">
+        <div class="container">
+            <div style="text-align:center; margin-bottom:40px;">
+                <h2 class="wow fadeInUp">Для кого клуб</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="hi-card wow fadeInUp" style="text-align:center;">
+                        <div class="hi-card-icon gold"><i class="fas fa-search"></i></div>
+                        <h4 style="margin-bottom:8px;">Ищете соавторов</h4>
+                        <p style="font-size:0.9rem; color:#475569; font-family:'Inter',sans-serif;">Хотите найти коллег для совместной публикации, но не знаете где искать</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="hi-card wow fadeInUp" data-wow-delay="0.1s" style="text-align:center;">
+                        <div class="hi-card-icon teal"><i class="fas fa-rocket"></i></div>
+                        <h4 style="margin-bottom:8px;">Хотите начать обучение</h4>
+                        <p style="font-size:0.9rem; color:#475569; font-family:'Inter',sans-serif;">Недорогой старт: все курсы + сообщество дешевле одного учебника.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="hi-card wow fadeInUp" data-wow-delay="0.2s" style="text-align:center;">
+                        <div class="hi-card-icon blue"><i class="fas fa-sync-alt"></i></div>
+                        <h4 style="margin-bottom:8px;">Выпускник курса</h4>
+                        <p style="font-size:0.9rem; color:#475569; font-family:'Inter',sans-serif;">Хотите продолжать расти, получать доступ к новым курсам и оставаться в среде</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <h4>Индекс Хирша</h4>
-          <div class="footer-links">
-            <a href="education.html">Обучение</a><a href="club.html">Клуб</a>
-            <a href="consulting.html">Консалтинг</a><a href="blog.html">Блог</a><a href="resources.html">Ресурсы</a>
-          </div>
+    <!-- CTA -->
+    <section style="padding:60px 0; background:#fff;">
+        <div class="container" style="text-align:center;">
+            <h2 class="wow fadeInUp" style="margin-bottom:16px;">Готовы начать?</h2>
+            <p class="wow fadeInUp" data-wow-delay="0.1s" style="color:#475569; margin-bottom:28px; max-width:500px; margin-left:auto; margin-right:auto; font-family:'Inter',sans-serif;">Подписка через Telegram.<br>Отменить можно в любой момент.</p>
+            <a href="https://web.tribute.tg/s/RvF" class="hi-btn hi-btn-gold hi-btn-lg wow fadeInUp" data-wow-delay="0.2s">Вступить в клуб — 990 ₽/мес</a>
         </div>
-        <div>
-          <h4>Контакты</h4>
-          <div class="footer-links">
-            <a href="https://t.me/+79854770449"><i class="fab fa-telegram" style="width:18px;"></i> Telegram</a>
-            <a href="https://wa.me/79854770449"><i class="fab fa-whatsapp" style="width:18px;"></i> WhatsApp</a>
-            <a href="mailto:zhigalovmd@yandex.ru"><i class="fas fa-envelope" style="width:18px;"></i> zhigalovmd@yandex.ru</a>
-          </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="w-100 pt-90 pb-50 position-relative hi-footer" style="background:#0f172a;">
+            <div class="container">
+                <div class="row" style="gap:0;">
+                    <div class="col-md-6 col-lg-4" style="margin-bottom:30px;">
+                        <h4 style="font-family:'Playfair Display',serif;">Индекс Хирша</h4>
+                        <div class="hi-footer-links">
+                            <a href="education.html">Обучение</a>
+                            <a href="club.html">Клуб</a>
+                            <a href="consulting.html">Консалтинг</a>
+                            <a href="blog.html">Блог</a>
+                            <a href="resources.html">Ресурсы</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4" style="margin-bottom:30px;">
+                        <h4 style="font-family:'Playfair Display',serif;">Контакты</h4>
+                        <div class="hi-footer-links">
+                            <a href="https://t.me/+79854770449"><i class="fab fa-telegram" style="width:18px;"></i> Telegram</a>
+                            <a href="https://wa.me/79854770449"><i class="fab fa-whatsapp" style="width:18px;"></i> WhatsApp</a>
+                            <a href="mailto:zhigalovmd@yandex.ru"><i class="fas fa-envelope" style="width:18px;"></i> zhigalovmd@yandex.ru</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4" style="margin-bottom:30px;">
+                        <h4 style="font-family:'Playfair Display',serif;">Соцсети</h4>
+                        <div class="hi-footer-links">
+                            <a href="https://t.me/hirsch_index_school" target="_blank"><i class="fab fa-telegram" style="width:18px;"></i> Telegram-канал</a>
+                            <a href="https://vk.com/club235429996" target="_blank"><i class="fab fa-vk" style="width:18px;"></i> ВКонтакте</a>
+                            <a href="https://max.ru/join/TmlfyQ5T5BJu-iLZlOYbZolsFX2vrBDQ8t8jaKfz3P0" target="_blank"><i class="fas fa-comment-dots" style="width:18px;"></i> MAX</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hi-footer-bottom">
+                    <span>&copy; 2026 Индекс Хирша. Все права защищены.</span>
+                    <span><a href="offer.html">Публичная оферта</a> &middot; <a href="privacy.html">Политика конфиденциальности</a></span>
+                </div>
+            </div>
         </div>
-        <div>
-          <h4>Соцсети</h4>
-          <div class="footer-links">
-            <a href="https://t.me/hirsch_index_school"><i class="fab fa-telegram" style="width:18px;"></i> Telegram-канал</a>
-            <a href="https://vk.com/club235429996" target="_blank"><i class="fab fa-vk" style="width:18px;"></i> ВКонтакте</a>
-            <a href="https://max.ru/join/TmlfyQ5T5BJu-iLZlOYbZolsFX2vrBDQ8t8jaKfz3P0" target="_blank"><i class="fas fa-comment-dots" style="width:18px;"></i> MAX</a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2026 Индекс Хирша. Все права защищены.</span>
-        <span><a href="offer.html">Публичная оферта</a> · <a href="privacy.html">Политика конфиденциальности</a></span>
-      </div>
-    </div>
-  </footer>
-  <script>function toggleMobile(){document.getElementById('mobileMenu').classList.toggle('open');}</script>
+    </footer>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/custom-scripts.js"></script>
 </body>
 </html>
