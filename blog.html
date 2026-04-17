@@ -1,122 +1,204 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Азбука медицинской науки — статьи о научном письме, методологии и публикациях. Индекс Хирша.">
-  <title>Блог — Индекс Хирша</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    .page-hero {
-      padding: 130px 0 60px;
-      background: linear-gradient(135deg, #ecfdf5, #d1fae5);
-      text-align: center;
-    }
-    .page-hero h1 { font-size: 2.75rem; margin-bottom: 16px; }
-    .page-hero p { font-size: 1.1rem; color: var(--text-light); max-width: 560px; margin: 0 auto; }
-    .toc-sidebar {
-      position: sticky; top: 90px;
-      max-height: calc(100vh - 120px); overflow-y: auto;
-      padding-right: 20px;
-    }
-    .toc-link {
-      display: block; padding: 6px 0; font-size: 0.85rem;
-      color: var(--text-light); text-decoration: none;
-      border-bottom: 1px solid var(--border-light);
-    }
-    .toc-link:hover { color: var(--brand); }
-    .blog-layout {
-      display: grid; grid-template-columns: 240px 1fr; gap: 40px;
-      align-items: start;
-    }
-    @media (max-width: 900px) {
-      .blog-layout { grid-template-columns: 1fr; }
-      .toc-sidebar { position: static; max-height: none; }
-    }
-  </style>
-</head>
-<body>
-  <nav>
-    <div class="container nav-inner">
-      <a href="index.html" class="logo">
-        <img src="assets/logo-main.jpg" alt="[h]">
-        <span class="logo-text">Индекс Хирша</span>
-      </a>
-      <div style="display:flex; align-items:center; gap:28px;">
-        <div class="menu">
-          <a href="education.html">Обучение</a>
-          <a href="club.html">Клуб</a>
-          <a href="consulting.html">Консалтинг</a>
-          <a href="blog.html" class="active">Блог</a>
-          <a href="resources.html">Ресурсы</a>
-        </div>
-        <a href="https://t.me/hirsch_index_school" class="btn btn-primary btn-sm" style="white-space:nowrap;">
-          <i class="fab fa-telegram" style="margin-right:6px;"></i>Telegram
-        </a>
-        <button class="mobile-toggle" onclick="toggleMobile()" aria-label="Меню"><i class="fas fa-bars"></i></button>
-      </div>
-    </div>
-  </nav>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="education.html">Обучение</a><a href="club.html">Клуб</a>
-    <a href="consulting.html">Консалтинг</a><a href="blog.html">Блог</a><a href="resources.html">Ресурсы</a>
-  </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Азбука медицинской науки — статьи о научном письме, методологии и публикациях. Индекс Хирша.">
+        <link rel="icon" href="assets/logo-main.jpg" sizes="35x35" type="image/jpeg">
+        <title>Блог — Индекс Хирша</title>
 
-  <section class="page-hero">
-    <div class="container">
-      <span class="section-badge">Блог</span>
-      <h1>Азбука медицинской науки</h1>
-      <p>Статьи о научном письме, методологии исследований и секретах публикаций</p>
-      <p style="font-size:0.85rem; color:var(--text-muted); margin-top:16px;">
-        <i class="fab fa-telegram" style="margin-right:4px;"></i>
-        Материалы из Telegram-канала <a href="https://t.me/hirsch_index_school" target="_blank" style="color:var(--teal); font-weight:500;">@hirsch_index_school</a> — каждую неделю новая тема
-      </p>
-    </div>
-  </section>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <section>
-    <div class="container">
-      <div class="blog-layout">
-        <div class="toc-sidebar">
-          <h4 style="margin-bottom:12px; font-size:0.95rem;">Оглавление</h4>
-          <a href="#week-23" class="toc-link"><strong>23.</strong> Корреляция и причинность</a>
-          <a href="#week-22" class="toc-link"><strong>22.</strong> Данные рутинной практики</a>
-          <a href="#week-21" class="toc-link"><strong>21.</strong> Зачем врачу наука?</a>
-          <a href="#week-20" class="toc-link"><strong>20.</strong> Проспективные и ретроспективные исследования</a>
-          <a href="#week-19" class="toc-link"><strong>19.</strong> Ослепление и плацебо</a>
-          <a href="#week-18" class="toc-link"><strong>18.</strong> Рандомизация и РКИ</a>
-          <a href="#week-17" class="toc-link"><strong>17.</strong> Виды обсервационных исследований</a>
-          <a href="#week-16" class="toc-link"><strong>16.</strong> Обсервационные и интервенционные исследования</a>
-          <a href="#week-15" class="toc-link"><strong>15.</strong> Доказательная медицина</a>
-          <a href="#week-14" class="toc-link"><strong>14.</strong> Объект и предмет исследования</a>
-          <a href="#week-13" class="toc-link"><strong>13.</strong> Актуальность и научная новизна</a>
-          <a href="#week-12" class="toc-link"><strong>12.</strong> Цель и задачи исследования</a>
-          <a href="#week-11" class="toc-link"><strong>11.</strong> Основы научного процесса</a>
-          <a href="#week-10" class="toc-link"><strong>10.</strong> Онлайн-ресурсы исследователя</a>
-          <a href="#week-9" class="toc-link"><strong>9.</strong> Виды публикаций</a>
-          <a href="#week-8" class="toc-link"><strong>8.</strong> Праздничная неделя</a>
-          <a href="#week-7" class="toc-link"><strong>7.</strong> Что мы читаем и зачем</a>
-          <a href="#week-6" class="toc-link"><strong>6.</strong> Как пережить рецензентов</a>
-          <a href="#week-5" class="toc-link"><strong>5.</strong> Нет времени писать</a>
-          <a href="#week-4" class="toc-link"><strong>4.</strong> Академическое письмо</a>
-          <a href="#week-3" class="toc-link"><strong>3.</strong> Научная коммуникация</a>
-          <a href="#week-2" class="toc-link"><strong>2.</strong> Ясность сильнее сложности</a>
-          <a href="#week-1" class="toc-link"><strong>1.</strong> Писать — значит думать</a>
+        <link rel="stylesheet" href="assets/css/all.min.css">
+        <link rel="stylesheet" href="assets/css/flaticon.css">
+        <link rel="stylesheet" href="assets/css/animate.min.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
+        <link rel="stylesheet" href="assets/css/color-hirsch.css">
+
+        <style>
+            body { font-family: 'Inter', sans-serif; }
+            h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
+
+            /* Shared nav */
+            .hi-nav { position:fixed; top:0; left:0; right:0; height:70px; background:#fff; border-bottom:1px solid #e2e8f0; z-index:9999; display:flex; align-items:center; }
+            .hi-nav-inner { max-width:1150px; margin:0 auto; padding:0 20px; width:100%; display:flex; align-items:center; justify-content:space-between; }
+            .hi-nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+            .hi-nav-logo img { width:36px; height:36px; border-radius:6px; }
+            .logo-text-hi { font-family:'Playfair Display',serif; font-size:1.15rem; font-weight:bold; color:#3366CC; margin-left:10px; }
+            .hi-nav-menu { display:flex; align-items:center; gap:28px; list-style:none; margin:0; padding:0; }
+            .hi-nav-menu a { font-family:'Inter',sans-serif; font-size:0.9rem; font-weight:500; color:#475569; text-decoration:none; transition:color 0.2s; }
+            .hi-nav-menu a:hover, .hi-nav-menu a.active { color:#3366CC; }
+            .hi-nav-tg { display:inline-flex; align-items:center; gap:6px; background:#3366CC; color:#fff; padding:9px 20px; border-radius:8px; font-family:'Inter',sans-serif; font-size:0.85rem; font-weight:500; text-decoration:none; transition:background 0.2s; white-space:nowrap; }
+            .hi-nav-tg:hover { background:#2952a3; color:#fff; }
+            .hi-nav-right { display:flex; align-items:center; gap:28px; }
+            .hi-burger { display:none; background:none; border:none; font-size:1.5rem; color:#1e293b; cursor:pointer; }
+            .hi-mobile-menu { display:none; position:fixed; top:70px; left:0; right:0; background:#fff; border-bottom:1px solid #e2e8f0; padding:20px; z-index:9998; flex-direction:column; gap:16px; }
+            .hi-mobile-menu.open { display:flex; }
+            .hi-mobile-menu a { font-family:'Inter',sans-serif; font-size:1rem; font-weight:500; color:#1e293b; text-decoration:none; padding:8px 0; }
+            .hi-mobile-menu a:hover { color:#3366CC; }
+            @media (max-width:768px) { .hi-nav-menu { display:none; } .hi-burger { display:block; } }
+
+            /* Page hero */
+            .hi-page-hero {
+                padding: 140px 0 70px;
+                background: linear-gradient(135deg, #f8fafc, #eff6ff);
+                text-align: center;
+            }
+            .hi-page-hero .hi-badge {
+                display: inline-block;
+                background: #eff6ff;
+                color: #3366CC;
+                font-size: 0.75rem;
+                font-weight: bold;
+                text-transform: uppercase;
+                padding: 6px 16px;
+                border-radius: 50px;
+                margin-bottom: 16px;
+                letter-spacing: 0.05em;
+                font-family: 'Inter', sans-serif;
+            }
+            .hi-page-hero h1 {
+                font-size: 2.75rem;
+                margin-bottom: 16px;
+                color: #0f172a;
+            }
+            .hi-page-hero p {
+                font-size: 1.1rem;
+                color: #475569;
+                max-width: 560px;
+                margin: 0 auto;
+                font-family: 'Inter', sans-serif;
+            }
+
+            /* Blog layout */
+            .blog-layout {
+                display: grid;
+                grid-template-columns: 240px 1fr;
+                gap: 40px;
+                align-items: start;
+            }
+            .toc-sidebar {
+                position: sticky; top: 90px;
+                max-height: calc(100vh - 120px); overflow-y: auto;
+                padding-right: 20px;
+            }
+            .toc-link {
+                display: block; padding: 6px 0; font-size: 0.85rem;
+                color: #94a3b8; text-decoration: none;
+                border-bottom: 1px solid #e2e8f0;
+                font-family: 'Inter', sans-serif;
+            }
+            .toc-link:hover { color: #3366CC; }
+
+            @media (max-width: 900px) {
+                .blog-layout { grid-template-columns: 1fr; }
+                .toc-sidebar { position: static; max-height: none; }
+            }
+
+            /* Footer */
+            .hi-footer a { color: #94a3b8; text-decoration: none; }
+            .hi-footer a:hover { color: #fff; }
+            .hi-footer h4 { color: #fff; margin-bottom: 16px; font-size: 0.95rem; }
+            .hi-footer-links { display: flex; flex-direction: column; gap: 8px; font-size: 0.9rem; }
+            .hi-footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; padding-top: 20px; display: flex; justify-content: space-between; font-size: 0.8rem; color: #94a3b8; flex-wrap: wrap; gap: 10px; }
+
+            @media (max-width: 768px) {
+                .hi-footer-bottom { flex-direction: column; text-align: center; }
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- Navigation -->
+        <nav class="hi-nav">
+            <div class="hi-nav-inner">
+                <a href="index.html" class="hi-nav-logo">
+                    <img src="assets/logo-main.jpg" alt="[h]">
+                    <span class="logo-text-hi">Индекс Хирша</span>
+                </a>
+                <div class="hi-nav-right">
+                    <div class="hi-nav-menu">
+                        <a href="education.html">Обучение</a>
+                        <a href="club.html">Клуб</a>
+                        <a href="consulting.html">Консалтинг</a>
+                        <a href="blog.html" class="active">Блог</a>
+                        <a href="resources.html">Ресурсы</a>
+                    </div>
+                    <a href="https://t.me/hirsch_index_school" class="hi-nav-tg" target="_blank">
+                        <i class="fab fa-telegram"></i> Telegram
+                    </a>
+                    <button class="hi-burger" onclick="document.getElementById('hiMobileMenu').classList.toggle('open')" aria-label="Меню">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <div class="hi-mobile-menu" id="hiMobileMenu">
+            <a href="education.html">Обучение</a>
+            <a href="club.html">Клуб</a>
+            <a href="consulting.html">Консалтинг</a>
+            <a href="blog.html">Блог</a>
+            <a href="resources.html">Ресурсы</a>
         </div>
-        <div>
-          
-      <div id="week-23" style="margin-bottom:50px;">
+
+        <!-- Hero -->
+        <section class="hi-page-hero">
+            <div class="container">
+                <div class="wow fadeInUp">
+                    <span class="hi-badge">Блог</span>
+                    <h1>Азбука медицинской науки</h1>
+                    <p>Статьи о научном письме, методологии исследований и секретах публикаций</p>
+                    <p style="font-size:0.85rem; color:#94a3b8; margin-top:16px;">
+                        <i class="fab fa-telegram" style="margin-right:4px;"></i>
+                        Материалы из Telegram-канала <a href="https://t.me/hirsch_index_school" target="_blank" style="color:#2BB5A0; font-weight:500;">@hirsch_index_school</a> — каждую неделю новая тема
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Content -->
+        <section class="pt-90 pb-90">
+            <div class="container">
+                <div class="blog-layout">
+                    <div class="toc-sidebar wow fadeInLeft">
+                        <h4 style="margin-bottom:12px; font-size:0.95rem;">Оглавление</h4>
+                        <a href="#week-23" class="toc-link"><strong>23.</strong> Корреляция и причинность</a>
+                        <a href="#week-22" class="toc-link"><strong>22.</strong> Данные рутинной практики</a>
+                        <a href="#week-21" class="toc-link"><strong>21.</strong> Зачем врачу наука?</a>
+                        <a href="#week-20" class="toc-link"><strong>20.</strong> Проспективные и ретроспективные исследования</a>
+                        <a href="#week-19" class="toc-link"><strong>19.</strong> Ослепление и плацебо</a>
+                        <a href="#week-18" class="toc-link"><strong>18.</strong> Рандомизация и РКИ</a>
+                        <a href="#week-17" class="toc-link"><strong>17.</strong> Виды обсервационных исследований</a>
+                        <a href="#week-16" class="toc-link"><strong>16.</strong> Обсервационные и интервенционные исследования</a>
+                        <a href="#week-15" class="toc-link"><strong>15.</strong> Доказательная медицина</a>
+                        <a href="#week-14" class="toc-link"><strong>14.</strong> Объект и предмет исследования</a>
+                        <a href="#week-13" class="toc-link"><strong>13.</strong> Актуальность и научная новизна</a>
+                        <a href="#week-12" class="toc-link"><strong>12.</strong> Цель и задачи исследования</a>
+                        <a href="#week-11" class="toc-link"><strong>11.</strong> Основы научного процесса</a>
+                        <a href="#week-10" class="toc-link"><strong>10.</strong> Онлайн-ресурсы исследователя</a>
+                        <a href="#week-9" class="toc-link"><strong>9.</strong> Виды публикаций</a>
+                        <a href="#week-8" class="toc-link"><strong>8.</strong> Праздничная неделя</a>
+                        <a href="#week-7" class="toc-link"><strong>7.</strong> Что мы читаем и зачем</a>
+                        <a href="#week-6" class="toc-link"><strong>6.</strong> Как пережить рецензентов</a>
+                        <a href="#week-5" class="toc-link"><strong>5.</strong> Нет времени писать</a>
+                        <a href="#week-4" class="toc-link"><strong>4.</strong> Академическое письмо</a>
+                        <a href="#week-3" class="toc-link"><strong>3.</strong> Научная коммуникация</a>
+                        <a href="#week-2" class="toc-link"><strong>2.</strong> Ясность сильнее сложности</a>
+                        <a href="#week-1" class="toc-link"><strong>1.</strong> Писать — значит думать</a>
+                    </div>
+                    <div class="wow fadeInUp">
+<div id="week-23" style="margin-bottom:50px;">
         <div style="display:flex; align-items:baseline; gap:12px; margin-bottom:20px;">
           <span style="font-size:0.8rem; font-weight:600; color:var(--brand); background:var(--border-light); padding:4px 12px; border-radius:4px;">Неделя 23</span>
           <h3 style="font-size:1.3rem; margin:0;">Корреляция и причинность</h3>
         </div>
-        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">👋 Коллеги, на этой неделе поговорим о том, что такое корреляция и причинность в науке, и научимся отличать первое от второго.</h4>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">23-1: Корреляция</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Корреляция означает, что две переменные изменяются согласованно.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Положительная корреляция - когда растёт одна переменная, растёт и другая.</p>
@@ -126,7 +208,7 @@
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Vania Galarraga и Paolo Boffetta в 2016 году провели мета-анализ с целью выяснить влияние приема кофе на развитие рака легкого.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">И действительно, в общей группе пациентов каждая дополнительная чашка кофе в день повышает риск развития рака. Но стоит ограничить анализ некурящими - связь исчезает полностью. Курильщики просто чаще пьют кофе. Курение - причина рака, а кофе - невинный свидетель.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Корреляция - это наблюдение. Причинность - это объяснение. Между ними - пропасть, через которую не перепрыгнуть одним p-value &lt; 0,05.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">23-2: Вмешивающийся фактор</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">В предыдущем сообщении кофе &quot;вызывал&quot; рак лёгкого, пока мы не обнаружили, что его чаще пили курильщики. Такая скрытая третья переменная называется вмешивающимся фактором (confounding factor, конфаундер).</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Вмешивающийся фактор - это переменная, которая связана и с предполагаемой причиной, и с исходом. Он создаёт иллюзию причинно-следственной связи там, где её нет, или маскирует связь, которая есть.</p>
@@ -141,7 +223,7 @@
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">- стратификация,</p>
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">- стандартизация.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Серьезная проблема - это неизмеренный конфаундер. Вы можете учесть возраст, пол, курение, образование. Но фактор, который вы не измерили или о котором не подумали, продолжает искажать результат.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">23-3: Как доказать причинность</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Этим собственно мы и занимаемся в науке, и это непросто. Одного исследования недостаточно - каким бы большим и качественным оно ни было.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">В 1965 году эпидемиолог Остин Брэдфорд Хилл выступил с лекцией, в которой описал 9 аспектов, помогающих отличить причинную связь от случайной ассоциации. Важно отметить, что сам Хилл назвал их &quot;точками зрения&quot; (viewpoints), а не критериями - он подчёркивал, что ни один из них не является обязательным условием.</p>
@@ -164,25 +246,25 @@
           <span style="font-size:0.8rem; font-weight:600; color:var(--brand); background:var(--border-light); padding:4px 12px; border-radius:4px;">Неделя 22</span>
           <h3 style="font-size:1.3rem; margin:0;">Данные рутинной практики</h3>
         </div>
-        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Неделя 22. Данные рутинной практики</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Коллеги, на этой неделе разберем данные рутинной практики (Real-World-Data) как источник научных данных.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Не каждое исследование требует рандомизации и ослепления. Иногда самый ценный источник доказательств - это данные, которые вы уже собираете каждый день. Цель этой недели - показать, что настоящая наука гораздо ближе, чем мы думаем.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">22-1. Данные рутинной практики - что это такое?</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Каждый раз, когда врач заполняет историю болезни, вносит запись в электронную карту или выписывает рецепт - он создаёт данные. Миллионы таких записей по всему миру составляют то, что в исследовательском мире называют Real-World Data (RWD) - данные реальной клинической практики.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">RWD - это данные, собранные вне клинических исследований. Электронные истории болезни, регистры заболеваний, страховые базы, аптечные отпуски, данные с носимых устройств. Всё, что описывает реальную работу медицины, а не контролируемый эксперимент.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">А Real-World Evidence (RWE) - это то, что получается, когда эти данные анализируют. Выводы о пользе и рисках лечения, построенные на наблюдении за реальными пациентами.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Регуляторы здравоохранения некоторых стран уже принимают такие данные всерьёз и используют их для принятия важных организационных решений. Но проработка этого вопроса еще далека от желаемого уровня.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Важно понимать, что данные, которые вы создаёте каждый день, могут и должны  становиться подспорьем для дальнейших медицинских открытий.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">22-2. Когда данные рутинной практики применяют без РКИ</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Можно ли одобрить препарат без единого рандомизированного исследования?</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">В 2021 году FDA ответило - да. Такролимус, иммуносупрессант для профилактики отторжения трансплантата, получил новое показание - трансплантация лёгких. Основанием стали данные национального регистра трансплантаций США (SRTR): более 25 000 пациентов за 18 лет. Регистр позволил сравнить такролимус-содержащие схемы с альтернативными - и именно это сравнение стало основой для одобрения.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">По нашим сведениям, это стало первым в истории FDA случаем, когда эффективность препарата была определена исключительно на основе доказательств рутинной практики.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Почему не провели РКИ? Такролимус был одобрен ещё в 1994 году - но только для трансплантации печени. При трансплантации лёгких его десятилетиями назначали off-label, без формального одобрения. Провести РКИ к этому моменту было невозможно - назначить плацебо пациенту с пересаженным лёгким неэтично. А регистр SRTR накопил данные, которые ни одно отдельное исследование не смогло бы собрать: тысячи пациентов, годы наблюдения, реальные условия клинической практики.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Данные рутинной практики не заменяют РКИ. Но там, где РКИ невозможно или неэтично - редкие болезни, уязвимые группы, долгосрочные исходы - они становятся единственным источником доказательств.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">22-3. Ловушки рутинных данных</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">В 2007 году Parimon и соавторы проанализировали базу данных более 10 000 пациентов с ХОБЛ и пришли к выводу, что ингаляционные кортикостероиды могут снижать риск рака лёгкого.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">В том же году Suissa показал, что в данном исследовании была допущена так называемая &quot;систематическая ошибка бессмертного периода&quot; (immortal time bias).</p>
@@ -196,11 +278,11 @@
           <span style="font-size:0.8rem; font-weight:600; color:var(--brand); background:var(--border-light); padding:4px 12px; border-radius:4px;">Неделя 21</span>
           <h3 style="font-size:1.3rem; margin:0;">Зачем врачу наука?</h3>
         </div>
-        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Неделя 21. Зачем врачу наука?</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Коллеги, на этой неделе сделаем паузу в &quot;Азбуке медицинской науки&quot;. Мы хорошо поработали, сейчас пора выдохнуть, остановиться и набраться сил и вдохновения!</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">На этой неделе предлагаю каждому из нас задуматься о науке под углом &quot;А зачем это мне?&quot;</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">21-1. От любимого дела не выгорают.</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">В 2009 году Тайт Шанафельт и соавторы опросили 465 врачей с целью выявить у них признаки синдрома профессионального выгорания и связь выгорания с занятием любимым делом.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Признаки синдрома выгорания были выявлены у 34% опрошенных.</p>
@@ -208,7 +290,7 @@
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Интересная закономерность - врачи, у которых менее 20% времени уходило на любимое дело, выгорали почти вдвое чаще: 53,8% против 29,9%. Каждые дополнительные 10% защищённого времени снижали риск.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Что важно для нас</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Любовь к науке характерна далеко не для большинства врачей. Но если Вы относитесь к этому меньшинству и считаете медицинскую науку своим любимым делом - дерзайте и не бойтесь! Защищайте свое время для &quot;Вашего дела&quot; и Вы не выгорите, Вам хватит сил и мотивации, потому что Вы занимаетесь тем, что Вам действительно интересно, даже если большинство окружающих Вас коллег относится к этому иначе!</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">21-2. Лучшие врачи выбирают науку</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Что первично - врач становится хорошим клиницистом благодаря науке, или хорошие клиницисты тянутся к науке?</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">В 2019 году канадские исследователи нашли способ это проверить. Они использовали базы данных системы медицинского страхования и оценили результаты работы врачей, добровольно согласившихся участвовать в исследовании по улучшению качества медицинской помощи. В контрольную группу вошли те врачи, которые отказались от участия.</p>
@@ -217,7 +299,7 @@
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Почему это важно для нас</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Тяга к научной работе - это маркер определённого мышления. Врач, который хочет участвовать в исследовании, уже задаёт вопросы, ищет обратную связь и готов менять свою практику.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Если вы читаете этот канал - Вы, скорее всего, из этой группы, с чем я Вас и поздравляю!</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">21-3. Зачем Вы здесь?</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">В 2014 году психологи Патрик Хилл и Николас Туриано задали вопрос: влияет ли ощущение цели в жизни на её продолжительность?</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Они взяли данные национального исследования MIDUS - 6163 участника, за которыми наблюдали 14 лет. У каждого в начале измерили ощущение осмысленности жизни - насколько человек чувствует, что его деятельность имеет направление и цель.</p>
@@ -233,24 +315,24 @@
           <span style="font-size:0.8rem; font-weight:600; color:var(--brand); background:var(--border-light); padding:4px 12px; border-radius:4px;">Неделя 20</span>
           <h3 style="font-size:1.3rem; margin:0;">Проспективные и ретроспективные исследования</h3>
         </div>
-        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Неделя 20. Проспективные и ретроспективные исследования</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Ранее мы разобрали виды обсервационных дизайнов и устройство РКИ. Но есть ещё одна ось классификации - временная. Исследование может двигаться вперёд от причины к следствию или назад от болезни к возможной причине. Это проспективный и ретроспективный подходы.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">На этой юбилейной 🎉 неделе разберём - в чём разница между ними, когда какой подход уместен, и почему это не конкурирующие, а взаимодополняющие методы исследования.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">20-1. Проспективное исследование</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Проспективное исследование начинается сегодня и движется в будущее. Исследователь набирает участников, фиксирует их характеристики и затем наблюдает - что с ними произойдёт.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Главное преимущество - данные собираются по заранее определённому протоколу. Какие показатели измерять, как часто, какими методами - всё решено до начала. Это снижает риск пропущенных данных и систематических ошибок.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Ограничение проспективного дизайна - время и ресурсы. Чтобы дождаться результатов, иногда нужны годы или десятилетия наблюдения. Для редких заболеваний этот подход непрактичен - можно годами наблюдать тысячи людей и не набрать достаточно случаев.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Любые интервенционные исследования по определению проспективны. Когортные  исследования могут быть как проспективными, так и ретроспективными.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">20-2. Ретроспективное исследование: взгляд назад</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Ретроспективное исследование движется в обратном направлении. Исследователь начинает с исхода - болезнь уже манифестировала, осложнение наступило, операция произведена - и смотрит назад, в прошлое пациента.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Зачем? Потому что не всегда можно ждать. Если заболевание редкое, проспективное наблюдение потребует огромной выборки и многолетнего ожидания. Ретроспективный дизайн позволяет найти ответ быстрее и дешевле - данные уже существуют.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Источники данных - медицинские карты, регистры, базы данных, страховые записи. Исследователь извлекает информацию о факторах, которые предшествовали болезни, и сравнивает с контрольной группой.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Главное ограничение - качество данных. Медицинская карта писалась не для исследования, а для лечения. Нужный показатель может быть не измерен, измерен не тем методом или не записан вовсе. Кроме того, когда пациент вспоминает прошлое, он может невольно искажать воспоминания - это систематическая ошибка воспоминания (recall bias).</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Исследования &quot;случай-контроль&quot; по определению ретроспективны. Когортные исследования также могут иметь ретроспективный дизайн. Клиническое наблюдение (Case report) и серии случаев (Case series), о которых мы пока еще не говорили подробно на нашем канале, также, как правило, ретроспективны.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">20-3. Гибридные подходы</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">В предыдущих сообщениях этой недели мы разобрали проспективный и ретроспективный подходы в их классической форме. На практике исследования иногда совмещают оба направления.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Первый (частый) пример - ретроспективная когорта с проспективно собранными данными. Представьте: крупная клиника 15 лет ведёт электронный регистр всех пациентов с сердечной недостаточностью. Данные вносились проспективно - при каждом визите, по стандартному протоколу. Но исследователь обращается к этому регистру сегодня, формулирует гипотезу и анализирует уже накопленные данные. Формально это ретроспективное исследование, но качество данных приближается к проспективному - потому что информация собиралась систематически, а не извлекалась из разрозненных медицинских карт.</p>
@@ -262,19 +344,19 @@
           <span style="font-size:0.8rem; font-weight:600; color:var(--brand); background:var(--border-light); padding:4px 12px; border-radius:4px;">Неделя 19</span>
           <h3 style="font-size:1.3rem; margin:0;">Ослепление и плацебо</h3>
         </div>
-        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Ослепление и плацебо</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">На прошлой неделе мы разобрали, как устроено РКИ: рандомизация, контрольная группа, измеряемый исход. Но даже идеальная рандомизация не защищает от одной проблемы - участник знает, что получает новый препарат, и это само по себе меняет результат.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">На этой неделе поговорим про ослепление и плацебо. Как сделать так, чтобы ни пациент, ни врач не влияли на результат своими ожиданиями.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">📱 Читать в VK</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">19-1. Ослепление: зачем скрывать лечение от пациента и врача</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Представьте: пациент знает, что получает новый препарат. Он чувствует себя лучше - потому что верит в лечение. Врач знает, что пациент в экспериментальной группе. Он внимательнее фиксирует улучшения, мягче оценивает побочные эффекты. Результат искажён - не препаратом, а ожиданиями.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Ослепление (маскирование) - это способ устранить такое влияние. Участники исследования не знают, кто какое лечение получает.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">В литературе вы встретите названия статей вроде &quot;Простое слепое ...&quot; (не знает пациент) и &quot;Двойное слепое...&quot; (не знают ни пациент, ни врач). Звучит просто - но на практике всё сложнее.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">В 2001 году Devereaux с коллегами провели исследование, в рамках которого опросили 91 врача на тему проведения РКИ и ослепления. Результат получился невероятный: были выявлены 17 разных определений, а точнее интерпретаций, термина &quot;двойное ослепление&quot;. Одни подразумевали маскирование пациента и врача. Другие - пациента и статистика. Третьи - свою комбинацию.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Поэтому современные стандарты отчётности (CONSORT) рекомендуют вместо &quot;двойное слепое исследование&quot; прямо указывать: кто именно был ослеплён - пациенты, лечащие врачи, оценщики исходов, статистики.  В заголовках статей &quot;двойное слепое&quot; по-прежнему встречается, но в разделе Методы авторы обязаны расшифровать, что за этим стоит.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">19-2. Плацебо: почему пустышка работает</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">В 1955 году анестезиолог Генри Бичер опубликовал статью &quot;The Powerful Placebo&quot;. Проанализировав 15 исследований с участием более 1000 пациентов, он обнаружил что примерно 35% из них получали удовлетворительное облегчение от плацебо.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Hróbjartsson и Gøtzsche в 2001опубликовали систематический обзор, в котором показали, что для объективных исходов плацебо практически бессильно. Но для субъективных - боль, тошнота, тревога - эффект реален и измерим, хотя и не так выражен, как в классической работе Бичера.</p>
@@ -284,14 +366,14 @@
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">- психологические (разговор, внушение, консультация),</p>
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">- физические (имитация манипуляций, включая операции).</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">В 2002 году Moseley с коллегами провели необычное плацебо-контролируемое исследование: 180 пациентов с остеоартрозом колена рандомизировали в три группы - артроскопический дебридмент, лаваж или плацебо-операция - разрезы кожи без вмешательства на суставе. Результат: никакой разницы между реальной и мнимой операцией!</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">19-1. Ослепление: зачем скрывать лечение от пациента и врача</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Представьте: пациент знает, что получает новый препарат. Он чувствует себя лучше - потому что верит в лечение. Врач знает, что пациент в экспериментальной группе. Он внимательнее фиксирует улучшения, мягче оценивает побочные эффекты. Результат искажён - не препаратом, а ожиданиями.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Ослепление (маскирование) - это способ устранить такое влияние. Участники исследования не знают, кто какое лечение получает.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">В литературе вы встретите названия статей вроде &quot;Простое слепое ...&quot; (не знает пациент) и &quot;Двойное слепое...&quot; (не знают ни пациент, ни врач). Звучит просто - но на практике всё сложнее.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">В 2001 году Devereaux с коллегами провели исследование, в рамках которого опросили 91 врача на тему проведения РКИ и ослепления. Результат получился невероятный: были выявлены 17 разных определений, а точнее интерпретаций, термина &quot;двойное ослепление&quot;. Одни подразумевали маскирование пациента и врача. Другие - пациента и статистика. Третьи - свою комбинацию.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Поэтому современные стандарты отчётности (CONSORT) рекомендуют вместо &quot;двойное слепое исследование&quot; прямо указывать: кто именно был ослеплён - пациенты, лечащие врачи, оценщики исходов, статистики.  В заголовках статей &quot;двойное слепое&quot; по-прежнему встречается, но в разделе Методы авторы обязаны расшифровать, что за этим стоит.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">19-2. Плацебо: почему пустышка работает</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">В 1955 году анестезиолог Генри Бичер опубликовал статью &quot;The Powerful Placebo&quot;. Проанализировав 15 исследований с участием более 1000 пациентов, он обнаружил что примерно 35% из них получали удовлетворительное облегчение от плацебо.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Hróbjartsson и Gøtzsche в 2001опубликовали систематический обзор, в котором показали, что для объективных исходов плацебо практически бессильно. Но для субъективных - боль, тошнота, тревога - эффект реален и измерим, хотя и не так выражен, как в классической работе Бичера.</p>
@@ -301,7 +383,7 @@
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">- психологические (разговор, внушение, консультация),</p>
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">- физические (имитация манипуляций, включая операции).</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">В 2002 году Moseley с коллегами провели необычное плацебо-контролируемое исследование: 180 пациентов с остеоартрозом колена рандомизировали в три группы - артроскопический дебридмент, лаваж или плацебо-операция - разрезы кожи без вмешательства на суставе. Результат: никакой разницы между реальной и мнимой операцией!</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">19-3. Когда ослепление невозможно</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Не каждое исследование можно ослепить. Хирургическую операцию сложно замаскировать под плацебо - хотя Moseley это и сделал, но это было простое слепое исследование, хирурги были в курсе происходящего. Физиотерапию, диету, психотерапию - тем более. В таких случаях проводят открытые исследования, где все знают, кто какое лечение получает.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Но открытый дизайн - это не приговор. Это просто другой дизайн. Существуют различные способы минимизировать влияние ожиданий.</p>
@@ -315,17 +397,17 @@
           <span style="font-size:0.8rem; font-weight:600; color:var(--brand); background:var(--border-light); padding:4px 12px; border-radius:4px;">Неделя 18</span>
           <h3 style="font-size:1.3rem; margin:0;">Рандомизация и РКИ</h3>
         </div>
-        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Рандомизация и рандомизированное контролируемое исследование.</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Коллеги, на прошлых неделях мы разобрали обсервационные дизайны - когортные, «случай-контроль», поперечные.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Теперь переходим на другую сторону: интервенционные исследования. Начинаем с главного инструмента - рандомизации и РКИ.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">📱 Читать в VK</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">18-1. Рандомизация: зачем нужна случайность</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">В 1747 году корабельный врач Джеймс Линд отобрал 12 матросов с цингой и распределил их по парам, назначив каждой разное лечение. Выздоровели только те, кто получил апельсины и лимоны. Это одно из первых контролируемых клинических сравнений - но ещё не рандомизация: Линд сам решал, кто что получит.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Проблема в том, что когда исследователь распределяет пациентов по группам, он - осознанно или нет - может отправить более тяжёлых в одну группу, а более лёгких в другую. Это систематическая ошибка отбора, и она искажает результат.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Рандомизация решает эту проблему. Участники распределяются по группам случайным образом - по таблице случайных чисел или компьютерному алгоритму. Исследователь не влияет на распределение. В результате группы выравниваются по всем факторам - как известным (возраст, пол, тяжесть заболевания), так и неизвестным. Чем больше выборка, тем надёжнее этот баланс.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">18-2. РКИ: как устроено рандомизированное контролируемое исследование</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">РКИ - рандомизированное контролируемое исследование - считается стандартом оценки эффективности лечения. Разберём, из чего оно состоит.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Первый элемент - рандомизация (случайное распределение по группам). При этом, рандомизация бывает разной:</p>
@@ -335,7 +417,7 @@
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Второй элемент - контрольная группа. Экспериментальную группу (получает новое лечение) всегда сравнивают с контрольной. Контроль бывает трёх типов: плацебо, стандартная терапия (активный компаратор) или отсутствие лечения. Выбор зависит от этики: если доказанное лечение существует, сравнивать с плацебо, как правило, недопустимо - пациент не должен оставаться без помощи.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Третий элемент - измеряемый исход. Что именно мы оцениваем: смертность, частоту осложнений, качество жизни? Без чётко определённой конечной точки результаты РКИ невозможно интерпретировать.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Классический пример - ISIS-292833-4): более 17 000 пациентов с инфарктом миокарда. Результат - аспирин снижает сосудистую смертность на 23%. После публикации назначение аспирина при инфаркте стало стандартом во всём мире.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">18-3. Сила и границы РКИ</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">РКИ даёт самые убедительные доказательства эффективности лечения. Но у этого дизайна есть границы, о которых важно помнить.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Первая - этика. Нельзя рандомизировать пациента в группу, которая заведомо хуже. Если препарат уже доказал эффективность, оставлять контрольную группу без лечения неэтично. Именно поэтому ряд важных клинических вопросов невозможно решить с помощью РКИ - и тогда на помощь приходят обсервационные дизайны, которые мы разобрали на прошлых неделях.</p>
@@ -350,7 +432,7 @@
           <span style="font-size:0.8rem; font-weight:600; color:var(--brand); background:var(--border-light); padding:4px 12px; border-radius:4px;">Неделя 17</span>
           <h3 style="font-size:1.3rem; margin:0;">Виды обсервационных исследований</h3>
         </div>
-        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Виды обсервационных исследований</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Коллеги, на прошлой неделе мы разобрали разницу между обсервационными и интервенционными исследованиями.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">На этой неделе углубляемся в три основных дизайна обсервационных исследований:</p>
@@ -358,7 +440,7 @@
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">- «случай-контроль»,</p>
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">- поперечные.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">📱 Читать в VK</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">17-1. Когортное исследование</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Представьте: вы набираете группу пациентов с гипертонией, часть из них курит, часть - нет. Наблюдаете пять лет и сравниваете, у кого чаще случились сердечно-сосудистые осложнения. Это и есть когортное исследование - вы следите за группой людей (когортой) во времени и смотрите, как воздействие влияет на исход.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Идея: сначала определяем, кто подвергается фактору риска, а кто нет. Потом ждём и фиксируем, что произойдёт. Направление - от причины к следствию, вперёд по времени.</p>
@@ -366,7 +448,7 @@
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Ограничения серьёзные. Когорту нужно наблюдать годами, иногда десятилетиями. Часть участников теряется - переезжает, меняет контакты, выбывает. А для редких заболеваний когорта потребует тысячи участников, чтобы набрать достаточно случаев.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Классический пример - Framingham Heart Study61752-3), стартовавшее в 1948 году. Наблюдение за факторами риска сердечно-сосудистых заболеваний жителей одного американского города продолжается уже более 75 лет.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">P.S.: описана классическая проспективная когорта - наблюдение вперёд по времени. Но подобные исследования бывают и ретроспективными. Подробно разберём это на следующей неделе.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">17-2. Исследование «случай-контроль»</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Допустим, вы заметили необычный рост редкой опухоли печени у молодых женщин. Набирать когорту и ждать десять лет - невозможно: болезнь слишком редкая. Выход - пойти от обратного.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Вы берёте группу пациенток с этой опухолью (случаи) и группу похожих женщин без неё (контроли). Затем смотрите в прошлое: чем отличалась их жизнь? Что они принимали, чем болели, где работали? Именно так в 1970-х обнаружили92594-4) возможную связь между оральными контрацептивами и аденомой печени.</p>
@@ -386,26 +468,26 @@
           <span style="font-size:0.8rem; font-weight:600; color:var(--brand); background:var(--border-light); padding:4px 12px; border-radius:4px;">Неделя 16</span>
           <h3 style="font-size:1.3rem; margin:0;">Обсервационные и интервенционные исследования</h3>
         </div>
-        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Обсервационные и интервенционные исследования.</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Коллеги, на прошлой неделе мы разобрали иерархию доказательств - от экспертного мнения до систематических обзоров. На этой неделе начинаем новый блок: подробно разбираем типы исследований (ранее на канале касался этой темы лишь мельком).</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Стартуем с главного водораздела - наблюдать (обсервационное исследование) или вмешиваться (интервенционное исследование)?</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">📱 Читать в VK</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">16-1. Обсервационные исследования</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Обсервационное исследование - это исследование, в котором автор регистрирует то, что происходит, не не меняя лечение и не распределяя пациентов по группам. Врач наблюдает, измеряет и анализирует - но не вмешивается в клинический процесс.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">По сути, каждый врач уже ведёт обсервационное исследование - просто не оформляет его как таковое. Вы сравниваете исходы двух групп пациентов, получавших разные схемы терапии. Отслеживаете, как меняются показатели после смены протокола. Анализируете, какие факторы влияют на длительность госпитализации. Всё это - наблюдение за клинической реальностью без попытки её изменить.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">К обсервационным относят когортные исследования, исследования «случай-контроль» и поперечные (одномоментные) исследования. Каждый из этих дизайнов мы подробно разберём в ближайших неделях.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Главное преимущество обсервационных исследований - они отражают реальную клиническую практику. Их можно проводить на больших выборках, они не требуют рандомизации и часто этически допустимы там, где эксперимент невозможен.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Главное ограничение - невозможность доказать причинно-следственную связь. Наблюдая, вы фиксируете ассоциации, но не можете исключить влияние скрытых факторов. Именно поэтому в иерархии доказательств обсервационные исследования стоят ниже рандомизированных контролируемых испытаний.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">16-2. Интервенционные исследования</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Интервенционное исследование отличается от обсервационного одним принципиальным действием: исследователь сам определяет, кто и какое лечение получит. Он не наблюдает за естественным ходом событий, а целенаправленно его меняет.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Самый распространённый пример - рандомизированное контролируемое исследование (РКИ). Пациентов случайным образом распределяют в группы: одна получает новый препарат или метод лечения, другая - стандартную терапию или плацебо. Исследователь контролирует вмешательство, сроки, дозы и условия наблюдения.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Почему это даёт более сильные доказательства? Когда вы наблюдаете, группы пациентов могут отличаться по десяткам параметров, о которых вы даже не знаете. Рандомизация решает эту проблему: случайное распределение выравнивает группы по всем факторам - и известным, и неизвестным. Если после этого в одной группе исход лучше, с высокой вероятностью причина - именно вмешательство.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Но интервенционное исследование - не синоним РКИ. К этой категории также относятся нерандомизированные эксперименты, кластерные исследования (когда рандомизируют не отдельных пациентов, а целые отделения или клиники) и перекрёстные дизайны (когда каждый пациент последовательно получает оба варианта лечения).</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Главное ограничение интервенционных исследований - не всякий вопрос можно изучить экспериментально. Нельзя случайным образом назначить пациентам курение, чтобы оценить его влияние на рак лёгкого. Нельзя отменить доказанно эффективное лечение ради чистоты контрольной группы. Этика задаёт границы эксперимента - и там, где эксперимент невозможен, обсервационные исследования остаются единственным инструментом.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">16-3. Наблюдать или вмешиваться: как выбрать дизайн</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Начинающий автор часто слышит: «РКИ - золотой стандарт». Из этого возникает иллюзия, что любое исследование нужно строить как эксперимент. На практике выбор дизайна определяется не амбициями, а тремя вопросами.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Первый - что вы хотите узнать? Если задача - оценить распространённость, описать течение болезни, выявить факторы риска - достаточно наблюдения. Если нужно показать, что конкретное вмешательство работает лучше альтернативы, - нужен эксперимент.</p>
@@ -413,7 +495,7 @@
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Третий - какие ресурсы доступны? РКИ требует финансирования, команды, одобрения этического комитета, времени на набор и наблюдение. Ретроспективный анализ данных, которые уже собраны в медицинских картах, обходится в разы дешевле и может дать результат быстрее.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Ошибка - считать обсервационные исследования второсортными. Хорошо спланированное когортное исследование на большой выборке ценнее, чем РКИ на 30 пациентах с сомнительной рандомизацией. Дизайн должен соответствовать вопросу, а не наоборот.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Правило простое: выбирайте самый сильный дизайн, который позволяют ваш вопрос, этика и ресурсы. Именно в такой последовательности.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">16-4. Резюме недели</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">На этой неделе мы разобрали главный водораздел в дизайне исследований: наблюдать или вмешиваться.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Обсервационное исследование - исследователь регистрирует данные, не меняя лечение и не распределяя пациентов по группам.</p>
@@ -430,7 +512,7 @@
           <span style="font-size:0.8rem; font-weight:600; color:var(--brand); background:var(--border-light); padding:4px 12px; border-radius:4px;">Неделя 15</span>
           <h3 style="font-size:1.3rem; margin:0;">Доказательная медицина</h3>
         </div>
-        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Доказательная медицина, уровни и иерархия доказательств.</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Коллеги, продолжаем серию «Азбука медицинской науки». До сих пор мы разбирали внутреннюю архитектуру научной работы: вопрос, гипотезу, цель, задачи, актуальность, новизну, объект и предмет. Всё это каркас исследования, определяющий его логику.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">На этой неделе переходим к обсуждению того, как устроена система доказательств, на которую любое исследование опирается и в которую встраивается.</p>
@@ -481,11 +563,11 @@
           <span style="font-size:0.8rem; font-weight:600; color:var(--brand); background:var(--border-light); padding:4px 12px; border-radius:4px;">Неделя 14</span>
           <h3 style="font-size:1.3rem; margin:0;">Объект и предмет исследования</h3>
         </div>
-        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Объект и предмет исследования.</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Коллеги, на этой неделе разберём объект и предмет исследования. Эти понятия неотъемлемы как инструмент научного мышления: они помогают удерживать границы работы, не смешивать уровни рассуждений и сохранять согласованность между темой, целью, задачами, методами и выводами.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Даже если вы не выносите эти формулировки отдельно в тексте вашей статьи, логика «объект–предмет» всё равно должна присутствовать в хорошем исследовании.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Объект исследования</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Объект исследования - это то, к чему относится работа в целом на самом широком уровне. В медицинских исследованиях объектом обычно выступают клиническая популяция, заболевание, клинический процесс, этап оказания помощи или организация медицинской помощи. Объект отвечает на вопрос, в каком клиническом контексте находится исследование и о какой группе или процессе идёт речь.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Прикладной смысл объекта для автора состоит в фиксации границ. Объект задаёт, что относится к исследованию, а что находится за его пределами. Когда объект определён чётко, проще удерживать масштаб, не расползаться на соседние диагнозы и подгруппы, не превращать введение в обзор «про всё, что знаю» и не пытаться ответить сразу на несколько разных вопросов.</p>
@@ -495,7 +577,7 @@
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">- диагностика и лечение внебольничной пневмонии в условиях многопрофильного стационара;</p>
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">- организация оказания помощи пациентам с инсультом в региональной сосудистой сети.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">В среду поговорим о предмете исследования.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Предмет исследования</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Предмет исследования - это конкретный фокус внутри объекта. Это то, что именно изучается в выбранном клиническом контексте: характеристика, взаимосвязь, эффект вмешательства, диагностическая точность теста, прогностический фактор, исход или модель. Предмет отвечает на вопрос, какой аспект объекта находится в центре анализа.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Прикладной смысл предмета для автора в том, что он превращает общий контур исследования в конкретный исследовательский фокус. Предмет помогает не путать тему и содержание работы. Тема может звучать широко, но предмет всегда конкретнее и ближе к данным. Именно предмет обычно определяет, какие переменные будут собираться и какие исходы станут центральными.</p>
@@ -504,7 +586,7 @@
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">- влияние выбранной стратегии лечения на частоту послеоперационных осложнений после коронарного шунтирования;</p>
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">- диагностическая значимость маркеров воспаления и данных лучевой диагностики при внебольничной пневмонии;</p>
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">- влияние организационных решений на летальность при инсульте.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Логическая структура научного исследования</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Научный процесс можно представить как систему, где каждый элемент отвечает за свою функцию. Если одно звено расплывается, дальше начинает “плыть” всё исследование. На данный момент на канале мы разобрали девять ключевых понятий научного процесса. Позвольте собрать их воедино, чтобы у вас сложилась единая картина, и мы могли двигаться дальше.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Сначала задаётся область, внутри которой вообще ведётся работа. Это объект исследования. Он фиксирует клинический контекст: какая популяция пациентов, какой процесс, какая часть медицинской помощи. Следующий уровень внутри объекта это предмет исследования. Предмет задаёт фокус анализа: что именно в этой популяции или процессе изучается, какой эффект, связь, исход или диагностический показатель.</p>
@@ -519,32 +601,32 @@
           <span style="font-size:0.8rem; font-weight:600; color:var(--brand); background:var(--border-light); padding:4px 12px; border-radius:4px;">Неделя 13</span>
           <h3 style="font-size:1.3rem; margin:0;">Актуальность и научная новизна</h3>
         </div>
-        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Цель и задачи исследования</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Коллеги, продолжаем серию «Азбука медицинской науки». На прошлой неделе мы разобрали научный вопрос и гипотезу - то, с чего начинается любая осмысленная научная работа.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">На этой неделе поговорим о следующем логическом шаге: цели и задачах исследования.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Это те элементы, которые превращают абстрактный интерес в структурированную научную деятельность и задают внутреннюю логику всей работы.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">[12-2] Задачи исследования</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Задачи исследования - это логически связанные шаги, с помощью которых достигается цель. Они описывают, какие именно аспекты необходимо последовательно рассмотреть, чтобы прийти к заявленному результату. В отличие от цели, задач может быть несколько, и каждая из них отвечает за отдельный фрагмент научной логики.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">С научной точки зрения задачи выполняют роль мостов между целью и методами. Через задачи становится понятно, почему выбран именно такой дизайн исследования, какие данные собираются и какие анализы проводятся. Хорошо сформулированные задачи позволяют читателю заранее увидеть структуру исследования, ещё до знакомства с разделами «Материалы и методы» и «Результаты».</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Принципиально важно, что задачи не должны выходить за рамки цели. Если задачи охватывают более широкий круг вопросов, чем заявленная цель, возникает логическое несоответствие. Задачи должны быть соразмерны цели и подчиняться ей, а не существовать как самостоятельные цели.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Если в научных статьях мы, как правило, декларируем только цель исследования, то в диссертации необходимо раскрыть как цель, так и задачи.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">[12-3] Связь цели и задач исследования</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Цель и задачи исследования образуют иерархическую структуру. Цель задаёт общее направление научной работы, а задачи конкретизируют путь к этому направлению. При корректной постановке каждая задача вносит вклад в достижение цели, и совокупность задач полностью её покрывает.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Эта связь имеет практическое значение для оценки качества научной работы. Если результаты исследования не соотносятся с задачами, а задачи - с целью, доверие к работе снижается независимо от качества данных. Напротив, логически связанная система «вопрос - цель - задачи» делает исследование прозрачным и предсказуемым для читателя.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">С концептуальной точки зрения цель и задачи выполняют ещё одну функцию. Они ограничивают исследование, защищая его от расползания и избыточных интерпретаций. Чётко заданные цель и задачи позволяют автору ясно понимать, на какие вопросы он отвечает, а какие сознательно оставляет за рамками данной работы.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Актуальность, научная новизна и практическая значимость исследования</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Коллеги, продолжаем серию «Азбука медицинской науки». Ранее мы уже разобрали, как формируются научный вопрос, гипотеза, цель и задачи исследования - внутренний каркас любой научной работы.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">На этой неделе поговорим о том, как исследование соотносится с внешним контекстом: почему оно вообще нужно сейчас, чем отличается от уже опубликованного и какую пользу может принести практике. Речь пойдёт об актуальности, научной новизне и практической значимости!</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Актуальность исследования</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Актуальность исследования отражает, почему рассматриваемая проблема важна именно в данный момент. Она связывает научную работу с текущим состоянием медицины, клинической практики и накопленных знаний. По сути, актуальность отвечает на вопрос, почему исследование заслуживает внимания здесь и сейчас, а не в абстрактном будущем.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">С научной точки зрения актуальность не равна общей значимости темы. Формулировки о «высокой распространённости заболевания» или «большом социальном бремени» сами по себе ещё не делают исследование актуальным. Актуальность возникает там, где существует конкретный пробел, противоречие или нерешённый вопрос, имеющий значение для клинических решений, диагностики или понимания механизмов.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Корректно сформулированная актуальность задаёт контекст всей работы. Она помогает читателю понять, из какого научного поля возникает исследование и какие проблемы оно призвано осветить. Без этого контекста даже методологически безупречная работа может восприниматься как изолированная и слабо связанная с реальными потребностями медицины.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Научная новизна</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Научная новизна описывает, чем данное исследование отличается от уже существующих работ. Она фиксирует вклад автора в расширение знаний, а не повторение известных фактов. Новизна не обязательно означает радикально новый метод или открытие; чаще речь идёт о новом ракурсе, уточнении, сопоставлении или применении известных подходов в другой клинической ситуации.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Важно понимать, что новизна определяется не намерением автора, а состоянием литературы. То, что для исследователя является новым, может давно быть описано в других публикациях. Поэтому научная новизна всегда соотносится с тем, что уже известно, и формулируется через отличие от предыдущих данных, а не через субъективную оценку оригинальности.</p>
@@ -556,27 +638,27 @@
           <span style="font-size:0.8rem; font-weight:600; color:var(--brand); background:var(--border-light); padding:4px 12px; border-radius:4px;">Неделя 12</span>
           <h3 style="font-size:1.3rem; margin:0;">Цель и задачи исследования</h3>
         </div>
-        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Цель и задачи исследования</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Коллеги, продолжаем серию «Азбука медицинской науки». На прошлой неделе мы разобрали научный вопрос и гипотезу - то, с чего начинается любая осмысленная научная работа.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">На этой неделе поговорим о следующем логическом шаге: цели и задачах исследования.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Это те элементы, которые превращают абстрактный интерес в структурированную научную деятельность и задают внутреннюю логику всей работы.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">[12-1] Цель исследования</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Цель исследования - это формулировка того, ради чего проводится научная работа. Она отвечает на вопрос, какой результат автор намерен получить в рамках обозначенного научного вопроса. В отличие от гипотезы, цель не содержит предположения и не описывает ожидаемый эффект, а фиксирует направление и смысл исследования.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">С методологической точки зрения цель должна быть единой и сквозной. В корректно спланированном исследовании цель одна, даже если работа включает несколько анализов или аспектов. Цель связывает между собой научный вопрос, дизайн исследования, выбор данных и последующие выводы. Если цель сформулирована расплывчато, исследование теряет фокус, а его результаты становятся трудными для интерпретации.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Цель и задачи исследования</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Коллеги, продолжаем серию «Азбука медицинской науки». На прошлой неделе мы разобрали научный вопрос и гипотезу - то, с чего начинается любая осмысленная научная работа.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">На этой неделе поговорим о следующем логическом шаге: цели и задачах исследования.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Это те элементы, которые превращают абстрактный интерес в структурированную научную деятельность и задают внутреннюю логику всей работы.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">[12-2] Задачи исследования</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Задачи исследования - это логически связанные шаги, с помощью которых достигается цель. Они описывают, какие именно аспекты необходимо последовательно рассмотреть, чтобы прийти к заявленному результату. В отличие от цели, задач может быть несколько, и каждая из них отвечает за отдельный фрагмент научной логики.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">С научной точки зрения задачи выполняют роль мостов между целью и методами. Через задачи становится понятно, почему выбран именно такой дизайн исследования, какие данные собираются и какие анализы проводятся. Хорошо сформулированные задачи позволяют читателю заранее увидеть структуру исследования, ещё до знакомства с разделами «Материалы и методы» и «Результаты».</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Принципиально важно, что задачи не должны выходить за рамки цели. Если задачи охватывают более широкий круг вопросов, чем заявленная цель, возникает логическое несоответствие. Задачи должны быть соразмерны цели и подчиняться ей, а не существовать как самостоятельные цели.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Если в научных статьях мы, как правило, декларируем только цель исследования, то в диссертации необходимо раскрыть как цель, так и задачи.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">[12-3] Связь цели и задач исследования</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Цель и задачи исследования образуют иерархическую структуру. Цель задаёт общее направление научной работы, а задачи конкретизируют путь к этому направлению. При корректной постановке каждая задача вносит вклад в достижение цели, и совокупность задач полностью её покрывает.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Эта связь имеет практическое значение для оценки качества научной работы. Если результаты исследования не соотносятся с задачами, а задачи - с целью, доверие к работе снижается независимо от качества данных. Напротив, логически связанная система «вопрос - цель - задачи» делает исследование прозрачным и предсказуемым для читателя.</p>
@@ -588,18 +670,18 @@
           <span style="font-size:0.8rem; font-weight:600; color:var(--brand); background:var(--border-light); padding:4px 12px; border-radius:4px;">Неделя 11</span>
           <h3 style="font-size:1.3rem; margin:0;">Основы научного процесса</h3>
         </div>
-        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Коллеги, из личного общения и из обратной связи от участников моего обучающего курса стало очевидно, что на канале важно регулярно возвращаться к самым базовым понятиям научного процесса в медицине.</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Поэтому мы начинаем серию «Азбука медицинской науки». В ней будем последовательно разбирать ключевые термины и понятия, без которых невозможно уверенно ориентироваться в научной работе.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">На этой неделе поговорим о научном вопросе и гипотезе. Это отправные точки любой научной работы, от которых зависит логика исследования и интерпретация результатов.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Научный вопрос в медицине это формулировка того, на какой конкретный аспект клинической реальности мы хотим получить ответ. Он отличается от темы тем, что тема обозначает область интереса, а вопрос задаёт границы и смысл будущего исследования. По сути, научный вопрос описывает, что именно мы считаем неизвестным или спорным и что хотим уточнить с опорой на данные.</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">С точки зрения научной логики вопрос должен быть конкретным, проверяемым и ограниченным, то есть привязанным к определённой популяции, вмешательству или экспозиции и исходу. Вопрос может быть описательным (что происходит и как часто), сравнительным (есть ли различия между группами), прогностическим (что предсказывает исход), диагностическим (насколько точен тест) или причинным (как вмешательство влияет на исход). Формулировка вопроса задаёт не только содержание, но и дизайн исследования, потому что разные вопросы требуют разных способов получения доказательств.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Гипотеза - это предполагаемый ответ на научный вопрос, сформулированный заранее. Она не является утверждением истинности и не равна выводам исследования. Это рабочее предположение, которое может подтвердиться, частично подтвердиться или быть опровергнуто. В медицинской науке гипотеза выполняет роль ориентира: она показывает, какого эффекта ожидают авторы и почему считают его правдоподобным.</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Существуют разные виды гипотез. Сравнительная гипотеза предполагает различие между группами. Направленная гипотеза задаёт предполагаемое направление эффекта (например, больше или меньше). Нулевая гипотеза обозначает отсутствие эффекта или различий и часто используется как формальная основа статистической проверки. Бывает также гипотеза о связи факторов, когда исследование направлено на оценку ассоциации между характеристикой и исходом.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Качественная гипотеза должна быть согласована с научным вопросом и понятийным уровнем исследования. То есть она должна говорить о том же объекте, тех же группах и тех же исходах, которые подразумеваются вопросом. Если гипотеза формулируется шире вопроса или про другое, это обычно сигнал, что вопрос сформулирован неясно или в исследовании смешаны разные цели.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Научный вопрос и гипотеза связаны как запрос и предполагаемый ответ. Вопрос определяет, что именно мы хотим выяснить и в каких границах, а гипотеза фиксирует, какой результат ожидается в рамках этих границ. Поэтому гипотеза без вопроса обычно превращается в общую мысль, а вопрос без гипотезы остаётся лишь описательным намерением без ясного направления интерпретации.</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Эта связка важна для качества исследования, потому что она влияет на выбор дизайна и на способ чтения результатов. Когда вопрос и гипотеза согласованы, читателю легче понять, почему использован именно такой дизайн, какие данные важны, и что именно считается подтверждением или опровержением предположения. Когда они не согласованы, исследование выглядит как набор разрозненных наблюдений, даже если данные хорошие.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">В практическом смысле научный вопрос и гипотеза выполняют ещё одну функцию. Они защищают научную работу от произвольных выводов, потому что заранее фиксируют смысл исследования. Это не делает исследование “предвзятым”, а делает его структурированным: сначала формулируется что мы хотим узнать, затем что мы предполагаем увидеть, и только потом анализируются данные.</p>
@@ -610,11 +692,11 @@
           <span style="font-size:0.8rem; font-weight:600; color:var(--brand); background:var(--border-light); padding:4px 12px; border-radius:4px;">Неделя 10</span>
           <h3 style="font-size:1.3rem; margin:0;">Онлайн-ресурсы исследователя</h3>
         </div>
-        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Онлайн-ресурсы исследователя</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Коллеги, доброе утро! Начинается первая юбилейная неделя на канале 🎉 Предлагаю сделать её максимально предметной. Поговорим о необходимых онлайн-ресурсах для проведения исследований и написания научных статей.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Сообщения по теме выйдут сегодня, в среду и пятницу.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Российские научные онлайн-ресурсы</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">1.  eLIBRARY.ru (РИНЦ) - крупнейший российский агрегатор научных публикаций и цитирований. Удобен для поиска русскоязычных статей, просмотра профилей авторов, списка работ и метаданных публикации.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">2. КиберЛенинка - открытая библиотека научных статей, быстрый способ получить полный текст.</p>
@@ -623,7 +705,7 @@
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">5. Антиплагиат - тот самый инструмент для проверки заимствований и ИИ-контента перед подачей статьи или диссертации.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Поделитесь, пожалуйста, в комментариях, какой у Вас опыт работы с этими ресурсами, чем пользуетесь еще в контексте российской науки?</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">В среду поговорим о международных ресурсах.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Международные ресурсы для поиска литературы и полных текстов</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">1. PubMed - главная база по биомедицине, &quot;наше всё&quot;.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">2. PubMed Central (PMC) - архив полнотекстовых статей с бесплатным доступом.</p>
@@ -632,7 +714,7 @@
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">5. Sci-Hub - пиратский (простите) ресурс для доступа к полным текстам.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">А как Вы еще ищете зарубежную литературу?</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">В пятницу поговорим о инфраструктурных международных ресурсах для науки и публикаций.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Инфраструктурные ресурсы для науки</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">1. Zotero - менеджер литературы: хранение PDF, структурирование по папкам, автоматические ссылки в Word. Это то, что избавляет от ручного оформления списка литературы. Таких менеджеров множество. Я пользуюсь этим, очень удобно и полностью бесплатно.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">2. ORCID - идентификатор автора, который связывает ваши публикации между системами.</p>
@@ -649,7 +731,7 @@
           <span style="font-size:0.8rem; font-weight:600; color:var(--brand); background:var(--border-light); padding:4px 12px; border-radius:4px;">Неделя 9</span>
           <h3 style="font-size:1.3rem; margin:0;">Виды публикаций</h3>
         </div>
-        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">- &quot;Виды публикаций&quot;</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Друзья, чтобы не утонуть в ленте статей, полезно знать вид/тип публикации. Он сразу подсказывает, что за данные внутри и какую “силу” обычно имеет вывод.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">На этой неделе подробно пройдемся по всем видам публикаций, которые условно можно разделить на три блока:</p>
@@ -657,7 +739,7 @@
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">2) Обобщение знаний (Synthesis) - разберем в среду.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">3) Короткие коммуникации (Short communications) - ознакомимся в пятницу.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Английские аналоги названий использую умышленно, для расширения кругозора.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Виды публикаций (часть 1): исследования (Research)</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">1.  Оригинальная статья (Original Article / Original Research). Базовый формат, где авторы публикуют собственные данные и показывают полный цикл исследования: постановку вопроса, методы, результаты и выводы. Обычно именно в оригинальных статьях впервые появляются новые клинические наблюдения в систематизированном виде. Это основной “строительный материал” медицинской науки.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">2.  Клиническое исследование (Clinical Study). Общее название для исследований, которые опираются на данные пациентов или клинической практики, но не обязательно включают активное вмешательство. В эту категорию могут попадать как наблюдательные работы, так и исследования, где сравнивают подходы в реальной клинике без строгой рандомизации. Проще говоря, это “про пациентов и клинические исходы”, а не про эксперимент в лаборатории.</p>
@@ -668,13 +750,13 @@
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">7.  Исследование случай-контроль (Case-Control Study). Наблюдательное исследование, где сначала формируют группу с исходом (случаи) и без исхода (контроли), а затем сравнивают, чем эти группы отличались по факторам в прошлом. Это удобно, когда исход редкий или ждать его в когорте слишком долго. При этом критично качество подбора контролей и данных о прошлых воздействиях.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">8.  Поперечное исследование (Cross-Sectional Study). Наблюдательное исследование “срезом” в один момент времени, когда данные собирают одновременно для всех переменных. Такой дизайн хорошо показывает распространённость состояния и связи между признаками, помогает описать “как устроена популяция сейчас”. Обычно он не позволяет уверенно говорить о причинности, потому что не задаёт последовательность “причина → следствие”.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">9.  Диагностическое исследование точности (Diagnostic Accuracy Study). Исследование, где оценивают, насколько диагностический тест способен отличать пациентов с состоянием от пациентов без состояния, обычно по сравнению с эталонным методом. Цель такого формата не “лечить”, а измерить точность диагностического инструмента и понять, где он полезен, а где даёт ошибки. Этот тип особенно важен при внедрении новых тестов, шкал, алгоритмов и технологий.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">&quot;Как написать хорошую медицинскую статью&quot;</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Друзья, 09 января (пт) в 15-00 (Мск) я проведу вебинар на тему &quot;Как написать хорошую медицинскую статью&quot;, приуроченный к грядущему интенсиву &quot;Обзорная статья за 4 недели&quot;.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">На вебинаре поговорим о том, зачем нужно заниматься наукой, зачем публиковать научные статьи, и как это делать правильно и легко. И главное, участники вебинара получат маршрутную карту, как грамотно выстроить свой научный путь.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Участие в вебинаре бесплатное, количество мест ограничено. Для регистрации перейдите, пожалуйста, по ссылке.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Начало года - это отличное время для творческого поиска и планирования. На нашем канале &quot;Индекс Хирша&quot; вектор планирования очевиден - это Ваша научная деятельность, Ваша научная карьера. Сейчас, в праздничные недели, самое время погрузиться в мир науки, перед тем, как Вас погрузят рабочие будни. Предлагаю зарядиться научным позитивом, который Вы пронесете через весь рабочий год. До встречи на вебинаре!</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Виды публикаций (часть 2): обобщение знаний (Synthesis)</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">1.  Обзор (Review). Обобщающая статья, которая помогает собрать картину по теме и понять основные линии доказательств. По уровню строгости обзоры сильно различаются: от экспертного синтеза до более “описательного” пересказа литературы. Хороший обзор полезен тем, что экономит время читателю и даёт структуру области.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">2.  Систематический обзор (Systematic Review). Обобщающая работа, где авторы заранее задают вопрос, правила поиска, критерии отбора и затем последовательно собирают все подходящие исследования. Ценность формата в прозрачности: читатель видит, что включили, что исключили и почему. Такой подход снижает риск выборочного подбора литературы под заранее желаемый вывод.</p>
@@ -682,7 +764,7 @@
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">4.  Клинические рекомендации (Guideline / Practice Guideline). Документ, который переводит доказательства в практические решения: что рекомендовать, кому, в каких ситуациях, с какой силой рекомендации. Обычно такие документы готовят экспертные группы по строгой методике, потому что на них ориентируются клиницисты, организации и регуляторы. По сути, это “итоговая карта действий” для практики.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">5.  Протокол исследования (Study Protocol) / протокол клинического испытания (Clinical Trial Protocol). Публикация, где описан план исследования до получения результатов: дизайн, популяция, исходы, методы анализа, организационные моменты. Протокол помогает фиксировать “правила игры” заранее и повышает доверие к итоговым выводам. Читателю полезно видеть, что исследование не было перестроено задним числом под результат.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">6.  Протокол систематического обзора (Systematic Review Protocol). Публикация, где заранее фиксируют вопрос обзора, критерии включения, стратегию поиска, подход к извлечению данных и анализу. Такой протокол помогает сделать будущий обзор более воспроизводимым и защищает от ситуации “в процессе отбора поменяли правила”. Для читателя и рецензента это маркер дисциплины и прозрачности.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Как написать хорошую медицинскую статью</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Друзья, напоминаю, что завтра 09 января в 15-00 я провожу вебинар на тему &quot;Как написать хорошую медицинскую статью&quot; - поделюсь опытом и расскажу, как научиться публиковаться правильно и легко, и как превратить публикационный процесс в отлаженную систему.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Участие в вебинаре бесплатное, количество мест ограничено. Для регистрации перейдите, пожалуйста, по ссылке.</p>
@@ -691,37 +773,37 @@
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">- о канале,</p>
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">- обо мне.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">До встречи на вебинаре!</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Виды публикаций (часть 3): короткие коммуникации (Short communications)</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">1.  Клинический случай (Case Report / Case Reports). Описание одного пациента, где ценность в необычном течении, редком осложнении, нестандартной диагностике или важном клиническом уроке. Это формат не для “доказательства эффективности”, а для передачи практического опыта и сигналов сообществу. Хороший клинический случай читается быстро и запоминается одним выводом.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">2.  Серия случаев (Case Series). Публикация нескольких похожих клинических наблюдений, объединённых одной темой или подходом. Серия случаев часто используется, когда проводить большое исследование пока невозможно, но важно зафиксировать повторяющийся клинический паттерн. Это формат раннего накопления опыта, который иногда становится отправной точкой для дальнейших исследований.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">3.  Редакционная статья (Editorial). Короткий текст с позицией редакции или приглашённого эксперта, который объясняет значение новой работы или обсуждает важную проблему области. Это не “нейтральный обзор”, а интерпретация и акцент: почему это важно, где риски, что дальше. Редакционные часто задают тон дискуссии вокруг темы.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">4.  Комментарий (Comment). Краткий текст, который обсуждает опубликованную статью или спорный вопрос, помогает читателю увидеть сильные и слабые стороны, альтернативные трактовки, ограничения. Комментарий может поддерживать выводы, критиковать их или уточнять границы применимости. Это жанр научного диалога “по существу”.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">5.  Письмо в редакцию (Letter). Формат для короткой реакции на публикацию: уточнение, критика, дополнение, вопрос к авторам, иногда сообщение небольшого наблюдения. Письма ценят за скорость и конкретику, они часто быстро читаются и могут влиять на обсуждение статьи. В хороших письмах минимум эмоций и максимум ясного аргумента.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Коллеги, добрый день! Начинаем вебинар через два часа. Присоединяйтесь.</h4>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Коллеги, добрый вечер! У нас много новых участников, позвольте познакомиться с Вами. Ниже несколько опросов.</h4>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">[ Опрос : Ваш медицинский опыт ]</h4>
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">- Студент</p>
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">- Ординатор</p>
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">- Специалист</p>
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">- Другое</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">[ Опрос : Есть ли у Вас статьи, где Вы первый автор? ]</h4>
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">- Да, есть (можете делиться ссылками в комментариях, с удовольствием почитаем)</p>
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">- Есть только соавторство (тоже делитесь в комментариях)</p>
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">- Пока нет статей, но очень хочется</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">[ Опрос : Есть ли у Вас ученая степень? ]</h4>
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">- Пока нет</p>
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">- К.м.н.</p>
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">- Д.м.н.</p>
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">- Другое</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Коллеги! Делимся ссылкой на запись сегодняшнего вебинара https://vkvideo.ru/video-28728559_456239111</h4>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Коллеги, здравствуйте!</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Давайте обсудим, что сегодня больше всего беспокоит молодых врачей, которые хотят публиковаться (и защищаться). С каким проблемами Вы сталкиваетесь чаще всего? Где спрятаны самые большие «камни преткновения»?</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Чтобы проблему решить, нужно ее сперва обозначить. Мне интересны Ваши мнения и истории.</p>
@@ -732,9 +814,9 @@
           <span style="font-size:0.8rem; font-weight:600; color:var(--brand); background:var(--border-light); padding:4px 12px; border-radius:4px;">Неделя 8</span>
           <h3 style="font-size:1.3rem; margin:0;">Праздничная неделя</h3>
         </div>
-        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Праздничная неделя</h4>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Научные итоги года 🎉</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Друзья, мы вплотную подходим к завершению года и к праздничным дням!</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Конец года - это тот самый момент, когда полезно остановиться и оглянуться назад.</p>
@@ -744,17 +826,17 @@
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Сохраните ваши &quot;итоги 2025го&quot; у себя в заметках. Если 2026й проведем вместе на канале, то через год вы с удивлением обнаружите, какой оказывается путь можно было пройти в науке за 12 месяцев!)</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Делитесь итогами в комментариях, с удовольствием порадуемся за каждого.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">С Наступающим!</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Дорогие друзья!</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Поздравляю каждого с Наступающим Новым 2026 Годом!</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Желаю личных и профессиональных успехов, неиссякаемого вдохновения, полезных и интересных идей, легких публикаций, добрых и быстрых рецензентов, хороших и проактивных соавторов, мудрых и грамотных научных руководителей, и побольше, побольше цитирований!!!😊🚀🍾🎉🎉🎉🥳</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">[ Опрос : Друзья, с Новым Годом! Предлагаю каждому спланировать свой научный год уже сейчас! Какое количество статей вы планируете написать в 2026 году как первый автор? ]</h4>
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">- 1-3</p>
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">- 4-6</p>
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">- 7-12</p>
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">- &gt;12</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Обзорная статья за 4 недели 🎓</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Объявление:</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Друзья, я набираю первую группу на 4-недельный обучающий интенсив по написанию обзорной статьи.</p>
@@ -784,7 +866,7 @@
           <span style="font-size:0.8rem; font-weight:600; color:var(--brand); background:var(--border-light); padding:4px 12px; border-radius:4px;">Неделя 7</span>
           <h3 style="font-size:1.3rem; margin:0;">Что мы читаем и зачем</h3>
         </div>
-        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Анонс недели:</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Тема седьмой недели: «Индекс Хирша, импакт-фактор и другие метрики»</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Доброе утро, коллеги!</p>
@@ -807,7 +889,7 @@
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Для самого же врача-ученого метрики не должны становиться ни кнутом, ни пряником. Не стоит падать духом, если ваши числа пока малы, и уж тем более не стоит гнаться за показателями в ущерб реальной работе. Наукометрия – это язык системы, на котором она «разговаривает» с нами. Его надо понимать, чтобы ориентироваться в правилах игры, но нельзя позволять цифрам управлять всеми решениями.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Итого: Наукометрия – не враг и не панацея, а просто набор условных единиц. Врачам важно знать эти правила игры: они влияют на карьеру в науке, дают ориентиры для развития, но при этом не определяют вашей ценности как врача и человека. Дальше в течение недели мы рассмотрим конкретные показатели и научимся относиться к ним с долей скепсиса и здорового смысла.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Среда</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Как измеряют вклад отдельных ученых: индекс Хирша и компания</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Индекс Хирша простыми словами.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Индекс Хирша (h-index) – пожалуй, самый известный личный наукометрический показатель ученого. Он задуман так, чтобы сразу учесть и количество публикаций, и их цитируемость.</p>
@@ -815,7 +897,7 @@
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Впервые его предложил физик Хорхе Хирш в 2005 году для упрощения оценки научного вклада.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Что нам говорит h-index формально? По сути, что у ученого есть определенное количество непроходных работ. Индекс 10 означает, что 10 работ получили широкое признание (каждая не менее 10 цитирований). Индекс 1 – что хотя бы одну работу кто-то процитировал. Высокий индекс часто трактуют как признак того, что совокупный вклад автора в науку велик и его работы востребованы в сообществе.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">На практике же читать h-index нужно осторожно: он не различает, где именно цитируют (в топ-журнале или в студенческих трудах), и не учитывает качество самих цитат. Это грубый индикатор, который удобен для сравнений в общем плане, но не заменяет экспертной оценки.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">&quot;Индекс индексу рознь&quot;.</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Прелесть (и проклятие) h-index в том, что считать его может любая база данных. В итоге у одного и того же автора могут быть разные значения индекса в разных системах. Основные площадки, на которых врач-исследователь может узнать свой h-index:</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">•  РИНЦ (РSCI, eLibrary.ru): российская база научного цитирования. Учитывает публикации в отечественных журналах, сборниках трудов, иногда диссертациях. Особенность: фокус на русскоязычных публикациях, много местных журналов. Часто h-index в РИНЦ выше, потому что учитываются цитаты, которые не видны международным базам.</p>
@@ -823,13 +905,13 @@
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">•  Web of Science: другая международная база (Clarivate). Методы похожи на Scopus – учитываются журналы из Web of Science Core Collection. Значение h обычно близко к Scopus (иногда чуть отличается, в зависимости от пересечения списков журналов).</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">•  Google Scholar: свободно доступный поисковик научных публикаций от Google. Он может считать h-index по всему, что найдет в интернете – включая статьи, препринты, тезисы. Особенность: самые щедрые подсчеты, но наименее «официозные». Google часто показывает более высокий индекс, но в академических кругах приоритет отдают Scopus/WoS.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">При оценке всегда уточняют, про какой именно h-index идет речь (обычно указывают базу). Для российских реалий РИНЦ-индекс тоже учитывается, но при выходе на международную арену важнее показатели именно Scopus.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Почему нельзя сравнивать кардиохирурга и биоинформатика.</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Индекс Хирша сильно зависит от области науки. В разных дисциплинах приняты разные масштабы публикаций и цитирования. Медики и биологи, как правило, публикуются много (большие коллективы, актуальные прикладные темы) – у них средние h-index выше, чем, например, у математиков или гуманитариев.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Например, для биологии и медицины h-index ~15–25 можно считать уже неплохим средним уровнем, а свыше 40 – очень высоким достижением. В то же время в гуманитарных науках индекс 15 – уже выдающийся результат, а новички часто имеют h=1–3.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Поэтому сравнение «у кого индекс больше» имеет смысл только внутри одной области. Даже внутри медицины: у эпидемиолога, работающего с популяционными исследованиями, цитат может быть больше, чем у узкого хирурга, спасающего жизни в операционной (просто потому, что исследования разного типа). Наукометрия не учитывает эти нюансы.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Специалисты рекомендуют сравнивать показатели только между коллегами схожего профиля и примерно одного стажа. Помните, что h-index во многом отражает длину вашей карьеры: молодой врач физически не может иметь h=20, сколько бы он ни публиковался, нужно время, чтобы накопились цитирования.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Что практическому врачу делать с h-index.</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Если вы заняты в основном клинической работой, не стоит превращаться в раба показателей. Тем не менее, знать свой h-index и понимать его значение полезно.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Минимум, который стоит знать:</p>
@@ -840,21 +922,21 @@
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Вывод: Индекс Хирша – полезный ориентир, с помощью которого система оценивает научную активность. Зная о нем, вы понимаете правила игры: что ценится регулярная публикация результатов, которые читают и цитируют. Однако для вас лично это всего лишь число. H-index – не приговор и не фетиш, а индикатор, у которого есть свои ограничения. Воспринимайте его спокойно: растет – хорошо, не растет – тоже не страшно, если вы набираетесь опыта и делаете важную работу. В конечном счете, ваши знания и умения как врача определяются не индексом, а практикой и реальными достижениями.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">(В пятницу обсудим, как измеряют журналы – от импакт-фактора до квартилей, и что все эти загадочные аббревиатуры значат для врача.)</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Пятница</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Коллеги, добрый день! ☀️</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Ну что, сегодня очередная порция информации по теме недели &quot;Наукометрия&quot;.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">👉 Для новых подписчиков - обычно сообщения на канале гораздо короче, на этой неделе решил опробовать почти энциклопедичный формат, но это больше исключение, чем правило.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Раскроем тему полностью, раз уж я за неё взялся.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Итак, сегодня говорим о журнальных метриках.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">К началу недели 7 &quot;Наукометрия&quot;</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Как измеряют журналы: импакт-фактор, квартиль, РИНЦ</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Импакт-фактор: за что его все так любят. Если ученых меряют индексом Хирша, то журналы – импакт-фактором (IF). Этот показатель создан для оценки влияния научного журнала. Идея простая: посчитать, сколько раз в среднем цитируют статьи из данного журнала. Классический импакт-фактор от Web of Science считается за 2 года: берется количество цитирований, которые в текущем году получили статьи, вышедшие в этом журнале за предыдущие 2 года, и делится на число этих статей. Например, IF = 3.0 означает, что в среднем каждую статью журнала цитировали 3 раза за два года после публикации. Формально импакт-фактор отражает среднюю цитируемость статей журнала.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Почему все про него говорят? Потому что исторически IF стал символом престижа журнала. Журналы с самым высоким импакт-фактором – как правило, всемирно известные издания (Nature, Lancet, New England Journal of Medicine и т.д.), где выходят самые прорывные работы. Высокий IF привлекает авторов: публикация в журнале с IF&gt;10 считается огромным успехом. IF – это количественный критерий “качества” журнала, на который можно ссылаться.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Однако важно помнить: импакт-фактор – мера журнала, а не отдельной статьи. Отличная статья в журнале с низким IF не становится плохой от этого, и наоборот, не каждая статья в журнале Q1 – шедевр. Несмотря на это, репутация журнала часто ассоциируется с его импакт-фактором, поэтому вокруг него такой ажиотаж.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Квартиль журнала (Q1–Q4): что это и откуда берется. Квартиль – это еще один способ ранжировать журналы по значимости. Все журналы в каждой научной категории выстраиваются по какому-либо показателю (часто по тому же импакт-фактору или близкому индексу) и делятся на четыре группы. Q1 – верхние 25% списка (самые цитируемые, влиятельные журналы), Q2 – следующий квартиль (25–50% позиций), Q3 – 50–75%, Q4 – нижняя четверть рейтинга. Например, если в категории “Кардиология” 100 журналов, то ~25 журналов с самыми высокими показателями войдут в Q1, а 25 самых слабых – в Q4.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Зачем нужны квартильные рейтинги? Они позволяют быстро понять уровень журнала. Если журнал в Q1 – значит, он в числе топ-изданий по цитируемости в своей области; Q4 – значит, ближе к низу списка. Это облегчает работу экспертов: вместо точного IF можно указать квартиль как обобщение.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Российские метрики журналов</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">В российской наукометрии прямо сейчас проходит активное реформирование, утверждаются новые перечни, а уже имеющиеся находятся под угрозой &quot;упразднения&quot;. Тем не менее, вот актуальная сводка на декабрь 2025:</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">1) Перечень научных журналов ВАК и категории К1–К3</p>
@@ -884,21 +966,21 @@
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">ЕГПНИ служит единым официальным перечнем для оценки публикационной активности учёных и организаций.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">• ЕГПНИ должен в перспективе заменить/объединить Перечень ВАК и Белый список и стать единственным и «базовым» официальным инструментом оценки журналов.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Воскресенье</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Коллеги, добрый день! ☀️</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Ну что, сегодня очередная порция информации по теме недели &quot;Наукометрия&quot;.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">👉 Для новых подписчиков - обычно сообщения на канале гораздо короче, на этой неделе решил опробовать почти энциклопедичный формат, но это больше исключение, чем правило.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Раскроем тему полностью, раз уж я за неё взялся.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Итак, сегодня говорим о журнальных метриках.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">К началу недели 7 &quot;Наукометрия&quot;</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Как измеряют журналы: импакт-фактор, квартиль, РИНЦ</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Импакт-фактор: за что его все так любят. Если ученых меряют индексом Хирша, то журналы – импакт-фактором (IF). Этот показатель создан для оценки влияния научного журнала. Идея простая: посчитать, сколько раз в среднем цитируют статьи из данного журнала. Классический импакт-фактор от Web of Science считается за 2 года: берется количество цитирований, которые в текущем году получили статьи, вышедшие в этом журнале за предыдущие 2 года, и делится на число этих статей. Например, IF = 3.0 означает, что в среднем каждую статью журнала цитировали 3 раза за два года после публикации. Формально импакт-фактор отражает среднюю цитируемость статей журнала.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Почему все про него говорят? Потому что исторически IF стал символом престижа журнала. Журналы с самым высоким импакт-фактором – как правило, всемирно известные издания (Nature, Lancet, New England Journal of Medicine и т.д.), где выходят самые прорывные работы. Высокий IF привлекает авторов: публикация в журнале с IF&gt;10 считается огромным успехом. IF – это количественный критерий “качества” журнала, на который можно ссылаться.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Однако важно помнить: импакт-фактор – мера журнала, а не отдельной статьи. Отличная статья в журнале с низким IF не становится плохой от этого, и наоборот, не каждая статья в журнале Q1 – шедевр. Несмотря на это, репутация журнала часто ассоциируется с его импакт-фактором, поэтому вокруг него такой ажиотаж.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Квартиль журнала (Q1–Q4): что это и откуда берется. Квартиль – это еще один способ ранжировать журналы по значимости. Все журналы в каждой научной категории выстраиваются по какому-либо показателю (часто по тому же импакт-фактору или близкому индексу) и делятся на четыре группы. Q1 – верхние 25% списка (самые цитируемые, влиятельные журналы), Q2 – следующий квартиль (25–50% позиций), Q3 – 50–75%, Q4 – нижняя четверть рейтинга. Например, если в категории “Кардиология” 100 журналов, то ~25 журналов с самыми высокими показателями войдут в Q1, а 25 самых слабых – в Q4.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Зачем нужны квартильные рейтинги? Они позволяют быстро понять уровень журнала. Если журнал в Q1 – значит, он в числе топ-изданий по цитируемости в своей области; Q4 – значит, ближе к низу списка. Это облегчает работу экспертов: вместо точного IF можно указать квартиль как обобщение.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Итоги недели &quot;Наукометрия&quot;.</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Седьмая неделя на канале была перегруженной на контент, поэтому сегодня очень короткое интерактивное воскресное резюме.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">На неделе мы с вами:</p>
@@ -913,7 +995,7 @@
           <span style="font-size:0.8rem; font-weight:600; color:var(--brand); background:var(--border-light); padding:4px 12px; border-radius:4px;">Неделя 6</span>
           <h3 style="font-size:1.3rem; margin:0;">Как пережить рецензентов</h3>
         </div>
-        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Тема недели: «Как пережить рецензентов и доработки».</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Доброе утро!</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Тема недели:</p>
@@ -952,7 +1034,7 @@
           <span style="font-size:0.8rem; font-weight:600; color:var(--brand); background:var(--border-light); padding:4px 12px; border-radius:4px;">Неделя 5</span>
           <h3 style="font-size:1.3rem; margin:0;">Нет времени писать</h3>
         </div>
-        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Неделя “Нет времени писать” начинается ⏳</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Всем знакомо: работа, дежурства, семья, отчёты — и мысль «писать статью» вызывает только усталую усмешку.</p>
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">- На этой неделе говорим о том, как врачи реально находят время на текст.</p>
@@ -962,29 +1044,29 @@
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Завтра начнём с главной отговорки — «у меня нет времени».</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">😄, если &quot;это про меня&quot;</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">😒, если &quot;не смешно&quot;</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Распорядок дня vs &quot;Нет времени&quot; ⏰</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Фраза «я круглосуточно занят» звучит честно — пока не начинаешь смотреть на день под лупой. Оказывается, в расписании врача живут странные существа: случайные переписки, бессмысленный скролл, зависание между приёмами. Они съедают ровно те 20–30 минут, которых «не хватает на статью».</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Попробуйте один день прожить с блокнотом или заметкой: каждые 15–30 минут фиксировать, чем вы занимались. Вечером посмотрите на карту дня. Обычно всплывают как минимум три небольших окна, которые можно тихо «перекроить» под текст. Одно такое окно закрепите официально: только документ, без мессенджеров и почты, с таймером на 20 минут.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Секрет в том, что писать вы начинаете не тогда, когда появится лишний час, а когда перестаёте раздавать свои маленькие слоты всему подряд.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Миф о большом часовом окне ✂️</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Многим кажется, что серьёзная статья требует идеальной сцены: полдня тишины, выключенный телефон и пустой список дел. В реальности у врача такие дни случаются чрезвычайно редко.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Гораздо честнее признать: наша реальность — это кусочки по 20–30 минут. В них можно не «написать статью», но продвинуться на один шаг: набросать план раздела, подобрать пару источников, переписать 5 предложений. Список таких микрозадач лучше держать под рукой — тогда, оказавшись в свободном окне, вы не будете тратить время на размышления «с чего начать». Просто берёте один пункт и делаете.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Статьи редко рождаются в одном длинном заходе. Чаще — в десятках коротких подходов, которые вы не отменили.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Когда наука кажется конкурентом личной жизни 👨‍👩‍👧</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Внутренний конфликт знаком многим: если я сяду писать, значит, заберу время у детей, супруги/супруга. На этом месте научное письмо автоматически оказывается «последним в очереди» и проигрывает всегда.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Важно увидеть масштаб задачи. Речь не про полный второй рабочий день, а про 2–3 небольших сессии в неделю. Эти сессии можно встроить в «менее болезненное» время: тут можно много чего посоветовать, но на практике это или &quot;когда все еще спят&quot;, или &quot;когда все уже спят&quot;.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">С близкими имеет смысл говорить об этом прямо: «у меня есть проект с дедлайном, мне нужно работать по 30–40 минут несколько раз в неделю». Часто достаточно небольшой перестройки быта или обмена: сегодня вы пишете, завтра берёте на себя лишнее дело по дому.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Научный текст не обязан становиться угрозой семье. Он может быть ещё одной взрослой договорённостью — чёткой и ограниченной по времени.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Об этой &quot;патовой&quot; ситуации редко говорят, но от неё еще никто не ушел 😊 Если об этом задуматься и попробовать найти честное решение, то риск выгореть и/или столкнуться с непониманием дома будет точно ниже.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Как перфекционизм тихо крадёт часы</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Иногда документ не открыт не потому, что нет времени, а потому что в голове живёт условие: если уже писать, то идеально. В такой логике любая короткая и «сырая» сессия кажется бессмысленной, а несовершенный абзац - почти преступлением против науки.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Помогает смена правила игры. В начале работы договоритесь с собой: сегодняшняя цель - сделать черновик, а не шедевр. Один небольшой блок, 150–200 слов, пусть даже с шероховатостями. &quot;Грязный&quot; текст всё равно лучше пустой страницы: его можно будет править в отдельную сессию, которая посвящена только редактуре. Так вы отделяете этап «набрасываю мысли» от этапа «делаю красиво» - и перестаёте требовать от себя всё и сразу.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Перфекционизм полезен на финише, но на старте он только блокирует движение. Пусть сегодня победит не идеальность, а факт, что документ наконец открыт.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Небольшой чек-лист недели «Нет времени»</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">За несколько дней мы посмотрели на дефицит времени под разными углами: рассыпанный день, ожидание идеального окна, конфликт с семьёй, перфекционизм. Всё это складывается в один практический сценарий.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Полезно задать себе четыре вопроса:</p>
@@ -993,7 +1075,7 @@
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">- Обсуждал(а) ли я с близкими свой план так, чтобы он был понятен и ограничен?</p>
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">- Появился ли на этой неделе хотя бы один абзац, который раньше существовал только в голове?</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Если хотя бы на два пункта вы отвечаете «да» - неделя уже сработала.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Воскресная пресса по теме недели</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Когда врач говорит «у меня нет времени на статьи», легко почувствовать личную вину: значит, плохо организовался, недостаточно старался. Но если посмотреть шире, окажется, что это типичная картина для медицинского сообщества в разных странах.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">В короткой статье Journal of the Association of Physicians of India авторы разбирают, почему доктора неохотно пишут для научных журналов. Среди причин - хроническая перегрузка клиникой, отсутствие нормального обучения научному письму, страх отказа и критики, ощущение, что публикация не меняет ничего в реальной работе. Всё это делает текст «дополнительной роскошью», а не частью профессии.</p>
@@ -1006,7 +1088,7 @@
           <span style="font-size:0.8rem; font-weight:600; color:var(--brand); background:var(--border-light); padding:4px 12px; border-radius:4px;">Неделя 4</span>
           <h3 style="font-size:1.3rem; margin:0;">Академическое письмо</h3>
         </div>
-        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">ПОНЕДЕЛЬНИК — Анонс недели</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Научный текст никогда не пишет один человек 🧩</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Самая большая ошибка автора — думать, что текст обязан быть идеальным «с первого захода». На самом деле сильные статьи рождаются там, где есть честная редактура и качественная обратная связь.</p>
@@ -1099,14 +1181,14 @@
           <span style="font-size:0.8rem; font-weight:600; color:var(--brand); background:var(--border-light); padding:4px 12px; border-radius:4px;">Неделя 3</span>
           <h3 style="font-size:1.3rem; margin:0;">Научная коммуникация</h3>
         </div>
-        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Почему в науке побеждают не самые умные, а самые коммуникабельные 🔗</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">В науке легко оказаться в вакууме: пишешь текст, борешься с сомнениями, ошибаешься — и всё это в одиночку.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Но правда в том, что сильные авторы всегда окружены сильными людьми: наставниками, коллегами, теми, кто уточняет, спорит, направляет.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">На этой неделе говорим о научном нетворкинге — как строить связи без навязчивости, без «выпрашивания» и без ощущения, что кому-то мешаешь. О том, как находить людей, с которыми ваш текст станет лучше, а вы — увереннее.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Завтра — первый шаг. И он меняет всё.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">🤔 есть над чем подумать</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Точный вопрос — половина вашей репутации ❓</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Самое страшное — писать старшему коллеге и думать: «А вдруг глупость спрошу?» Но хороший научный вопрос — это не про знания, а про уважение к чужому времени.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Попробуйте так:</p>
@@ -1117,7 +1199,7 @@
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">В науке охотно отвечают тем, кто думает сам — и только потом спрашивает.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">А какой вопрос вы давно не решались задать? И кому? Может быть, сегодня — тот самый день для действия?</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">🤔 есть над чем подумать</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Один в исследовании — не геройство, а тормоз 🧬</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Тысячи врачей пишут статьи в режиме «сам-себе-наставник». И попадают в ловушку: ошибки повторяются, мысль не растёт, а работа идёт медленнее, чем могла бы.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Попробуйте иначе:</p>
@@ -1128,7 +1210,7 @@
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Наука — это «мы».</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">А кому вы можете сегодня помочь одним маленьким действием?</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">🤔 есть над чем подумать</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Нетворкинг — это обмен маленькими пользами, а не сделки 🤝</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Многие боятся писать коллегам, чтобы не выглядеть человеком, который «пришёл за пользой». Но научное общение держится не на услугах, а на тёплых микро-контактах.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Работает так:</p>
@@ -1138,7 +1220,7 @@
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">— не исчезайте после помощи — связь строится «до» и «после», а не «в момент».</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">А что вы можете дать, прежде чем попросить?</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">🤔 есть над чем подумать</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Контакт умирает не от расстояния, а от тишины 🌱</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Вы познакомились на конференции / в чате / на стажировке… и через месяц вы уже чужие люди. В науке так происходит постоянно.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Чтобы связь жила:</p>
@@ -1149,7 +1231,7 @@
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Нетворкинг — это не «польза». Это внимание.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Кому вы давно хотели написать, но откладывали? Пишите прямо сейчас.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">🤔 есть над чем подумать</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Научные связи: инструкция для тех, кто пока еще не полюбил «нетворкинг» 📘</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">На этой неделе вы увидели простую вещь:</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">нетворкинг — это не разговоры и не визитки. Это культура маленьких действий.</p>
@@ -1161,7 +1243,7 @@
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">— создайте свой круг из 3–5 людей — это ваш мозговой капитал.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">А завтра — кое-что важное, что поможет вам этот круг построить.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">🤔 заинтриговал</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Ваш научный круг начинается здесь 🌀</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Невозможно расти в науке, если вокруг — тишина. Нужны люди, с которыми можно обсудить рукопись, спорный вывод, формулировку цели или метод.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Поэтому мы запускаем открытый чат канала:</p>
@@ -1183,7 +1265,7 @@
           <span style="font-size:0.8rem; font-weight:600; color:var(--brand); background:var(--border-light); padding:4px 12px; border-radius:4px;">Неделя 2</span>
           <h3 style="font-size:1.3rem; margin:0;">Ясность сильнее сложности</h3>
         </div>
-        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">🧠 Тема недели: «Ясность сильнее сложности»</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">В научном письме до сих пор распространено заблуждение:</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">если текст звучит сложно, значит он умный.</p>
@@ -1193,7 +1275,7 @@
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">— без расшифровки,</p>
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">— без потери научной строгости.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Ясность — это профессиональная честность, а хороший текст — это внимание к читателю.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">✂️ Простой текст ≠ примитивный текст</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Главная ошибка авторов — стремление усложнять.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Вот плохой пример:</p>
@@ -1207,7 +1289,7 @@
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Простота — это конкретность.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Примитивность — это пустота.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Не путайте одно с другим.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">🌫 Как рассеять туман в тексте</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">«Туман» — это пассивные конструкции, канцелярит и абстрактные существительные, например:</p>
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">— было проведено,</p>
@@ -1236,7 +1318,7 @@
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">«Если убрать половину слов — мысль станет яснее или беднее?»</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">В 80% случаев — яснее.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Чистота текста начинается с честных глаголов.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">🎯 Как превращать разговорную мысль в академическую формулировку</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Если точная формулировка не даётся, почти всегда проблема не в языке — а в том, что мысль ещё не докручена.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Полезный приём — сначала сказать мысль вслух, как обычно объясняете коллеге. Но важно не остановиться на «коридорном» варианте — а перевести его в аккуратное академическое предложение.</p>
@@ -1254,7 +1336,7 @@
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">— точку сравнения,</p>
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">— критерий оценки.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Принцип: не заменять академический стиль «разговорным», а использовать разговорный этап как инструмент для прояснения мысли.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">💥 Короткие предложения — это профессионализм, а не упрощение</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Длинные фразы делают текст тяжёлым — читатель теряет нить, смысл расплывается.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Попробуйте правило:</p>
@@ -1266,7 +1348,7 @@
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Поэтому мы проанализировали…»</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Короткое предложение не делает текст детским —</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">оно делает его честным и точным.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">📚 Резюме недели «Ясность сильнее сложности»</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">На этой неделе мы обсудили следующее:</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">1. Сложный текст часто маскирует не глубину, а неясность.</p>
@@ -1277,7 +1359,7 @@
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">📌 Упражнение:</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Возьмите свой реальный абзац и сократите его на 30–50% (не меняя фактов). Вы удивитесь, что смысл станет только яснее.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">🤔 есть над чем подумать</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">📰 Новости научного письма</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Журнал Indian Journal of Radiology and Imaging опубликовал статью «Writing for Clarity: A Concise Guide for Scientific Writing and Tips for Selecting a Journal».</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Авторы напоминают: ясность — ключевой критерий качества научного текста.</p>
@@ -1304,13 +1386,13 @@
           <span style="font-size:0.8rem; font-weight:600; color:var(--brand); background:var(--border-light); padding:4px 12px; border-radius:4px;">Неделя 1</span>
           <h3 style="font-size:1.3rem; margin:0;">Писать — значит думать</h3>
         </div>
-        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+        <div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">🧠 Добро пожаловать в «Индекс Хирша»</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Здесь говорят о научном письме для врачей — просто, честно и без снобизма.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Мы разбираем, как превращать клинический опыт в статьи, как писать так, чтобы тебя читали, и как перестать бояться слова «публикация».</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Каждый день — один короткий пост: о науке, стиле, ошибках, структуре и смысле.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">📚 Если вы врач, ординатор или исследователь — этот канал для вас. Наука начинается с текста. А первый текст начинается с вас.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Текст как инструмент мышления</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Мы не пишем, потому что всё поняли.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Мы пишем, чтобы понять.</p>
@@ -1318,7 +1400,7 @@
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Когда она попадает на страницу, становится инструментом: её можно проверять, уточнять, улучшать.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Так работает наука — чёткая фиксация делает действие осмысленным.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Текст — это не отчёт. Это форма мышления в чистом виде.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Ясность сильнее сложности</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Сложный текст не делает вас умнее.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Он просто мешает вас понять.</p>
@@ -1327,13 +1409,13 @@
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Когда вы говорите ясно — вы думаете точно.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">А точность в науке важнее блеска.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Хороший стиль — это форма профессиональной дисциплины.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Структура — это не рамка, а инструмент.</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Она не ограничивает мысль, а удерживает её в фокусе — как зажим удерживает ткань, не позволяя ей сместиться.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Хорошая структура делает текст предсказуемым в лучшем смысле этого слова: читатель понимает, куда вы ведёте, почему этот абзац стоит здесь, и что должно случиться дальше.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">В медицине порядок действий спасает от хаоса. В тексте — тоже.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Структура — это форма уважения к смыслу. Она не украшение, а дисциплина.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Выводы первой недели: “Писать — значит думать”.</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">На этой неделе мы поговорили о том, что:</p>
             <p style="margin:4px 0 4px 16px; color:var(--text-light); font-size:0.92rem;">— ясность текста рождается из точности мысли;</p>
@@ -1343,7 +1425,7 @@
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Письмо — не внешняя форма, а внутренняя работа.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Выдержанная, спокойная, профессиональная.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Попробуйте на выходных одно упражнение: возьмите любой свой абзац и сделайте его короче, яснее и строже. Это маленькое действие лучше всего тренирует научный стиль.</p>
-          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:8px;">
+          </div><div style="margin-bottom:16px; padding:16px 20px; background:#fff; border:1px solid var(--border-light); border-radius:12px;">
             <h4 style="margin:20px 0 10px; font-size:1.05rem;">Новости научного письма</h4>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">Научный мир всё громче говорит о том, что публикаций становится слишком много — качество тонет в количестве.</p>
             <p style="color:var(--text-light); font-size:0.92rem; margin-bottom:10px;">По данным Web of Science, за 10 лет число статей выросло с 1,7 до 2,5 миллионов в год, и значительная часть работ остаётся практически незамеченной.</p>
@@ -1353,43 +1435,55 @@
           </div>
       </div>
         </div>
-      </div>
-    </div>
-  </section>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <h4>Индекс Хирша</h4>
-          <div class="footer-links">
-            <a href="education.html">Обучение</a><a href="club.html">Клуб</a>
-            <a href="consulting.html">Консалтинг</a><a href="blog.html">Блог</a><a href="resources.html">Ресурсы</a>
-          </div>
-        </div>
-        <div>
-          <h4>Контакты</h4>
-          <div class="footer-links">
-            <a href="https://t.me/+79854770449"><i class="fab fa-telegram" style="width:18px;"></i> Telegram</a>
-            <a href="https://wa.me/79854770449"><i class="fab fa-whatsapp" style="width:18px;"></i> WhatsApp</a>
-            <a href="mailto:zhigalovmd@yandex.ru"><i class="fas fa-envelope" style="width:18px;"></i> zhigalovmd@yandex.ru</a>
-          </div>
-        </div>
-        <div>
-          <h4>Соцсети</h4>
-          <div class="footer-links">
-            <a href="https://t.me/hirsch_index_school"><i class="fab fa-telegram" style="width:18px;"></i> Telegram-канал</a>
-            <a href="https://vk.com/club235429996" target="_blank"><i class="fab fa-vk" style="width:18px;"></i> ВКонтакте</a>
-            <a href="https://max.ru/join/TmlfyQ5T5BJu-iLZlOYbZolsFX2vrBDQ8t8jaKfz3P0" target="_blank"><i class="fas fa-comment-dots" style="width:18px;"></i> MAX</a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Индекс Хирша. Все права защищены.</span>
-        <span><a href="offer.html">Публичная оферта</a> · <a href="privacy.html">Политика конфиденциальности</a></span>
-      </div>
-    </div>
-  </footer>
-  <script>function toggleMobile(){document.getElementById('mobileMenu').classList.toggle('open');}</script>
-</body>
+        <!-- Footer -->
+        <footer>
+            <div class="w-100 pt-90 pb-50 position-relative hi-footer" style="background:#0f172a;">
+                <div class="container">
+                    <div class="row" style="gap:0;">
+                        <div class="col-md-6 col-lg-4" style="margin-bottom:30px;">
+                            <h4 style="font-family:'Playfair Display',serif;">Индекс Хирша</h4>
+                            <div class="hi-footer-links">
+                                <a href="education.html">Обучение</a>
+                                <a href="club.html">Клуб</a>
+                                <a href="consulting.html">Консалтинг</a>
+                                <a href="blog.html">Блог</a>
+                                <a href="resources.html">Ресурсы</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4" style="margin-bottom:30px;">
+                            <h4 style="font-family:'Playfair Display',serif;">Контакты</h4>
+                            <div class="hi-footer-links">
+                                <a href="https://t.me/+79854770449"><i class="fab fa-telegram" style="width:18px;"></i> Telegram</a>
+                                <a href="https://wa.me/79854770449"><i class="fab fa-whatsapp" style="width:18px;"></i> WhatsApp</a>
+                                <a href="mailto:zhigalovmd@yandex.ru"><i class="fas fa-envelope" style="width:18px;"></i> zhigalovmd@yandex.ru</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4" style="margin-bottom:30px;">
+                            <h4 style="font-family:'Playfair Display',serif;">Соцсети</h4>
+                            <div class="hi-footer-links">
+                                <a href="https://t.me/hirsch_index_school" target="_blank"><i class="fab fa-telegram" style="width:18px;"></i> Telegram-канал</a>
+                                <a href="https://vk.com/club235429996" target="_blank"><i class="fab fa-vk" style="width:18px;"></i> ВКонтакте</a>
+                                <a href="https://max.ru/join/TmlfyQ5T5BJu-iLZlOYbZolsFX2vrBDQ8t8jaKfz3P0" target="_blank"><i class="fas fa-comment-dots" style="width:18px;"></i> MAX</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hi-footer-bottom">
+                        <span>&copy; 2026 Индекс Хирша. Все права защищены.</span>
+                        <span><a href="offer.html">Публичная оферта</a> &middot; <a href="privacy.html">Политика конфиденциальности</a></span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/custom-scripts.js"></script>
+    </body>
 </html>
