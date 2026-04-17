@@ -1,277 +1,461 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Обучение — Индекс Хирша. Видеокурсы для врачей и исследователей: обзорная статья, дизайн исследования.">
-  <title>Обучение — Индекс Хирша</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Обучение — Индекс Хирша. Видеокурсы для врачей и исследователей: обзорная статья, дизайн исследования.">
+        <link rel="icon" href="assets/logo-main.jpg" sizes="35x35" type="image/jpeg">
+        <title>Обучение — Индекс Хирша</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    .page-hero {
-      padding: 130px 0 60px;
-      background: linear-gradient(135deg, #f8fafc, #eff6ff);
-      text-align: center;
-    }
-    .page-hero h1 { font-size: 2.75rem; margin-bottom: 16px; }
-    .page-hero p { font-size: 1.1rem; color: var(--text-light); max-width: 560px; margin: 0 auto; }
+        <link rel="stylesheet" href="assets/css/all.min.css">
+        <link rel="stylesheet" href="assets/css/flaticon.css">
+        <link rel="stylesheet" href="assets/css/animate.min.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
+        <link rel="stylesheet" href="assets/css/color-hirsch.css">
 
-    .course-card-lg {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 0;
-      background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg);
-      overflow: hidden; transition: 0.3s;
-    }
-    .course-card-lg:hover { box-shadow: var(--shadow-lg); }
+        <style>
+            body { font-family: 'Inter', sans-serif; }
+            h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
 
-    .course-card-visual {
-      padding: 48px; display: flex; flex-direction: column;
-      justify-content: center; align-items: center; text-align: center;
-    }
-    .course-card-visual.blue-bg {
-      background: linear-gradient(135deg, #eff6ff, #dbeafe);
-    }
-    .course-card-visual.teal-bg {
-      background: linear-gradient(135deg, #ecfdf5, #d1fae5);
-    }
-    .course-card-visual img {
-      width: 80px; height: 80px; border-radius: 16px; margin-bottom: 20px;
-    }
-    .course-card-visual .course-tag {
-      font-size: 0.75rem; font-weight: bold; text-transform: uppercase;
-      color: var(--brand); letter-spacing: 0.05em; margin-bottom: 8px;
-    }
-    .course-card-visual h3 {
-      font-size: 1.5rem; margin-bottom: 8px;
-    }
-    .course-card-visual .course-meta {
-      font-size: 0.85rem; color: var(--text-light);
-    }
+            /* Shared nav */
+            .hi-nav { position:fixed; top:0; left:0; right:0; height:70px; background:#fff; border-bottom:1px solid #e2e8f0; z-index:9999; display:flex; align-items:center; }
+            .hi-nav-inner { max-width:1150px; margin:0 auto; padding:0 20px; width:100%; display:flex; align-items:center; justify-content:space-between; }
+            .hi-nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+            .hi-nav-logo img { width:36px; height:36px; border-radius:6px; }
+            .logo-text-hi { font-family:'Playfair Display',serif; font-size:1.15rem; font-weight:bold; color:#3366CC; margin-left:10px; }
+            .hi-nav-menu { display:flex; align-items:center; gap:28px; list-style:none; margin:0; padding:0; }
+            .hi-nav-menu a { font-family:'Inter',sans-serif; font-size:0.9rem; font-weight:500; color:#475569; text-decoration:none; transition:color 0.2s; }
+            .hi-nav-menu a:hover, .hi-nav-menu a.active { color:#3366CC; }
+            .hi-nav-tg { display:inline-flex; align-items:center; gap:6px; background:#3366CC; color:#fff; padding:9px 20px; border-radius:8px; font-family:'Inter',sans-serif; font-size:0.85rem; font-weight:500; text-decoration:none; transition:background 0.2s; white-space:nowrap; }
+            .hi-nav-tg:hover { background:#2952a3; color:#fff; }
+            .hi-nav-right { display:flex; align-items:center; gap:28px; }
+            .hi-burger { display:none; background:none; border:none; font-size:1.5rem; color:#1e293b; cursor:pointer; }
+            .hi-mobile-menu { display:none; position:fixed; top:70px; left:0; right:0; background:#fff; border-bottom:1px solid #e2e8f0; padding:20px; z-index:9998; flex-direction:column; gap:16px; }
+            .hi-mobile-menu.open { display:flex; }
+            .hi-mobile-menu a { font-family:'Inter',sans-serif; font-size:1rem; font-weight:500; color:#1e293b; text-decoration:none; padding:8px 0; }
+            .hi-mobile-menu a:hover { color:#3366CC; }
+            @media (max-width:768px) { .hi-nav-menu { display:none; } .hi-burger { display:block; } }
 
-    .course-card-info {
-      padding: 40px;
-    }
-    .course-card-info p {
-      color: var(--text-light); font-size: 0.95rem; margin-bottom: 20px;
-    }
-    .course-features {
-      list-style: none; margin-bottom: 24px;
-    }
-    .course-features li {
-      padding: 6px 0; font-size: 0.9rem; color: var(--text-light);
-      display: flex; align-items: center; gap: 10px;
-    }
-    .course-features li i { color: var(--teal); font-size: 0.8rem; }
+            /* Page hero */
+            .hi-page-hero {
+                padding: 140px 0 70px;
+                background: linear-gradient(135deg, #f8fafc, #eff6ff);
+                text-align: center;
+            }
+            .hi-page-hero .hi-badge {
+                display: inline-block;
+                background: #eff6ff;
+                color: #3366CC;
+                font-size: 0.75rem;
+                font-weight: bold;
+                text-transform: uppercase;
+                padding: 6px 16px;
+                border-radius: 50px;
+                margin-bottom: 16px;
+                letter-spacing: 0.05em;
+                font-family: 'Inter', sans-serif;
+            }
+            .hi-page-hero h1 {
+                font-size: 2.75rem;
+                margin-bottom: 16px;
+                color: #0f172a;
+            }
+            .hi-page-hero p {
+                font-size: 1.1rem;
+                color: #475569;
+                max-width: 560px;
+                margin: 0 auto;
+                font-family: 'Inter', sans-serif;
+            }
 
-    .course-price-row {
-      display: flex; align-items: baseline; gap: 12px; margin-bottom: 20px;
-    }
-    .course-price-from {
-      font-size: 0.85rem; color: var(--text-muted);
-    }
-    .course-price-val {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.75rem; font-weight: 700;
-    }
+            /* Course cards */
+            .hi-course-card {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 0;
+                background: #fff;
+                border: 1px solid #e2e8f0;
+                border-radius: 16px;
+                overflow: hidden;
+                transition: 0.3s;
+            }
+            .hi-course-card:hover {
+                box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            }
+            .hi-course-visual {
+                padding: 48px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+            .hi-course-visual.teal { background: linear-gradient(135deg, #ecfdf5, #d1fae5); }
+            .hi-course-visual.blue { background: linear-gradient(135deg, #eff6ff, #dbeafe); }
+            .hi-course-visual img {
+                width: 80px;
+                height: 80px;
+                border-radius: 16px;
+                margin-bottom: 20px;
+            }
+            .hi-course-tag {
+                font-size: 0.75rem;
+                font-weight: bold;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                margin-bottom: 8px;
+                font-family: 'Inter', sans-serif;
+            }
+            .hi-course-visual h3 { font-size: 1.5rem; margin-bottom: 8px; }
+            .hi-course-meta {
+                font-size: 0.85rem;
+                color: #475569;
+                font-family: 'Inter', sans-serif;
+            }
+            .hi-course-info {
+                padding: 40px;
+                font-family: 'Inter', sans-serif;
+            }
+            .hi-course-info p {
+                color: #475569;
+                font-size: 0.95rem;
+                margin-bottom: 20px;
+                line-height: 1.6;
+            }
+            .hi-course-features {
+                list-style: none;
+                padding: 0;
+                margin-bottom: 24px;
+            }
+            .hi-course-features li {
+                padding: 6px 0;
+                font-size: 0.9rem;
+                color: #475569;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            .hi-course-features li i { color: #2BB5A0; font-size: 0.8rem; }
+            .hi-course-price {
+                display: flex;
+                align-items: baseline;
+                gap: 12px;
+                margin-bottom: 20px;
+            }
+            .hi-course-price .from { font-size: 0.85rem; color: #94a3b8; }
+            .hi-course-price .val {
+                font-family: 'Playfair Display', serif;
+                font-size: 1.75rem;
+                font-weight: 700;
+                color: #1e293b;
+            }
+            .hi-btn {
+                display: inline-block;
+                padding: 13px 28px;
+                border-radius: 8px;
+                font-weight: 500;
+                font-size: 0.95rem;
+                font-family: 'Inter', sans-serif;
+                text-decoration: none;
+                transition: all 0.3s;
+                cursor: pointer;
+                border: none;
+            }
+            .hi-btn-teal { background: #2BB5A0; color: #fff; }
+            .hi-btn-teal:hover { background: #239688; color: #fff; }
+            .hi-btn-blue { background: #3366CC; color: #fff; }
+            .hi-btn-blue:hover { background: #2952a3; color: #fff; }
+            .hi-btn-gold { background: #c5a065; color: #fff; }
+            .hi-btn-gold:hover { background: #b8944d; color: #fff; }
+            .hi-btn-outline { background: #fff; border: 1px solid #e2e8f0; color: #1e293b; }
+            .hi-btn-outline:hover { border-color: #3366CC; color: #3366CC; }
+            .hi-btn-sm { padding: 10px 20px; font-size: 0.85rem; }
 
-    @media (max-width: 768px) {
-      .course-card-lg { grid-template-columns: 1fr; }
-      .course-card-visual { padding: 32px; }
-      .course-card-info { padding: 28px; }
-    }
-  </style>
-</head>
-<body>
+            /* Club crosssell */
+            .hi-club-banner {
+                background: linear-gradient(135deg, #0f172a, #1e293b);
+                color: #fff;
+                padding: 32px;
+                border-radius: 16px;
+                display: flex;
+                align-items: center;
+                gap: 24px;
+            }
+            .hi-club-banner img {
+                width: 64px;
+                height: 64px;
+                border-radius: 12px;
+                flex-shrink: 0;
+            }
+            .hi-club-banner p {
+                opacity: 0.9;
+                font-size: 0.95rem;
+                margin-bottom: 12px;
+                font-family: 'Inter', sans-serif;
+            }
+            .hi-club-price {
+                font-family: 'Playfair Display', serif;
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: #c5a065;
+            }
 
-  <!-- Navigation -->
-  <nav>
-    <div class="container nav-inner">
-      <a href="index.html" class="logo">
-        <img src="assets/logo-main.jpg" alt="[h]">
-        <span class="logo-text">Индекс Хирша</span>
-      </a>
-      <div style="display:flex; align-items:center; gap:28px;">
-        <div class="menu">
-          <a href="education.html" class="active">Обучение</a>
-          <a href="club.html">Клуб</a>
-          <a href="consulting.html">Консалтинг</a>
-          <a href="blog.html">Блог</a>
-          <a href="resources.html">Ресурсы</a>
-        </div>
-        <a href="https://t.me/hirsch_index_school" class="btn btn-primary btn-sm" style="white-space:nowrap;">
-          <i class="fab fa-telegram" style="margin-right:6px;"></i>Telegram
-        </a>
-        <button class="mobile-toggle" onclick="toggleMobile()" aria-label="Меню">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
-    </div>
-  </nav>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="education.html">Обучение</a>
-    <a href="club.html">Клуб</a>
-    <a href="consulting.html">Консалтинг</a>
-    <a href="blog.html">Блог</a><a href="resources.html">Ресурсы</a>
-  </div>
+            /* Who for cards */
+            .hi-card {
+                background: #fff;
+                padding: 32px;
+                border-radius: 12px;
+                border: 1px solid #e2e8f0;
+                transition: 0.3s;
+            }
+            .hi-card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            }
+            .hi-card-icon {
+                width: 56px;
+                height: 56px;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 20px;
+                font-size: 24px;
+            }
+            .hi-card-icon.teal { background: #ecfdf5; color: #2BB5A0; }
+            .hi-card-icon.blue { background: #eff6ff; color: #3366CC; }
+            .hi-card-icon.gold { background: #fef9ee; color: #c5a065; }
 
-  <!-- Page Hero -->
-  <section class="page-hero">
-    <div class="container">
-      <span class="section-badge">Обучение</span>
-      <h1>Курсы для исследователей</h1>
-      <p>Пошаговые видеокурсы: от дизайна исследования до публикации в Scopus-журнале</p>
-    </div>
-  </section>
+            /* Footer */
+            .hi-footer a { color: #94a3b8; text-decoration: none; }
+            .hi-footer a:hover { color: #fff; }
+            .hi-footer h4 { color: #fff; margin-bottom: 16px; font-size: 0.95rem; }
+            .hi-footer-links { display: flex; flex-direction: column; gap: 8px; font-size: 0.9rem; }
+            .hi-footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; padding-top: 20px; display: flex; justify-content: space-between; font-size: 0.8rem; color: #94a3b8; flex-wrap: wrap; gap: 10px; }
 
-  <!-- Course 1: Research Design -->
-  <section>
-    <div class="container">
-      <div class="course-card-lg">
-        <div class="course-card-visual teal-bg">
-          <img src="assets/logo-edu.jpg" alt="Дизайн исследования">
-          <div class="course-tag" style="color:var(--teal);">Видеокурс</div>
-          <h3>Как подготовить хороший дизайн исследования</h3>
-          <div class="course-meta">10 уроков</div>
-        </div>
-        <div class="course-card-info">
-          <p>Основы планирования клинического исследования. Формулировка гипотезы, выбор дизайна, расчёт выборки, определение конечных точек и подготовка протокола.</p>
-          <ul class="course-features">
-            <li><i class="fas fa-check"></i> 10 видеоуроков</li>
-            <li><i class="fas fa-check"></i> Шаблоны ответов к каждому уроку</li>
-            <li><i class="fas fa-check"></i> Результат — готовый протокол исследования</li>
-          </ul>
-          <div class="course-price-row">
-            <span class="course-price-from">от</span>
-            <span class="course-price-val">9 900 ₽</span>
-          </div>
-          <div style="display:flex; gap:10px; flex-wrap:wrap;">
-            <a href="course-design.html" class="btn btn-teal">Подробнее</a>
-            <a href="course-design.html#pricing" class="btn btn-outline">Тарифы</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+            @media (max-width: 768px) {
+                .hi-course-card { grid-template-columns: 1fr; }
+                .hi-course-visual { padding: 32px; }
+                .hi-course-info { padding: 28px; }
+                .hi-club-banner { flex-direction: column; text-align: center; }
+                .hi-footer-bottom { flex-direction: column; text-align: center; }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <!-- Navigation -->
+            <div class="hi-nav">
+                <div class="hi-nav-inner">
+                    <a href="index.html" class="hi-nav-logo">
+                        <img src="assets/logo-main.jpg" alt="Индекс Хирша">
+                        <span class="logo-text-hi">Индекс Хирша</span>
+                    </a>
+                    <div class="hi-nav-right">
+                        <ul class="hi-nav-menu">
+                            <li><a href="education.html" class="active">Обучение</a></li>
+                            <li><a href="club.html">Клуб</a></li>
+                            <li><a href="consulting.html">Консалтинг</a></li>
+                            <li><a href="blog.html">Блог</a></li>
+                            <li><a href="resources.html">Ресурсы</a></li>
+                        </ul>
+                        <a href="https://t.me/hirsch_index_school" target="_blank" class="hi-nav-tg">
+                            <i class="fab fa-telegram"></i>Telegram
+                        </a>
+                        <button class="hi-burger" onclick="document.getElementById('hiMobile').classList.toggle('open')" aria-label="Меню">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="hi-mobile-menu" id="hiMobile">
+                <a href="education.html">Обучение</a>
+                <a href="club.html">Клуб</a>
+                <a href="consulting.html">Консалтинг</a>
+                <a href="blog.html">Блог</a>
+                <a href="resources.html">Ресурсы</a>
+                <a href="https://t.me/hirsch_index_school"><i class="fab fa-telegram"></i> Telegram</a>
+            </div>
 
-  <!-- Course 2: Review Article -->
-  <section class="bg-white">
-    <div class="container">
-      <div class="course-card-lg">
-        <div class="course-card-visual blue-bg">
-          <img src="assets/logo-edu.jpg" alt="Обзорная статья">
-          <div class="course-tag">Видеокурс</div>
-          <h3>Как написать хороший нарративный обзор</h3>
-          <div class="course-meta">30 уроков · 5 модулей · 6 недель</div>
-        </div>
-        <div class="course-card-info">
-          <p>Полный цикл подготовки обзорной статьи для публикации в рецензируемом журнале. От выбора темы и формулировки исследовательского вопроса до подачи рукописи и работы с рецензентами.</p>
-          <ul class="course-features">
-            <li><i class="fas fa-check"></i> 30 видеоуроков с пошаговыми инструкциями</li>
-            <li><i class="fas fa-check"></i> Шаблоны и методические материалы</li>
-            <li><i class="fas fa-check"></i> Рабочая тетрадь к каждому уроку</li>
-            <li><i class="fas fa-check"></i> Результат — готовая рукопись, поданная в журнал</li>
-          </ul>
-          <div class="course-price-row">
-            <span class="course-price-from">от</span>
-            <span class="course-price-val">14 900 ₽</span>
-          </div>
-          <div style="display:flex; gap:10px; flex-wrap:wrap;">
-            <a href="course-review.html" class="btn btn-primary">Подробнее</a>
-            <a href="course-review.html#pricing" class="btn btn-outline">Тарифы</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+            <!-- Page Hero -->
+            <section class="hi-page-hero">
+                <div class="container">
+                    <div class="wow fadeInUp">
+                        <span class="hi-badge">Обучение</span>
+                        <h1>Курсы для исследователей</h1>
+                        <p>Пошаговые видеокурсы: от дизайна исследования до публикации в Scopus-журнале</p>
+                    </div>
+                </div>
+            </section>
 
-  <!-- Club banner -->
-  <section style="padding: 30px 0;">
-    <div class="container">
-      <div class="club-crosssell">
-        <img src="assets/logo-club.jpg" alt="Клуб">
-        <div style="flex:1;">
-          <p>Все курсы доступны по подписке в научном клубе «Индекс Хирша».</p>
-          <div style="display:flex; align-items:center; gap:20px; flex-wrap:wrap;">
-            <span class="price-highlight">990 ₽/мес</span>
-            <a href="club.html" class="btn btn-gold btn-sm">Подробнее о клубе</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+            <!-- Course 1: Research Design -->
+            <section>
+                <div class="w-100 pt-80 pb-80 position-relative">
+                    <div class="container">
+                        <div class="hi-course-card wow fadeInUp">
+                            <div class="hi-course-visual teal">
+                                <img src="assets/logo-edu.jpg" alt="Дизайн исследования">
+                                <div class="hi-course-tag" style="color:#2BB5A0;">Видеокурс</div>
+                                <h3>Как подготовить хороший дизайн исследования</h3>
+                                <div class="hi-course-meta">10 уроков</div>
+                            </div>
+                            <div class="hi-course-info">
+                                <p>Основы планирования клинического исследования. Формулировка гипотезы, выбор дизайна, расчёт выборки, определение конечных точек и подготовка протокола.</p>
+                                <ul class="hi-course-features">
+                                    <li><i class="fas fa-check"></i> 10 видеоуроков</li>
+                                    <li><i class="fas fa-check"></i> Шаблоны ответов к каждому уроку</li>
+                                    <li><i class="fas fa-check"></i> Результат — готовый протокол исследования</li>
+                                </ul>
+                                <div class="hi-course-price">
+                                    <span class="from">от</span>
+                                    <span class="val">9 900 ₽</span>
+                                </div>
+                                <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                                    <a href="course-design.html" class="hi-btn hi-btn-teal">Подробнее</a>
+                                    <a href="course-design.html#pricing" class="hi-btn hi-btn-outline">Тарифы</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-  <!-- Who it's for -->
-  <section>
-    <div class="container">
-      <div class="section-header">
-        <h2>Для кого наши курсы</h2>
-      </div>
-      <div class="grid-3">
-        <div class="card">
-          <div class="card-icon teal"><i class="fas fa-user-md"></i></div>
-          <h3 style="font-size:1.1rem; margin-bottom:10px;">Врачи</h3>
-          <p style="font-size:0.9rem; color:var(--text-light);">Хотите начать публиковаться, но не знаете с чего начать. Курс проведёт вас от идеи до статьи.</p>
-        </div>
-        <div class="card">
-          <div class="card-icon blue"><i class="fas fa-flask"></i></div>
-          <h3 style="font-size:1.1rem; margin-bottom:10px;">Исследователи</h3>
-          <p style="font-size:0.9rem; color:var(--text-light);">Есть опыт, но хотите систематизировать процесс и повысить шансы на принятие в Q1/Q2-журнал.</p>
-        </div>
-        <div class="card">
-          <div class="card-icon gold"><i class="fas fa-graduation-cap"></i></div>
-          <h3 style="font-size:1.1rem; margin-bottom:10px;">Аспиранты</h3>
-          <p style="font-size:0.9rem; color:var(--text-light);">Нужна публикация для диссертации. Пошаговый алгоритм сэкономит месяцы самостоятельных попыток.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+            <!-- Course 2: Review Article -->
+            <section>
+                <div class="w-100 pt-0 pb-80 position-relative">
+                    <div class="container">
+                        <div class="hi-course-card wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="hi-course-visual blue">
+                                <img src="assets/logo-edu.jpg" alt="Обзорная статья">
+                                <div class="hi-course-tag" style="color:#3366CC;">Видеокурс</div>
+                                <h3>Как написать хороший нарративный обзор</h3>
+                                <div class="hi-course-meta">30 уроков · 5 модулей · 6 недель</div>
+                            </div>
+                            <div class="hi-course-info">
+                                <p>Полный цикл подготовки обзорной статьи для публикации в рецензируемом журнале. От выбора темы и формулировки исследовательского вопроса до подачи рукописи и работы с рецензентами.</p>
+                                <ul class="hi-course-features">
+                                    <li><i class="fas fa-check"></i> 30 видеоуроков с пошаговыми инструкциями</li>
+                                    <li><i class="fas fa-check"></i> Шаблоны и методические материалы</li>
+                                    <li><i class="fas fa-check"></i> Рабочая тетрадь к каждому уроку</li>
+                                    <li><i class="fas fa-check"></i> Результат — готовая рукопись, поданная в журнал</li>
+                                </ul>
+                                <div class="hi-course-price">
+                                    <span class="from">от</span>
+                                    <span class="val">14 900 ₽</span>
+                                </div>
+                                <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                                    <a href="course-review.html" class="hi-btn hi-btn-blue">Подробнее</a>
+                                    <a href="course-review.html#pricing" class="hi-btn hi-btn-outline">Тарифы</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <h4>Индекс Хирша</h4>
-          <div class="footer-links">
-            <a href="education.html">Обучение</a>
-            <a href="club.html">Клуб</a>
-            <a href="consulting.html">Консалтинг</a>
-            <a href="blog.html">Блог</a>
-            <a href="resources.html">Ресурсы</a>
-          </div>
-        </div>
-        <div>
-          <h4>Контакты</h4>
-          <div class="footer-links">
-            <a href="https://t.me/+79854770449"><i class="fab fa-telegram" style="width:18px;"></i> Telegram</a>
-            <a href="https://wa.me/79854770449"><i class="fab fa-whatsapp" style="width:18px;"></i> WhatsApp</a>
-            <a href="mailto:zhigalovmd@yandex.ru"><i class="fas fa-envelope" style="width:18px;"></i> zhigalovmd@yandex.ru</a>
-          </div>
-        </div>
-        <div>
-          <h4>Соцсети</h4>
-          <div class="footer-links">
-            <a href="https://t.me/hirsch_index_school"><i class="fab fa-telegram" style="width:18px;"></i> Telegram-канал</a>
-            <a href="https://vk.com/club235429996" target="_blank"><i class="fab fa-vk" style="width:18px;"></i> ВКонтакте</a>
-            <a href="https://max.ru/join/TmlfyQ5T5BJu-iLZlOYbZolsFX2vrBDQ8t8jaKfz3P0" target="_blank"><i class="fas fa-comment-dots" style="width:18px;"></i> MAX</a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2026 Индекс Хирша. Все права защищены.</span>
-        <span><a href="offer.html">Публичная оферта</a> · <a href="privacy.html">Политика конфиденциальности</a></span>
-      </div>
-    </div>
-  </footer>
+            <!-- Club banner -->
+            <section>
+                <div class="w-100 pb-80 position-relative">
+                    <div class="container">
+                        <div class="hi-club-banner wow fadeInUp">
+                            <img src="assets/logo-club.jpg" alt="Клуб">
+                            <div style="flex:1;">
+                                <p>Все курсы доступны по подписке в научном клубе «Индекс Хирша».</p>
+                                <div style="display:flex; align-items:center; gap:20px; flex-wrap:wrap;">
+                                    <span class="hi-club-price">990 ₽/мес</span>
+                                    <a href="club.html" class="hi-btn hi-btn-gold hi-btn-sm">Подробнее о клубе</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-  <script>
-    function toggleMobile() {
-      document.getElementById('mobileMenu').classList.toggle('open');
-    }
-  </script>
-</body>
+            <!-- Who it's for -->
+            <section>
+                <div class="w-100 pt-80 pb-100 position-relative" style="background:#f8fafc;">
+                    <div class="container">
+                        <div class="text-center mb-5 wow fadeInUp">
+                            <h2 style="color:#0f172a;">Для кого наши курсы</h2>
+                        </div>
+                        <div class="row" style="gap:0;">
+                            <div class="col-md-4" style="margin-bottom:24px;">
+                                <div class="hi-card wow fadeInUp" data-wow-delay="0.1s">
+                                    <div class="hi-card-icon teal"><i class="fas fa-user-md"></i></div>
+                                    <h3 style="font-size:1.1rem; margin-bottom:10px;">Врачи</h3>
+                                    <p style="font-size:0.9rem; color:#475569; font-family:'Inter',sans-serif; margin:0;">Хотите начать публиковаться, но не знаете с чего начать. Курс проведёт вас от идеи до статьи.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4" style="margin-bottom:24px;">
+                                <div class="hi-card wow fadeInUp" data-wow-delay="0.2s">
+                                    <div class="hi-card-icon blue"><i class="fas fa-flask"></i></div>
+                                    <h3 style="font-size:1.1rem; margin-bottom:10px;">Исследователи</h3>
+                                    <p style="font-size:0.9rem; color:#475569; font-family:'Inter',sans-serif; margin:0;">Есть опыт, но хотите систематизировать процесс и повысить шансы на принятие в Q1/Q2-журнал.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4" style="margin-bottom:24px;">
+                                <div class="hi-card wow fadeInUp" data-wow-delay="0.3s">
+                                    <div class="hi-card-icon gold"><i class="fas fa-graduation-cap"></i></div>
+                                    <h3 style="font-size:1.1rem; margin-bottom:10px;">Аспиранты</h3>
+                                    <p style="font-size:0.9rem; color:#475569; font-family:'Inter',sans-serif; margin:0;">Нужна публикация для диссертации. Пошаговый алгоритм сэкономит месяцы самостоятельных попыток.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer>
+                <div class="w-100 pt-90 pb-50 position-relative hi-footer" style="background:#0f172a;">
+                    <div class="container">
+                        <div class="row" style="gap:0;">
+                            <div class="col-md-6 col-lg-4" style="margin-bottom:30px;">
+                                <h4 style="font-family:'Playfair Display',serif;">Индекс Хирша</h4>
+                                <div class="hi-footer-links">
+                                    <a href="education.html">Обучение</a>
+                                    <a href="club.html">Клуб</a>
+                                    <a href="consulting.html">Консалтинг</a>
+                                    <a href="blog.html">Блог</a>
+                                    <a href="resources.html">Ресурсы</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4" style="margin-bottom:30px;">
+                                <h4 style="font-family:'Playfair Display',serif;">Контакты</h4>
+                                <div class="hi-footer-links">
+                                    <a href="https://t.me/+79854770449"><i class="fab fa-telegram" style="width:18px;"></i> Telegram</a>
+                                    <a href="https://wa.me/79854770449"><i class="fab fa-whatsapp" style="width:18px;"></i> WhatsApp</a>
+                                    <a href="mailto:zhigalovmd@yandex.ru"><i class="fas fa-envelope" style="width:18px;"></i> zhigalovmd@yandex.ru</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4" style="margin-bottom:30px;">
+                                <h4 style="font-family:'Playfair Display',serif;">Соцсети</h4>
+                                <div class="hi-footer-links">
+                                    <a href="https://t.me/hirsch_index_school" target="_blank"><i class="fab fa-telegram" style="width:18px;"></i> Telegram-канал</a>
+                                    <a href="https://vk.com/club235429996" target="_blank"><i class="fab fa-vk" style="width:18px;"></i> ВКонтакте</a>
+                                    <a href="https://max.ru/join/TmlfyQ5T5BJu-iLZlOYbZolsFX2vrBDQ8t8jaKfz3P0" target="_blank"><i class="fas fa-comment-dots" style="width:18px;"></i> MAX</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hi-footer-bottom">
+                            <span>&copy; 2026 Индекс Хирша. Все права защищены.</span>
+                            <span><a href="offer.html">Публичная оферта</a> &middot; <a href="privacy.html">Политика конфиденциальности</a></span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </main>
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/custom-scripts.js"></script>
+    </body>
 </html>
