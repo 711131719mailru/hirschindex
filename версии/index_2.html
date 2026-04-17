@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Индекс Хирша — школа научных публикаций. Помогаем врачам и исследователям проходить путь от идеи до публикации в Scopus-журналах.">
+  <title>Индекс Хирша — Школа научных публикаций</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* Hero — page-specific */
+    .hero {
+      padding: 140px 0 80px;
+      background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 50%, #ecfdf5 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute; top: -50%; right: -20%; width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(43,181,160,0.08) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .hero-content {
+      max-width: 720px; margin: 0 auto; text-align: center; position: relative; z-index: 1;
+    }
+    .hero h1 {
+      font-size: 3rem; color: var(--navy); margin-bottom: 24px;
+    }
+    .hero h1 span { color: var(--brand); }
+    .hero p {
+      font-size: 1.15rem; color: var(--text-light); margin-bottom: 36px;
+      max-width: 580px; margin-left: auto; margin-right: auto;
+    }
+    .hero-buttons {
+      display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+    }
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; }
+      .hero { padding: 120px 0 60px; }
+    }
+
+    /* Pillar cards — page-specific */
+    .pillar-card {
+      background: #fff; padding: 36px 28px; border-radius: var(--radius-lg);
+      border: 1px solid var(--border); transition: 0.3s;
+      text-align: center; display: flex; flex-direction: column; align-items: center;
+    }
+    .pillar-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+    .pillar-logo {
+      width: 72px; height: 72px; border-radius: 16px; margin-bottom: 20px;
+      object-fit: cover;
+    }
+    .pillar-card h3 { margin-bottom: 12px; font-size: 1.3rem; }
+    .pillar-card p { font-size: 0.9rem; color: var(--text-light); margin-bottom: 20px; flex: 1; }
+
+    /* Founder section */
+    .founder-section {
+      display: flex; align-items: center; gap: 50px;
+    }
+    .founder-photo {
+      width: 320px; height: 400px; border-radius: var(--radius-lg);
+      object-fit: cover; flex-shrink: 0;
+      box-shadow: var(--shadow-lg);
+    }
+    .founder-info h2 { margin-bottom: 16px; }
+    .founder-info p { color: var(--text-light); margin-bottom: 16px; }
+    .founder-badges {
+      display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px;
+    }
+    .founder-badge {
+      background: var(--border-light); padding: 8px 16px;
+      border-radius: 6px; font-size: 0.85rem; font-weight: 500;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .founder-badge i { color: var(--brand); }
+    @media (max-width: 900px) {
+      .founder-section { flex-direction: column; text-align: center; }
+      .founder-photo { width: 100%; max-width: 300px; height: 350px; }
+      .founder-badges { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <img src="assets/logo-main.jpg" alt="[h]">
+        <span class="logo-text">Индекс Хирша</span>
+      </a>
+      <div style="display:flex; align-items:center; gap:28px;">
+        <div class="menu">
+          <a href="education.html">Обучение</a>
+          <a href="club.html">Клуб</a>
+          <a href="consulting.html">Консалтинг</a>
+          <a href="blog.html">Блог</a>
+        </div>
+        <a href="https://t.me/hirsch_index_school" class="btn btn-primary btn-sm" style="white-space:nowrap;">
+          <i class="fab fa-telegram" style="margin-right:6px;"></i>Telegram
+        </a>
+        <button class="mobile-toggle" onclick="toggleMobile()" aria-label="Меню">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="education.html">Обучение</a>
+    <a href="club.html">Клуб</a>
+    <a href="consulting.html">Консалтинг</a>
+    <a href="blog.html">Блог</a>
+    <a href="https://t.me/hirsch_index_school"><i class="fab fa-telegram"></i> Канал</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div style="font-size:1.5rem; color:var(--text-light); margin-bottom:12px;">Школа научного медицинского письма</div>
+        <h1><span>«Индекс Хирша»</span></h1>
+        <p>Превращаем ваши идеи в научные публикации!</p>
+        <div class="hero-buttons">
+          <a href="education.html" class="btn btn-primary btn-lg">Курсы</a>
+          <a href="club.html" class="btn btn-teal btn-lg">Вступить в клуб</a>
+          <a href="consulting.html" class="btn btn-outline btn-lg">Консалтинг</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 Pillars -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <h2>Экосистема «Индекс Хирша»</h2>
+        <p>Четыре направления, одна цель — ваша публикация в международном журнале</p>
+      </div>
+      <div class="grid-4">
+
+        <a href="education.html" class="pillar-card">
+          <img src="assets/logo-edu.jpg" class="pillar-logo" alt="Обучение">
+          <h3>Обучение</h3>
+          <p>Видеокурсы с пошаговыми инструкциями. От дизайна исследования до публикации.</p>
+          <span class="btn btn-outline btn-sm">Подробнее</span>
+        </a>
+
+        <a href="club.html" class="pillar-card">
+          <img src="assets/logo-club.jpg" class="pillar-logo" alt="Клуб">
+          <h3>Клуб</h3>
+          <p>Закрытое сообщество для поиска соавторов и запуска совместных проектов. Доступ ко всем курсам.</p>
+          <span class="btn btn-outline btn-sm">Подробнее</span>
+        </a>
+
+        <a href="consulting.html" class="pillar-card">
+          <img src="assets/logo-consulting.jpg" class="pillar-logo" alt="Консалтинг">
+          <h3>Консалтинг</h3>
+          <p>Индивидуальное сопровождение: дизайн, статистика, редактура, подача в журнал.</p>
+          <span class="btn btn-outline btn-sm">Подробнее</span>
+        </a>
+
+        <a href="blog.html" class="pillar-card">
+          <img src="assets/logo-blog.jpg" class="pillar-logo" alt="Блог">
+          <h3>Блог</h3>
+          <p>Азбука медицинской науки — статьи о научном письме, методологии и публикациях.</p>
+          <span class="btn btn-outline btn-sm">Подробнее</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Founder -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="founder-section">
+        <img src="assets/founder.jpg" class="founder-photo" alt="Константин Жигалов">
+        <div class="founder-info">
+          <span class="section-badge">Основатель</span>
+          <h2>Константин Жигалов</h2>
+          <p>Врач-кардиохирург с многолетним опытом в университетских клиниках Германии. Защитил диссертацию (PhD) в Charité — Universitätsmedizin Berlin. Автор более 70 публикаций в международных рецензируемых журналах.</p>
+          <p>Создал школу «Индекс Хирша», чтобы помочь российским врачам и исследователям преодолеть барьер международной публикации — от выбора темы до получения DOI.</p>
+          <div class="founder-badges">
+            <div class="founder-badge"><i class="fas fa-graduation-cap"></i> MD, PhD</div>
+            <div class="founder-badge"><i class="fas fa-chart-line"></i> h-index 16</div>
+            <div class="founder-badge"><i class="fas fa-file-alt"></i> 70+ статей</div>
+            <div class="founder-badge"><i class="fas fa-language"></i> RU / EN / DE</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scientometric Profiles -->
+  <section class="bg-white" style="padding: 0 0 50px;">
+    <div class="container">
+      <div class="profiles-grid">
+        <a href="https://www.scopus.com/authid/detail.uri?authorId=57517490500" target="_blank" class="profile-card">
+          <div class="p-icon bg-scopus"><i class="fas fa-chart-line"></i></div>
+          <div class="p-info">
+            <span class="p-label">Scopus</span>
+            <span class="p-value">ID 57517490500</span>
+            <div class="p-stats">H-Index: <span class="h-badge">16</span></div>
+          </div>
+        </a>
+        <a href="https://scholar.google.com/citations?user=AgmsZFAAAAAJ&hl=ru&oi=ao" target="_blank" class="profile-card">
+          <div class="p-icon bg-scholar"><i class="fas fa-graduation-cap"></i></div>
+          <div class="p-info">
+            <span class="p-label">Google Scholar</span>
+            <span class="p-value">Konstantin Zhigalov</span>
+            <div class="p-stats">H-Index: <span class="h-badge">19</span></div>
+          </div>
+        </a>
+        <a href="https://orcid.org/0000-0002-6440-3736" target="_blank" class="profile-card">
+          <div class="p-icon bg-orcid"><i class="fab fa-orcid"></i></div>
+          <div class="p-info">
+            <span class="p-label">ORCID</span>
+            <span class="p-value">0000-0002-6440-3736</span>
+            <div class="p-stats" style="color:var(--text-muted);">Verified Record</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Channels -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <h2>Мы в соцсетях</h2>
+        <p>Образовательный контент о научных публикациях</p>
+      </div>
+      <div class="social-grid">
+        <a href="https://t.me/hirsch_index_school" target="_blank" class="social-card">
+          <div class="social-icon tg"><i class="fab fa-telegram"></i></div>
+          <div>
+            <div style="font-weight:600;">Telegram</div>
+            <div style="font-size:0.85rem; color:var(--text-light);">@hirsch_index_school</div>
+          </div>
+        </a>
+        <a href="https://vk.com/club235429996" target="_blank" class="social-card">
+          <div class="social-icon vk"><i class="fab fa-vk"></i></div>
+          <div>
+            <div style="font-weight:600;">ВКонтакте</div>
+            <div style="font-size:0.85rem; color:var(--text-light);">Индекс Хирша</div>
+          </div>
+        </a>
+        <a href="https://max.ru/join/TmlfyQ5T5BJu-iLZlOYbZolsFX2vrBDQ8t8jaKfz3P0" target="_blank" class="social-card">
+          <img src="assets/icon-max.jpg" alt="MAX" style="width:44px; height:44px; border-radius:10px; object-fit:cover; flex-shrink:0;">
+          <div>
+            <div style="font-weight:600;">MAX</div>
+            <div style="font-size:0.85rem; color:var(--text-light);">Индекс Хирша</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Индекс Хирша</h4>
+          <div class="footer-links">
+            <a href="education.html">Обучение</a>
+            <a href="club.html">Клуб</a>
+            <a href="consulting.html">Консалтинг</a>
+            <a href="blog.html">Блог</a>
+          </div>
+        </div>
+        <div>
+          <h4>Контакты</h4>
+          <div class="footer-links">
+            <a href="https://t.me/+79854770449"><i class="fab fa-telegram" style="width:18px;"></i> Telegram</a>
+            <a href="https://wa.me/79854770449"><i class="fab fa-whatsapp" style="width:18px;"></i> WhatsApp</a>
+            <a href="mailto:zhigalovmd@yandex.ru"><i class="fas fa-envelope" style="width:18px;"></i> zhigalovmd@yandex.ru</a>
+          </div>
+        </div>
+        <div>
+          <h4>Соцсети</h4>
+          <div class="footer-links">
+            <a href="https://t.me/hirsch_index_school"><i class="fab fa-telegram" style="width:18px;"></i> Telegram-канал</a>
+            <a href="https://vk.com/club235429996" target="_blank"><i class="fab fa-vk" style="width:18px;"></i> ВКонтакте</a>
+            <a href="https://max.ru/join/TmlfyQ5T5BJu-iLZlOYbZolsFX2vrBDQ8t8jaKfz3P0" target="_blank"><i class="fas fa-comment-dots" style="width:18px;"></i> MAX</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Индекс Хирша. Все права защищены.</span>
+        <a href="offer.html">Публичная оферта</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobile() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>

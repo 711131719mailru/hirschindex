@@ -1,0 +1,90 @@
+if (document.readyState === 'loading') {
+	document.addEventListener('DOMContentLoaded', connectButton);
+} else {
+	connectButton()
+}
+
+function connectButton() {
+  // Подключение refunnels через тренинги.
+  const trainingId = window.location.pathname?.split('/').pop()
+  const exludedAccs = [706419, 195719]
+  if (isTrainingPage(window.location.pathname) && trainingId && isAdmin() && !exludedAccs.includes(window.accountId)) {
+    const docCookie = Object.fromEntries(document.cookie.split(';').map(pair => pair.trim().split('=')))
+    const custom_uid = docCookie['x-chtm-uid'] ?? docCookie['x-chatium-unique-id'] ?? window.gcSessionId
+    connectRefunnelsToTraining(trainingId, custom_uid)
+  }
+}
+
+function isTrainingPage(pathname) {
+  return /\/teach\/control\/stream\/view\/id\/\d+(\?.*)?$/.test(pathname)
+}
+
+function isAdmin() {
+  return !!window.userInfo?.isAdmin
+}
+
+async function connectRefunnelsToTraining(trainingId, custom_uid) {
+  const block = document.querySelector(
+    '.xdget-block.xdget-container.xdget-common-container.xdget-visible-to-bg-.xdget-col.empty.col-gc-4.col-md-4',
+  )
+
+  if (block) {
+    if (block.classList.contains('empty')) {
+      block.classList.remove('empty')
+    }
+    if (block.style.display === 'none') {
+      block.style.display = 'block'
+    }
+
+    const createFunnelButton = document.createElement('button')
+    createFunnelButton.textContent = 'Создать воронку для тренинга'
+    createFunnelButton.classList.add('__chtm-create-funnel-btn-inserted')
+    createFunnelButton.addEventListener('click', e =>
+      window.open(
+        `/chtm/app/store/offer/refunnels?utm_source=gc&utm_medium=training&custom_uid=${custom_uid}&nextUrl=${encodeURIComponent(
+          '/chtm/app/builder/blueprints/create-funnel?trainingId=' + trainingId + '&custom_uid=' + custom_uid,
+        )}`,
+      ),
+    )
+
+    // Добавляем кнопку на страницу тренинга
+    block.appendChild(createFunnelButton)
+
+    // Добавляем стили для кнопки
+    const styleElement = document.createElement('style')
+    styleElement.textContent = `
+      .__chtm-create-funnel-btn-inserted {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      .__chtm-create-funnel-btn-inserted:hover {
+        background-color: #0056b3;
+      }
+    `
+    block.appendChild(styleElement)
+
+    // записываем лог о том, что показали кнопку
+    setTimeout(async () => { 
+      fetch('https://getcourse.ru/chtm/app/builder/event/~reg/Xzfsm2ftiWKDtUZbdg9F9oSnm/2bWeIMVE4q?hash=ACQDOFXW0F',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            uid: custom_uid,
+            customData: {
+              host: window.location.host,
+              trainingId: trainingId,
+              userId: window.accountUserId,
+            },
+          }),
+        });
+    }, 0);
+  }
+}

@@ -1,0 +1,9 @@
+var SessionStore = function() {
+	if (typeof( Storage ) !== 'undefined') {
+		localStorage.setItem('session', JSON.stringify({"id":9321648890,"last_activity":"2026-04-16 14:27:34","user_id":470687683,"utm_id":null}));
+		localStorage.setItem('visit', JSON.stringify({"id":15383687233,"sid":9321648890}));
+		localStorage.setItem('visitor', JSON.stringify({"id":8077412878,"sfix":1}));
+		localStorage.setItem('hash', '40e0532fb1e498759b3576e008d0d5d5');
+	}
+}
+SessionStore();
