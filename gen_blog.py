@@ -211,7 +211,7 @@ output = '''<!doctype html>
 output = output.replace('PLACEHOLDER_TOC', '\n          '.join(toc_items))
 output = output.replace('PLACEHOLDER_WEEKS', ''.join(week_sections))
 
-with open(r'C:\Моя папка\1. Наука\004 Контент\Сайты\Индекс Хирша (RU)\blog.html', 'w', encoding='utf-8') as f:
+with open(r'C:\Моя папка\1. Наука\004 Контент\Сайты\Индекс Хирша (RU)\blog\index.html', 'w', encoding='utf-8') as f:
     f.write(output)
 
 print('blog.html generated successfully')
