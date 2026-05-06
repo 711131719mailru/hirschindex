@@ -128,6 +128,19 @@
     /* Grid helper */
     .hi-grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
     @media (max-width:991px) { .hi-grid-3 { grid-template-columns:1fr; } }
+
+    /* Other courses cross-sell */
+    .hi-other-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; max-width:900px; margin:0 auto; }
+    .hi-other-card { background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:28px; transition:0.3s; display:flex; flex-direction:column; }
+    .hi-other-card:hover { box-shadow:0 10px 25px rgba(0,0,0,0.08); transform:translateY(-2px); }
+    .hi-other-tag { font-size:0.7rem; font-weight:bold; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:8px; font-family:'Inter',sans-serif; }
+    .hi-other-tag.teal { color:#2BB5A0; }
+    .hi-other-tag.blue { color:#3366CC; }
+    .hi-other-tag.gold { color:#c5a065; }
+    .hi-other-card h3 { font-family:'Playfair Display',serif; font-size:1.15rem; margin-bottom:8px; color:#0f172a; }
+    .hi-other-card p { font-size:0.9rem; color:#475569; font-family:'Inter',sans-serif; margin-bottom:16px; flex:1; }
+    .hi-other-meta { font-size:0.8rem; color:#94a3b8; margin-bottom:16px; font-family:'Inter',sans-serif; }
+    @media (max-width:768px) { .hi-other-grid { grid-template-columns:1fr; } }
   </style>
 </head>
 <body>
@@ -359,9 +372,37 @@
       <div class="hi-club-banner" style="margin-top:50px;">
         <img src="/assets/logo-club.jpg" alt="Клуб">
         <div style="flex:1;">
+          <div style="color:#c5a065; font-family:'Inter',sans-serif; font-weight:600; font-size:0.75rem; letter-spacing:0.18em; text-transform:uppercase; margin-bottom:8px;">Сообщество выпускников</div>
+          <h3 style="font-family:'Playfair Display',serif; color:#fff; font-size:1.4rem; font-weight:700; margin-bottom:12px;">Научный клуб «Индекс Хирша»</h3>
           <p style="margin-bottom:12px;">После курса вы получите приглашение в закрытое сообщество школы — научный клуб «Индекс Хирша». Там продолжается практика, ищутся соавторы и формируются команды для совместных публикаций.</p>
           <a href="/club/" class="hi-btn hi-btn-gold hi-btn-sm">Подробнее о клубе</a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other courses -->
+  <section style="padding:70px 0; background:#fff;">
+    <div class="container">
+      <div class="hi-section-header">
+        <h2>Другие курсы</h2>
+        <p>Продолжите путь автора в нашей школе</p>
+      </div>
+      <div class="hi-other-grid">
+        <a href="/course-review/" class="hi-other-card wow fadeInUp" style="text-decoration:none; color:inherit;">
+          <div class="hi-other-tag blue">Видеокурс &middot; Обзор</div>
+          <h3>Как написать хороший нарративный обзор</h3>
+          <div class="hi-other-meta">30 уроков &middot; 5 модулей &middot; 6 недель</div>
+          <p>Полный цикл подготовки обзорной статьи: от выбора темы и литературного поиска до подачи в журнал и работы с рецензентами.</p>
+          <span class="hi-btn hi-btn-outline hi-btn-sm" style="align-self:flex-start;">Подробнее</span>
+        </a>
+        <a href="/course-case-report/" class="hi-other-card wow fadeInUp" data-wow-delay="0.1s" style="text-decoration:none; color:inherit;">
+          <div class="hi-other-tag gold">Курс &middot; Клинический случай</div>
+          <h3>Как опубликовать клинический случай</h3>
+          <div class="hi-other-meta">15 уроков &middot; 4 модуля &middot; 3 недели</div>
+          <p>Полный цикл подготовки клинического случая: от выбора темы и чек-листа CARE до подачи рукописи и работы с рецензентами.</p>
+          <span class="hi-btn hi-btn-outline hi-btn-sm" style="align-self:flex-start;">Подробнее</span>
+        </a>
       </div>
     </div>
   </section>

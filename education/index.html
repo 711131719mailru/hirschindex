@@ -98,6 +98,7 @@
             }
             .hi-course-visual.teal { background: linear-gradient(135deg, #ecfdf5, #d1fae5); }
             .hi-course-visual.blue { background: linear-gradient(135deg, #eff6ff, #dbeafe); }
+            .hi-course-visual.gold { background: linear-gradient(135deg, #fef9ee, #fbe6b3); }
             .hi-course-visual img {
                 width: 80px;
                 height: 80px;
@@ -239,6 +240,48 @@
             .hi-footer-links { display: flex; flex-direction: column; gap: 8px; font-size: 0.9rem; }
             .hi-footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; padding-top: 20px; display: flex; justify-content: space-between; font-size: 0.8rem; color: #94a3b8; flex-wrap: wrap; gap: 10px; }
 
+            /* Course mini-nav (anchor links) */
+            .hi-course-nav {
+                display: flex;
+                justify-content: center;
+                gap: 12px;
+                flex-wrap: wrap;
+                margin-top: 28px;
+            }
+            .hi-course-nav a {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                padding: 10px 20px;
+                border-radius: 50px;
+                background: #fff;
+                border: 1px solid #e2e8f0;
+                color: #475569;
+                font-family: 'Inter', sans-serif;
+                font-size: 0.85rem;
+                font-weight: 500;
+                text-decoration: none;
+                transition: all 0.2s;
+            }
+            .hi-course-nav a:hover {
+                border-color: #3366CC;
+                color: #3366CC;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            }
+            .hi-course-nav .dot {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                flex-shrink: 0;
+            }
+            .hi-course-nav .dot.teal { background: #2BB5A0; }
+            .hi-course-nav .dot.blue { background: #3366CC; }
+            .hi-course-nav .dot.gold { background: #c5a065; }
+
+            /* Anchor offset for fixed nav */
+            .hi-anchor { scroll-margin-top: 90px; }
+
             @media (max-width: 991px) {
                 .hi-course-card { grid-template-columns: 1fr; }
                 .hi-course-visual { padding: 32px; }
@@ -289,21 +332,26 @@
                     <div class="wow fadeInUp">
                         <span class="hi-badge">Обучение</span>
                         <h1>Курсы для исследователей</h1>
-                        <p>Пошаговые видеокурсы: от дизайна исследования до публикации в Scopus-журнале</p>
+                        <p>Пошаговые курсы: от дизайна исследования до публикации в рецензируемом журнале</p>
+                        <nav class="hi-course-nav" aria-label="Список курсов">
+                            <a href="#course-design"><span class="dot teal"></span>Дизайн исследования</a>
+                            <a href="#course-review"><span class="dot blue"></span>Нарративный обзор</a>
+                            <a href="#course-case-report"><span class="dot gold"></span>Клинический случай</a>
+                        </nav>
                     </div>
                 </div>
             </section>
 
             <!-- Course 1: Research Design -->
-            <section>
+            <section id="course-design" class="hi-anchor">
                 <div class="w-100 pt-80 pb-80 position-relative">
                     <div class="container">
                         <div class="hi-course-card wow fadeInUp">
                             <div class="hi-course-visual teal">
                                 <img src="/assets/logo-edu.jpg" alt="Дизайн исследования">
-                                <div class="hi-course-tag" style="color:#2BB5A0;">Видеокурс</div>
+                                <div class="hi-course-tag" style="color:#2BB5A0;">Курс</div>
                                 <h3>Как подготовить хороший дизайн исследования</h3>
-                                <div class="hi-course-meta">10 уроков</div>
+                                <div class="hi-course-meta">10 уроков · 2 недели</div>
                             </div>
                             <div class="hi-course-info">
                                 <p>Основы планирования клинического исследования. Формулировка гипотезы, выбор дизайна, расчёт выборки, определение конечных точек и подготовка протокола.</p>
@@ -327,7 +375,7 @@
             </section>
 
             <!-- Course 2: Review Article -->
-            <section>
+            <section id="course-review" class="hi-anchor">
                 <div class="w-100 pt-0 pb-80 position-relative">
                     <div class="container">
                         <div class="hi-course-card wow fadeInUp" data-wow-delay="0.1s">
@@ -352,6 +400,39 @@
                                 <div style="display:flex; gap:10px; flex-wrap:wrap;">
                                     <a href="/course-review/" class="hi-btn hi-btn-blue">Подробнее</a>
                                     <a href="/course-review/#pricing" class="hi-btn hi-btn-outline">Тарифы</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Course 3: Case Report -->
+            <section id="course-case-report" class="hi-anchor">
+                <div class="w-100 pt-0 pb-80 position-relative">
+                    <div class="container">
+                        <div class="hi-course-card wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="hi-course-visual gold">
+                                <img src="/assets/logo-edu.jpg" alt="Клинический случай">
+                                <div class="hi-course-tag" style="color:#c5a065;">Курс</div>
+                                <h3>Как опубликовать клинический случай</h3>
+                                <div class="hi-course-meta">15 уроков · 4 модуля · 3 недели</div>
+                            </div>
+                            <div class="hi-course-info">
+                                <p>Полный цикл подготовки клинического случая для публикации в рецензируемом журнале. От выбора темы и подготовки по чек-листу CARE до подачи рукописи в журнал и работы с рецензентами.</p>
+                                <ul class="hi-course-features">
+                                    <li><i class="fas fa-check"></i> 15 уроков с пошаговыми инструкциями</li>
+                                    <li><i class="fas fa-check"></i> Шаблоны и методические материалы</li>
+                                    <li><i class="fas fa-check"></i> Рабочая тетрадь к каждому уроку</li>
+                                    <li><i class="fas fa-check"></i> Результат — готовая рукопись, поданная в журнал</li>
+                                </ul>
+                                <div class="hi-course-price">
+                                    <span class="from">от</span>
+                                    <span class="val">12 900 ₽</span>
+                                </div>
+                                <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                                    <a href="/course-case-report/" class="hi-btn hi-btn-gold">Подробнее</a>
+                                    <a href="/course-case-report/#pricing" class="hi-btn hi-btn-outline">Тарифы</a>
                                 </div>
                             </div>
                         </div>
