@@ -122,6 +122,24 @@
     .hi-footer-links { display:flex; flex-direction:column; gap:8px; font-size:0.9rem; }
     .hi-footer-bottom { border-top:1px solid rgba(255,255,255,0.1); margin-top:40px; padding-top:20px; display:flex; justify-content:space-between; font-size:0.8rem; color:#94a3b8; flex-wrap:wrap; gap:10px; }
 
+    /* About author */
+    .hi-author-section { padding:60px 0; background:#fff; }
+    .hi-author-card { background:#fff; border:1px solid #e2e8f0; border-radius:16px; padding:36px; display:grid; grid-template-columns:1.2fr 1fr; gap:36px; align-items:center; box-shadow:0 1px 3px rgba(0,0,0,0.04); }
+    .hi-author-card h3 { margin:0 0 16px; font-size:1.5rem; color:#0f172a; }
+    .hi-author-roles { list-style:none; padding:0; margin:0 0 24px; }
+    .hi-author-roles li { position:relative; padding:5px 0 5px 18px; font-family:'Inter',sans-serif; font-size:0.95rem; color:#475569; }
+    .hi-author-roles li::before { content:''; position:absolute; left:0; top:13px; width:6px; height:6px; border-radius:50%; background:var(--accent); }
+    .hi-author-stats { display:flex; gap:32px; }
+    .hi-stat-value { font-family:'Playfair Display',serif; font-size:2.5rem; font-weight:700; color:var(--accent); line-height:1; }
+    .hi-stat-label { font-family:'Inter',sans-serif; font-size:0.85rem; color:#94a3b8; margin-top:4px; }
+    .hi-author-links { display:flex; flex-direction:column; gap:12px; }
+    .hi-author-link { display:flex; align-items:center; gap:16px; padding:14px 18px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; text-decoration:none; color:inherit; transition:0.2s; }
+    .hi-author-link:hover { border-color:var(--accent); background:#fff; transform:translateX(2px); }
+    .hi-author-link i { font-size:1.4rem; color:var(--accent); width:28px; text-align:center; }
+    .hi-link-label { font-family:'Inter',sans-serif; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.08em; color:#94a3b8; margin-bottom:2px; }
+    .hi-link-value { font-family:'Inter',sans-serif; font-size:0.92rem; font-weight:600; color:#0f172a; }
+    @media (max-width:768px) { .hi-author-card { grid-template-columns:1fr; padding:28px; gap:28px; } .hi-author-stats { gap:24px; } }
+
     /* Other courses cross-sell */
     .hi-other-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; max-width:900px; margin:0 auto; }
     .hi-other-card { background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:28px; transition:0.3s; display:flex; flex-direction:column; }
@@ -326,6 +344,51 @@
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- About author -->
+  <section class="hi-author-section" style="--accent:#3366CC;">
+    <div class="container" style="max-width:850px;">
+      <div style="text-align:center; margin-bottom:40px;">
+        <h2>Об авторе курса</h2>
+      </div>
+      <div class="hi-author-card wow fadeInUp">
+        <div>
+          <h3>Константин Жигалов</h3>
+          <ul class="hi-author-roles">
+            <li>Врач-кардиохирург (Германия)</li>
+            <li>PhD (Charité, Berlin), Prof h.c.</li>
+            <li>Научный консультант, преподаватель</li>
+          </ul>
+          <div class="hi-author-stats">
+            <div>
+              <div class="hi-stat-value">78</div>
+              <div class="hi-stat-label">публикаций</div>
+            </div>
+            <div>
+              <div class="hi-stat-value">16</div>
+              <div class="hi-stat-label">h-index (Scopus)</div>
+            </div>
+          </div>
+        </div>
+        <div class="hi-author-links">
+          <a href="https://www.scopus.com/authid/detail.uri?authorId=57517490500" target="_blank" class="hi-author-link">
+            <i class="fas fa-chart-line"></i>
+            <div>
+              <div class="hi-link-label">Scopus</div>
+              <div class="hi-link-value">ID 57517490500</div>
+            </div>
+          </a>
+          <a href="https://orcid.org/0000-0002-6440-3736" target="_blank" class="hi-author-link">
+            <i class="fab fa-orcid"></i>
+            <div>
+              <div class="hi-link-label">ORCID</div>
+              <div class="hi-link-value">0000-0002-6440-3736</div>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </section>
