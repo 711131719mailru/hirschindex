@@ -186,7 +186,7 @@ output = '''<!doctype html>
           <div class="footer-links">
             <a href="https://t.me/+79854770449"><i class="fab fa-telegram" style="width:18px;"></i> Telegram</a>
             <a href="https://wa.me/79854770449"><i class="fab fa-whatsapp" style="width:18px;"></i> WhatsApp</a>
-            <a href="mailto:zhigalovmd@yandex.ru"><i class="fas fa-envelope" style="width:18px;"></i> zhigalovmd@yandex.ru</a>
+            <a href="mailto:info@hirschindex.ru"><i class="fas fa-envelope" style="width:18px;"></i> info@hirschindex.ru</a>
           </div>
         </div>
         <div>
