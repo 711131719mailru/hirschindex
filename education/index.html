@@ -233,6 +233,19 @@
             .hi-card-icon.blue { background: #eff6ff; color: #3366CC; }
             .hi-card-icon.gold { background: #fef9ee; color: #c5a065; }
 
+            /* Testimonials */
+            .hi-testi-section { padding:70px 0; background:#f8fafc; }
+            .hi-testi-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; max-width:920px; margin:0 auto; }
+            .hi-testi-card { background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:28px; display:flex; flex-direction:column; gap:14px; transition:0.2s; }
+            .hi-testi-card:hover { border-color:#3366CC; box-shadow:0 6px 18px rgba(0,0,0,0.05); }
+            .hi-testi-card.featured { grid-column:1 / -1; background:linear-gradient(135deg,#fff,#f8fafc); border-color:#3366CC; }
+            .hi-testi-head { display:flex; gap:14px; align-items:center; }
+            .hi-testi-avatar { width:48px; height:48px; border-radius:50%; background:#3366CC; color:#fff; display:flex; align-items:center; justify-content:center; font-family:'Inter',sans-serif; font-weight:600; font-size:1rem; flex-shrink:0; }
+            .hi-testi-name { font-family:'Inter',sans-serif; font-weight:600; font-size:0.95rem; color:#0f172a; line-height:1.3; }
+            .hi-testi-role { font-family:'Inter',sans-serif; font-size:0.82rem; color:#94a3b8; margin-top:2px; }
+            .hi-testi-text { font-family:'Inter',sans-serif; font-size:0.92rem; color:#475569; line-height:1.55; margin:0; }
+            @media (max-width:768px) { .hi-testi-grid { grid-template-columns:1fr; } .hi-testi-card.featured { grid-column:1; } }
+
             /* Footer */
             .hi-footer a { color: #94a3b8; text-decoration: none; }
             .hi-footer a:hover { color: #fff; }
@@ -483,6 +496,114 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials -->
+            <section id="testimonials" class="hi-testi-section">
+                <div class="container" style="max-width:960px;">
+                    <div style="text-align:center; margin-bottom:40px;" class="wow fadeInUp">
+                        <h2 style="color:#0f172a;">Отзывы выпускников</h2>
+                        <p style="font-size:1rem; color:#475569; font-family:'Inter',sans-serif;">Что говорят те, кто уже прошёл курс «Нарративный обзор»</p>
+                    </div>
+                    <div class="hi-testi-grid">
+
+                        <!-- 1 — Мостовой (featured) -->
+                        <div class="hi-testi-card featured wow fadeInUp">
+                            <div class="hi-testi-head">
+                                <div class="hi-testi-avatar" style="background:#1e40af;">АМ</div>
+                                <div>
+                                    <div class="hi-testi-name">Алексей Валерьевич Мостовой</div>
+                                    <div class="hi-testi-role">врач анестезиолог-реаниматолог · д.м.н. · руководитель службы реанимации и интенсивной терапии · Перинатальный центр ГБУЗ «ГКБ №67 им. Л.А. Ворохобова ДЗМ», Москва</div>
+                                </div>
+                            </div>
+                            <p class="hi-testi-text">Дорогие коллеги! Хотел бы сказать пару слов для тех, кто сейчас только планирует свою научную карьеру. Я пошёл на этот курс «ради интереса» и «по знакомству», поскольку нас с Константином Юрьевичем объединяют общие идеи. Однако сейчас, после защиты докторской диссертации, могу сказать: если бы такой курс попался мне лет 20 назад — всё было бы значительно легче и быстрее. Сознание и научное мышление меняются и приобретают правильное направление в течение нескольких недель. Вкладывайте в себя — и вперёд!</p>
+                        </div>
+
+                        <!-- 2 — Осипова -->
+                        <div class="hi-testi-card wow fadeInUp" data-wow-delay="0.05s">
+                            <div class="hi-testi-head">
+                                <div class="hi-testi-avatar" style="background:#0e7490;">ЕО</div>
+                                <div>
+                                    <div class="hi-testi-name">Евгения Юрьевна Осипова</div>
+                                    <div class="hi-testi-role">врач анестезиолог-реаниматолог · Перинатальный центр ГБУЗ «Сахалинская областная клиническая больница», Южно-Сахалинск</div>
+                                </div>
+                            </div>
+                            <p class="hi-testi-text">Замечательный курс — помогает построить структуру, использовать современные методы для поиска и хранения литературы, а комментарии и предложения Константина Юрьевича вообще бесценны. Также общение с коллегами помогает поддерживать настрой. Спасибо огромное за курс!</p>
+                        </div>
+
+                        <!-- 3 — Фиголь -->
+                        <div class="hi-testi-card wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="hi-testi-head">
+                                <div class="hi-testi-avatar" style="background:#15803d;">СФ</div>
+                                <div>
+                                    <div class="hi-testi-name">Сергей Юрьевич Фиголь</div>
+                                    <div class="hi-testi-role">врач анестезиолог-реаниматолог · заведующий ОРИТН · Приморский краевой перинатальный центр, Владивосток</div>
+                                </div>
+                            </div>
+                            <p class="hi-testi-text">Классный курс — помогает начинающим учёным двигаться в правильном направлении! Спасибо Константину Юрьевичу!</p>
+                        </div>
+
+                        <!-- 4 — Цинцадзе -->
+                        <div class="hi-testi-card wow fadeInUp" data-wow-delay="0.15s">
+                            <div class="hi-testi-head">
+                                <div class="hi-testi-avatar" style="background:#7c3aed;">АЦ</div>
+                                <div>
+                                    <div class="hi-testi-name">Анастасия Александровна Цинцадзе</div>
+                                    <div class="hi-testi-role">врач анестезиолог-реаниматолог · НМИЦ онкологии им. Н.Н. Блохина, Москва</div>
+                                </div>
+                            </div>
+                            <p class="hi-testi-text">Очень рада, что прохожу этот курс! Искренне рекомендую всем, кто задумывается о своём академическом будущем. До этого я была наслышана о пользе написания статей, но именно здесь нашла систему. Главное — в голове наконец-то выстроился чёткий, логичный план для будущих публикаций. Множество вещей, которые мы обсуждаем на курсе, я раньше вообще не имела понятия. Эти лайфхаки по работе с литературой и постепенному наращиванию материала сэкономили мне месяцы работы.</p>
+                        </div>
+
+                        <!-- 5 — Дегтярева -->
+                        <div class="hi-testi-card wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="hi-testi-head">
+                                <div class="hi-testi-avatar" style="background:#b91c1c;">ЕД</div>
+                                <div>
+                                    <div class="hi-testi-name">Екатерина Васильевна Дегтярева</div>
+                                    <div class="hi-testi-role">врач анестезиолог-реаниматолог детский · Роддом УЗ «ГКБ №5», Минск</div>
+                                </div>
+                            </div>
+                            <p class="hi-testi-text">Спасибо вам за полезный курс — очень рада, что учусь у вас. Всё доступно, актуально, без лишнего «груза» — то, что надо для чёткого построения в голове плана: как и что писать. Очень нравится организация занятий в форме «задание — ответ»: задача разбивается на маленькие подзадачи, и с каждой становишься на шаг ближе к цели. Спасибо за пояснения и лайфхаки по работе с литературой в Zotero. Однозначно рекомендую курс всем, кто хочет начать или уже занимается наукой.</p>
+                        </div>
+
+                        <!-- 6 — Белик (featured) -->
+                        <div class="hi-testi-card featured wow fadeInUp" data-wow-delay="0.25s">
+                            <div class="hi-testi-head">
+                                <div class="hi-testi-avatar" style="background:#c2410c;">СБ</div>
+                                <div>
+                                    <div class="hi-testi-name">Сергей Григорьевич Белик</div>
+                                    <div class="hi-testi-role">врач-психотерапевт · Центр психотерапии «Балтстар», Санкт-Петербург</div>
+                                </div>
+                            </div>
+                            <p class="hi-testi-text">Хочу оставить отзыв о прохождении курса по написанию нарративного обзора у Константина Юрьевича. Я врач с опытом работы 24 года и хорошо знаю: опыт нарабатывается годами, и он самый ценный для любого специалиста. Но не каждый готов поделиться наработанным опытом, о котором не прочтёшь в учебниках. Константин Юрьевич — именно тот специалист, который делится самым ценным. И что очень важно — Константин Юрьевич человек слова: все договорённости он выполняет, остаётся только выполнять свои — и всё получится. Благодарен Константину Юрьевичу за полученные знания.</p>
+                        </div>
+
+                    </div>
+
+                    <div style="text-align:center; margin-top:36px; font-family:'Inter',sans-serif; font-size:0.92rem; color:#94a3b8;">
+                        Хотите оставить отзыв? Напишите на <a href="mailto:info@hirschindex.ru" style="color:#3366CC; text-decoration:none; font-weight:500;">info@hirschindex.ru</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Webinars -->
+            <section style="padding:60px 0; background:#fff;">
+                <div class="container" style="max-width:720px; text-align:center;">
+                    <div class="wow fadeInUp">
+                        <div style="display:inline-flex; align-items:center; justify-content:center; width:48px; height:48px; border-radius:50%; background:#eff6ff; color:#3366CC; margin-bottom:16px;">
+                            <i class="fas fa-video" style="font-size:1.1rem;"></i>
+                        </div>
+                        <h2 style="color:#0f172a; margin-bottom:12px;">Вебинары</h2>
+                        <p style="font-size:1rem; color:#475569; font-family:'Inter',sans-serif; max-width:540px; margin:0 auto 24px;">
+                            Регулярно проводим бесплатные образовательные вебинары по темам курсов.
+                            Анонсы публикуем в нашем Telegram-канале.
+                        </p>
+                        <a href="https://t.me/hirsch_index_school" target="_blank" class="hi-btn hi-btn-blue">
+                            <i class="fab fa-telegram" style="margin-right:6px;"></i>Telegram-канал
+                        </a>
                     </div>
                 </div>
             </section>
