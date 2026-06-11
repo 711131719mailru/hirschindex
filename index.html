@@ -100,6 +100,9 @@
                 white-space: nowrap;
             }
             .hi-nav-tg:hover { background: #2952a3; color: #fff; }
+            .hi-nav-social { display:flex; align-items:center; gap:14px; }
+            .hi-nav-social a { color:#475569; font-size:0.95rem; transition:color 0.2s; display:inline-flex; align-items:center; line-height:1; }
+            .hi-nav-social a:hover { color:#3366CC; }
             .hi-nav-right {
                 display: flex;
                 align-items: center;
@@ -140,6 +143,7 @@
                 .hi-nav-menu { display: none; }
                 .hi-burger { display: block; }
                 .hi-nav-tg { display: none !important; }
+                .hi-nav-social { display: none !important; }
             }
             .logo-text-hi {
                 font-family: 'Playfair Display', serif;
@@ -195,6 +199,66 @@
                 max-width: 580px;
                 margin-left: auto;
                 margin-right: auto;
+            }
+
+            /* Partners section */
+            .hi-partners {
+                background: #f8fafc;
+            }
+            .hi-partners-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+                max-width: 980px;
+                margin: 0 auto;
+            }
+            .hi-partner-card {
+                background: #fff;
+                border: 1px solid #e2e8f0;
+                border-radius: 12px;
+                height: 130px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+                text-decoration: none;
+                color: inherit;
+                transition: 0.25s;
+            }
+            .hi-partner-card:hover {
+                border-color: #3366CC;
+                box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+                transform: translateY(-2px);
+            }
+            .hi-partner-card img {
+                max-height: 70px;
+                max-width: 100%;
+                object-fit: contain;
+                filter: grayscale(20%);
+                transition: filter 0.25s;
+            }
+            .hi-partner-card:hover img {
+                filter: grayscale(0%);
+            }
+            .hi-partner-placeholder {
+                background: transparent;
+                border: 2px dashed #cbd5e1;
+                border-radius: 12px;
+                height: 130px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #94a3b8;
+                font-family: 'Inter', sans-serif;
+                font-size: 0.85rem;
+                font-weight: 500;
+                letter-spacing: 0.04em;
+            }
+            @media (max-width: 991px) {
+                .hi-partners-grid { grid-template-columns: repeat(2, 1fr); }
+            }
+            @media (max-width: 480px) {
+                .hi-partners-grid { grid-template-columns: 1fr; }
             }
 
             /* Pillar cards */
@@ -420,9 +484,12 @@
                             <li><a href="/blog/">Блог</a></li>
                             <li><a href="/resources/">Ресурсы</a></li>
                         </ul>
-                        <a href="https://t.me/hirsch_index_school" target="_blank" class="hi-nav-tg">
-                            <i class="fab fa-telegram"></i>Telegram
-                        </a>
+                        <div class="hi-nav-social">
+                            <a href="https://t.me/hirsch_index_school" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                            <a href="https://www.instagram.com/hirsch_index_ru" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61590906262853" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.linkedin.com/company/hirsch-index-school" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
                         <button class="hi-burger" onclick="document.getElementById('hiMobile').classList.toggle('open')" aria-label="Меню">
                             <i class="fas fa-bars"></i>
                         </button>
@@ -435,7 +502,10 @@
                 <a href="/consulting/">Консалтинг</a>
                 <a href="/blog/">Блог</a>
                 <a href="/resources/">Ресурсы</a>
-                <a href="https://t.me/hirsch_index_school"><i class="fab fa-telegram"></i> Telegram</a>
+                <a href="https://t.me/hirsch_index_school" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
+                <a href="https://www.instagram.com/hirsch_index_ru" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://www.facebook.com/profile.php?id=61590906262853" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+                <a href="https://www.linkedin.com/company/hirsch-index-school" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
             </div>
 
             <!-- ===== Hero ===== -->
@@ -553,6 +623,30 @@
             </section>
 
 
+            <!-- ===== PARTNERS DRAFT — not for deploy until 3+ partners are confirmed ===== -->
+            <section class="hi-partners">
+                <div class="w-100 pt-100 pb-100 position-relative">
+                    <div class="container">
+                        <div class="sec-title v2 text-center w-100 wow fadeInUp">
+                            <div class="sec-title-inner d-inline-block">
+                                <h2 class="mb-0 text-color3">Партнёры</h2>
+                                <p class="mb-0" style="font-family:'Inter',sans-serif; color:#475569;">Профессиональные медицинские сообщества и организации, с&nbsp;которыми мы сотрудничаем</p>
+                            </div>
+                        </div>
+                        <div class="hi-partners-grid">
+                            <a href="https://medneo.pro/" target="_blank" class="hi-partner-card wow fadeInUp" data-wow-delay="0.05s" aria-label="МедНео">
+                                <img src="/assets/partners/medneo.svg" alt="МедНео">
+                            </a>
+                            <div class="hi-partner-placeholder wow fadeInUp" data-wow-delay="0.1s">Скоро</div>
+                            <div class="hi-partner-placeholder wow fadeInUp" data-wow-delay="0.15s">Скоро</div>
+                            <div class="hi-partner-placeholder wow fadeInUp" data-wow-delay="0.2s">Скоро</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ===== /PARTNERS DRAFT ===== -->
+
+
             <!-- ===== Social Channels ===== -->
             <section>
                 <div class="w-100 pt-100 pb-100 position-relative">
@@ -583,6 +677,27 @@
                                 <div>
                                     <div style="font-weight:600;">MAX</div>
                                     <div style="font-size:0.85rem; color:#475569;">Индекс Хирша</div>
+                                </div>
+                            </a>
+                            <a href="https://www.instagram.com/hirsch_index_ru" target="_blank" class="hi-social-card wow fadeInUp" data-wow-delay="0.4s">
+                                <div class="hi-social-icon" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); color:#fff;"><i class="fab fa-instagram"></i></div>
+                                <div>
+                                    <div style="font-weight:600;">Instagram</div>
+                                    <div style="font-size:0.85rem; color:#475569;">@hirsch_index_ru</div>
+                                </div>
+                            </a>
+                            <a href="https://www.facebook.com/profile.php?id=61590906262853" target="_blank" class="hi-social-card wow fadeInUp" data-wow-delay="0.5s">
+                                <div class="hi-social-icon" style="background:#1877F2; color:#fff;"><i class="fab fa-facebook-f"></i></div>
+                                <div>
+                                    <div style="font-weight:600;">Facebook</div>
+                                    <div style="font-size:0.85rem; color:#475569;">Индекс Хирша</div>
+                                </div>
+                            </a>
+                            <a href="https://www.linkedin.com/company/hirsch-index-school" target="_blank" class="hi-social-card wow fadeInUp" data-wow-delay="0.6s">
+                                <div class="hi-social-icon" style="background:#0A66C2; color:#fff;"><i class="fab fa-linkedin-in"></i></div>
+                                <div>
+                                    <div style="font-weight:600;">LinkedIn</div>
+                                    <div style="font-size:0.85rem; color:#475569;">Hirsch Index School</div>
                                 </div>
                             </a>
                         </div>
