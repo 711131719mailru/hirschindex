@@ -201,66 +201,6 @@
                 margin-right: auto;
             }
 
-            /* Partners section */
-            .hi-partners {
-                background: #f8fafc;
-            }
-            .hi-partners-grid {
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                gap: 20px;
-                max-width: 980px;
-                margin: 0 auto;
-            }
-            .hi-partner-card {
-                background: #fff;
-                border: 1px solid #e2e8f0;
-                border-radius: 12px;
-                height: 130px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 20px;
-                text-decoration: none;
-                color: inherit;
-                transition: 0.25s;
-            }
-            .hi-partner-card:hover {
-                border-color: #3366CC;
-                box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-                transform: translateY(-2px);
-            }
-            .hi-partner-card img {
-                max-height: 70px;
-                max-width: 100%;
-                object-fit: contain;
-                filter: grayscale(20%);
-                transition: filter 0.25s;
-            }
-            .hi-partner-card:hover img {
-                filter: grayscale(0%);
-            }
-            .hi-partner-placeholder {
-                background: transparent;
-                border: 2px dashed #cbd5e1;
-                border-radius: 12px;
-                height: 130px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: #94a3b8;
-                font-family: 'Inter', sans-serif;
-                font-size: 0.85rem;
-                font-weight: 500;
-                letter-spacing: 0.04em;
-            }
-            @media (max-width: 991px) {
-                .hi-partners-grid { grid-template-columns: repeat(2, 1fr); }
-            }
-            @media (max-width: 480px) {
-                .hi-partners-grid { grid-template-columns: 1fr; }
-            }
-
             /* Pillar cards */
             .hi-pillar {
                 background: #fff;
@@ -623,28 +563,6 @@
             </section>
 
 
-            <!-- ===== PARTNERS DRAFT — not for deploy until 3+ partners are confirmed ===== -->
-            <section class="hi-partners">
-                <div class="w-100 pt-100 pb-100 position-relative">
-                    <div class="container">
-                        <div class="sec-title v2 text-center w-100 wow fadeInUp">
-                            <div class="sec-title-inner d-inline-block">
-                                <h2 class="mb-0 text-color3">Партнёры</h2>
-                                <p class="mb-0" style="font-family:'Inter',sans-serif; color:#475569;">Профессиональные медицинские сообщества и организации, с&nbsp;которыми мы сотрудничаем</p>
-                            </div>
-                        </div>
-                        <div class="hi-partners-grid">
-                            <a href="https://medneo.pro/" target="_blank" class="hi-partner-card wow fadeInUp" data-wow-delay="0.05s" aria-label="МедНео">
-                                <img src="/assets/partners/medneo.svg" alt="МедНео">
-                            </a>
-                            <div class="hi-partner-placeholder wow fadeInUp" data-wow-delay="0.1s">Скоро</div>
-                            <div class="hi-partner-placeholder wow fadeInUp" data-wow-delay="0.15s">Скоро</div>
-                            <div class="hi-partner-placeholder wow fadeInUp" data-wow-delay="0.2s">Скоро</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- ===== /PARTNERS DRAFT ===== -->
 
 
             <!-- ===== Social Channels ===== -->
