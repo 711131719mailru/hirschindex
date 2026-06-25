@@ -151,17 +151,18 @@
     @media (max-width:768px) { .hi-author-card { grid-template-columns:1fr; padding:28px; gap:28px; } .hi-author-stats { gap:24px; } }
 
     /* Other courses cross-sell */
-    .hi-other-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; max-width:900px; margin:0 auto; }
+    .hi-other-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; max-width:1100px; margin:0 auto; }
     .hi-other-card { background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:28px; transition:0.3s; display:flex; flex-direction:column; }
     .hi-other-card:hover { box-shadow:0 10px 25px rgba(0,0,0,0.08); transform:translateY(-2px); }
     .hi-other-tag { font-size:0.7rem; font-weight:bold; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:8px; font-family:'Inter',sans-serif; }
     .hi-other-tag.teal { color:#2BB5A0; }
     .hi-other-tag.blue { color:#3366CC; }
     .hi-other-tag.gold { color:#c5a065; }
+    .hi-other-tag.purple { color:#7c3aed; }
     .hi-other-card h3 { font-family:'Playfair Display',serif; font-size:1.15rem; margin-bottom:8px; color:#0f172a; }
     .hi-other-card p { font-size:0.9rem; color:#475569; font-family:'Inter',sans-serif; margin-bottom:16px; flex:1; }
     .hi-other-meta { font-size:0.8rem; color:#94a3b8; margin-bottom:16px; font-family:'Inter',sans-serif; }
-    @media (max-width:768px) { .hi-other-grid { grid-template-columns:1fr; } }
+    @media (max-width:991px) { .hi-other-grid { grid-template-columns:1fr; } }
   </style>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -453,15 +454,6 @@
 
       </div>
 
-      <!-- Club cross-sell -->
-      <div class="hi-club-banner" style="margin-top:50px;">
-        <img src="/assets/logo-club.jpg" alt="Клуб">
-        <div style="flex:1;">
-          <div style="color:#c5a065; font-family:'Inter',sans-serif; font-weight:600; font-size:0.75rem; letter-spacing:0.18em; text-transform:uppercase; margin-bottom:8px;">Сообщество выпускников</div>
-          <h3 style="font-family:'Playfair Display',serif; color:#fff; font-size:1.4rem; font-weight:700; margin-bottom:12px;">Научный клуб «Индекс Хирша»</h3>
-          <p style="margin-bottom:12px;">После курса вы получите приглашение в закрытое сообщество школы — научный клуб «Индекс Хирша». Там продолжается практика, ищутся соавторы и формируются команды для совместных публикаций.</p>
-          <a href="/club/" class="hi-btn hi-btn-gold hi-btn-sm">Подробнее о клубе</a>
-        </div>
       </div>
     </div>
   </section>
@@ -474,7 +466,14 @@
         <p>Продолжите путь автора в нашей школе</p>
       </div>
       <div class="hi-other-grid">
-        <a href="/course-review/" class="hi-other-card wow fadeInUp" style="text-decoration:none; color:inherit;">
+        <a href="/course-data/" class="hi-other-card wow fadeInUp" data-wow-delay="0.05s" style="text-decoration:none; color:inherit;">
+                  <div class="hi-other-tag purple">Курс &middot; Сбор данных</div>
+                  <h3>Как собрать и подготовить данные для оригинального исследования</h3>
+                  <div class="hi-other-meta">8 уроков &middot; 3 модуля &middot; 2 недели</div>
+                  <p>От утверждённого дизайна — к словарю переменных, заполненной базе данных в Excel, деидентификации и очищенной таблице для статистики.</p>
+                  <span class="hi-btn hi-btn-outline hi-btn-sm" style="align-self:flex-start;">Подробнее</span>
+                </a>
+                <a href="/course-review/" class="hi-other-card wow fadeInUp" style="text-decoration:none; color:inherit;">
           <div class="hi-other-tag blue">Видеокурс &middot; Обзор</div>
           <h3>Как написать хороший нарративный обзор</h3>
           <div class="hi-other-meta">30 уроков &middot; 5 модулей &middot; 6 недель</div>
@@ -489,6 +488,20 @@
           <span class="hi-btn hi-btn-outline hi-btn-sm" style="align-self:flex-start;">Подробнее</span>
         </a>
       </div>
+    </div>
+  </section>
+
+  <!-- Club banner -->
+  <section style="padding:60px 0; background:#fff;">
+    <div class="container" style="max-width:850px;">
+      <div class="hi-club-banner">
+        <img src="/assets/logo-club.jpg" alt="Клуб">
+        <div style="flex:1;">
+          <div style="color:#c5a065; font-family:'Inter',sans-serif; font-weight:600; font-size:0.75rem; letter-spacing:0.18em; text-transform:uppercase; margin-bottom:8px;">Сообщество выпускников</div>
+          <h3 style="font-family:'Playfair Display',serif; color:#fff; font-size:1.4rem; font-weight:700; margin-bottom:12px;">Научный клуб «Индекс Хирша»</h3>
+          <p style="margin-bottom:12px;">После курса вы получите приглашение в закрытое сообщество школы — научный клуб «Индекс Хирша». Там продолжается практика, ищутся соавторы и формируются команды для совместных публикаций.</p>
+          <a href="/club/" class="hi-btn hi-btn-gold hi-btn-sm">Подробнее о клубе</a>
+        </div>
     </div>
   </section>
 

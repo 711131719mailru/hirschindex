@@ -102,6 +102,7 @@
             .hi-course-visual.teal { background: linear-gradient(135deg, #ecfdf5, #d1fae5); }
             .hi-course-visual.blue { background: linear-gradient(135deg, #eff6ff, #dbeafe); }
             .hi-course-visual.gold { background: linear-gradient(135deg, #fef9ee, #fbe6b3); }
+            .hi-course-visual.purple { background: linear-gradient(135deg, #f3e8ff, #e9d5ff); }
             .hi-course-visual img {
                 width: 80px;
                 height: 80px;
@@ -177,6 +178,8 @@
             .hi-btn-blue:hover { background: #2952a3; color: #fff; }
             .hi-btn-gold { background: #c5a065; color: #fff; }
             .hi-btn-gold:hover { background: #b8944d; color: #fff; }
+            .hi-btn-purple { background: #7c3aed; color: #fff; }
+            .hi-btn-purple:hover { background: #6d28d9; color: #fff; }
             .hi-btn-outline { background: #fff; border: 1px solid #e2e8f0; color: #1e293b; }
             .hi-btn-outline:hover { border-color: #3366CC; color: #3366CC; }
             .hi-btn-sm { padding: 10px 20px; font-size: 0.85rem; }
@@ -295,6 +298,7 @@
             .hi-course-nav .dot.teal { background: #2BB5A0; }
             .hi-course-nav .dot.blue { background: #3366CC; }
             .hi-course-nav .dot.gold { background: #c5a065; }
+            .hi-course-nav .dot.purple { background: #7c3aed; }
 
             /* Anchor offset for fixed nav */
             .hi-anchor { scroll-margin-top: 90px; }
@@ -371,6 +375,7 @@
                         <p>Пошаговые курсы: от дизайна исследования до публикации в рецензируемом журнале</p>
                         <nav class="hi-course-nav" aria-label="Список курсов">
                             <a href="#course-design"><span class="dot teal"></span>Дизайн исследования</a>
+                            <a href="#course-data"><span class="dot purple"></span>Сбор данных</a>
                             <a href="#course-case-report"><span class="dot gold"></span>Клинический случай</a>
                             <a href="#course-review"><span class="dot blue"></span>Нарративный обзор</a>
                         </nav>
@@ -410,7 +415,40 @@
                 </div>
             </section>
 
-            <!-- Course 2: Case Report -->
+            <!-- Course 2: Data Collection -->
+            <section id="course-data" class="hi-anchor">
+                <div class="w-100 pt-0 pb-80 position-relative">
+                    <div class="container">
+                        <div class="hi-course-card wow fadeInUp" data-wow-delay="0.05s">
+                            <div class="hi-course-visual purple">
+                                <img src="/assets/logo-edu.jpg" alt="Сбор данных">
+                                <div class="hi-course-tag" style="color:#7c3aed;">Курс</div>
+                                <h3>Как собрать и подготовить данные для оригинального исследования</h3>
+                                <div class="hi-course-meta">8 уроков · 3 модуля · 2 недели</div>
+                            </div>
+                            <div class="hi-course-info">
+                                <p>От утверждённого дизайна — к словарю переменных, заполненной базе данных в Excel, деидентификации и очищенной таблице, готовой к передаче статистику.</p>
+                                <ul class="hi-course-features">
+                                    <li><i class="fas fa-check"></i> 8 уроков с пошаговыми инструкциями</li>
+                                    <li><i class="fas fa-check"></i> Шаблоны базы данных и словаря переменных</li>
+                                    <li><i class="fas fa-check"></i> Контроль качества и деидентификация</li>
+                                    <li><i class="fas fa-check"></i> Результат — готовая БД для статистики</li>
+                                </ul>
+                                <div class="hi-course-price">
+                                    <span class="from">от</span>
+                                    <span class="val">9 900 ₽</span>
+                                </div>
+                                <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                                    <a href="/course-data/" class="hi-btn hi-btn-purple">Подробнее</a>
+                                    <a href="/course-data/#pricing" class="hi-btn hi-btn-outline">Тарифы</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Course 3: Case Report -->
             <section id="course-case-report" class="hi-anchor">
                 <div class="w-100 pt-0 pb-80 position-relative">
                     <div class="container">
@@ -443,7 +481,7 @@
                 </div>
             </section>
 
-            <!-- Course 3: Review Article -->
+            <!-- Course 4: Review Article -->
             <section id="course-review" class="hi-anchor">
                 <div class="w-100 pt-0 pb-80 position-relative">
                     <div class="container">
