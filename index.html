@@ -201,6 +201,95 @@
                 margin-right: auto;
             }
 
+            /* Announcement banner (temporary) */
+            .hi-announce {
+                background: linear-gradient(135deg, #fef9ee 0%, #fbe6b3 100%);
+                border-top: 1px solid rgba(197,160,101,0.25);
+                border-bottom: 1px solid rgba(197,160,101,0.25);
+                padding: 28px 24px;
+            }
+            .hi-announce-card {
+                display: grid;
+                grid-template-columns: 220px minmax(0, 720px) 220px;
+                justify-content: center;
+                align-items: center;
+                gap: 32px;
+                max-width: 1240px;
+                margin: 0 auto;
+            }
+            .hi-announce-meta {
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 8px;
+            }
+            .hi-announce-pill {
+                display: block;
+                background: #c5a065;
+                color: #fff;
+                font-family: 'Inter', sans-serif;
+                font-size: 0.75rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 0.08em;
+                padding: 6px 14px;
+                border-radius: 50px;
+                text-align: center;
+            }
+            .hi-announce-date {
+                display: block;
+                font-family: 'Inter', sans-serif;
+                font-size: 0.95rem;
+                color: #6b4f1f;
+                font-weight: 600;
+                text-align: center;
+            }
+            .hi-announce-body { flex: 1; }
+            .hi-announce-body h2 {
+                font-family: 'Playfair Display', serif;
+                font-size: 1.5rem;
+                color: #1e293b;
+                margin: 0 0 6px;
+                line-height: 1.25;
+            }
+            .hi-announce-body p {
+                font-family: 'Inter', sans-serif;
+                font-size: 0.95rem;
+                color: #475569;
+                margin: 0;
+                line-height: 1.45;
+            }
+            .hi-desktop-br { display: inline; }
+            .hi-announce-cta { /* grid cell handles sizing */ }
+            .hi-announce-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                background: #c5a065;
+                color: #fff !important;
+                font-family: 'Inter', sans-serif;
+                font-size: 0.95rem;
+                font-weight: 500;
+                padding: 13px 20px;
+                border-radius: 8px;
+                text-decoration: none;
+                transition: background 0.2s, transform 0.2s;
+                white-space: nowrap;
+                width: 100%;
+            }
+            .hi-announce-btn:hover {
+                background: #b8944d;
+                transform: translateX(2px);
+            }
+            @media (max-width: 900px) {
+                .hi-announce { padding: 24px 0; }
+                .hi-announce-card { grid-template-columns: 1fr; gap: 16px; text-align: center; }
+                .hi-announce-meta { flex-direction: row; align-items: center; gap: 12px; flex-wrap: wrap; justify-content: center; }
+                .hi-announce-body h2 { font-size: 1.25rem; }
+                .hi-desktop-br { display: none; }
+            }
+
             /* Pillar cards */
             .hi-pillar {
                 background: #fff;
@@ -473,6 +562,24 @@
                     </div>
                 </div>
             </section>
+
+            <!-- ===== ANNOUNCEMENT BANNER (temp): запуск всех 4 курсов, старт 06.07.2026 ===== -->
+            <section class="hi-announce">
+                <div class="hi-announce-card wow fadeInUp">
+                    <div class="hi-announce-meta">
+                        <span class="hi-announce-pill">Открыт набор</span>
+                        <span class="hi-announce-date">Старт 6 июля 2026 (Пн.)</span>
+                    </div>
+                    <div class="hi-announce-body">
+                        <h2>Первый поток всех 4 курсов</h2>
+                        <p>Дизайн исследования &middot; Сбор данных &middot; Клинический случай &middot; Нарративный обзор. <br class="hi-desktop-br">Все четыре курса стартуют одновременно — выбирайте программу и присоединяйтесь к группе.</p>
+                    </div>
+                    <div class="hi-announce-cta">
+                        <a href="/education/" class="hi-announce-btn">Выбрать курс <i class="fas fa-arrow-right" style="font-size:0.85rem;"></i></a>
+                    </div>
+                </div>
+            </section>
+            <!-- ===== /ANNOUNCEMENT BANNER ===== -->
 
             <!-- ===== Ecosystem (4 Pillars) ===== -->
             <section>
