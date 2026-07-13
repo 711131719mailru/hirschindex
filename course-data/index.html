@@ -143,6 +143,14 @@
     .hi-other-meta { font-size:0.8rem; color:#94a3b8; margin-bottom:16px; font-family:'Inter',sans-serif; }
     @media (max-width:991px) { .hi-other-grid { grid-template-columns:1fr; } }
 
+    /* Multi-course discount notice */
+    .hi-multi-discount { display:flex; align-items:center; gap:16px; max-width:1100px; margin:0 auto 32px; padding:16px 22px; background:linear-gradient(135deg, #fefce8 0%, #fef3c7 100%); border:1px solid #fde68a; border-radius:12px; box-shadow:0 2px 8px rgba(245,158,11,0.06); }
+    .hi-multi-discount-icon { flex-shrink:0; width:40px; height:40px; border-radius:50%; background:#f59e0b; color:#fff; display:flex; align-items:center; justify-content:center; font-size:1rem; }
+    .hi-multi-discount-text { font-family:'Inter',sans-serif; font-size:0.92rem; color:#475569; line-height:1.5; }
+    .hi-multi-discount-text strong { color:#0f172a; font-weight:600; margin-right:4px; }
+    @media (max-width:600px) { .hi-multi-discount { flex-direction:column; text-align:center; padding:20px; gap:12px; } }
+
+
     /* GC Modals */
     .hi-gc-modal-overlay { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:10000; justify-content:center; align-items:center; }
     .hi-gc-modal-overlay.active { display:flex; }
@@ -391,7 +399,7 @@
         <!-- Tier 1 -->
         <div class="hi-pricing-card wow fadeInUp">
           <div class="hi-pricing-name">Самостоятельный</div>
-          <div class="hi-pricing-price">9 900 <span>&#8381;</span></div>
+          <div class="hi-pricing-price">8 900 <span>&#8381;</span></div>
           <ul class="hi-pricing-features">
             <li><span class="check"><i class="fas fa-check"></i></span> 3 модуля (уроки 1–8)</li>
             <li><span class="check"><i class="fas fa-check"></i></span> Методические материалы</li>
@@ -409,7 +417,7 @@
         <!-- Tier 2 -->
         <div class="hi-pricing-card featured">
           <div class="hi-pricing-name">Стандартный</div>
-          <div class="hi-pricing-price">19 900 <span>&#8381;</span></div>
+          <div class="hi-pricing-price">15 900 <span>&#8381;</span></div>
           <ul class="hi-pricing-features">
             <li><span class="check"><i class="fas fa-check"></i></span> 3 модуля (уроки 1–8)</li>
             <li><span class="check"><i class="fas fa-check"></i></span> Методические материалы</li>
@@ -427,7 +435,7 @@
         <!-- Tier 3 -->
         <div class="hi-pricing-card wow fadeInUp">
           <div class="hi-pricing-name">Расширенный</div>
-          <div class="hi-pricing-price">29 900 <span>&#8381;</span></div>
+          <div class="hi-pricing-price">24 900 <span>&#8381;</span></div>
           <ul class="hi-pricing-features">
             <li><span class="check"><i class="fas fa-check"></i></span> 3 модуля (уроки 1–8)</li>
             <li><span class="check"><i class="fas fa-check"></i></span> Методические материалы</li>
@@ -454,6 +462,10 @@
       <div style="text-align:center; margin-bottom:40px;">
         <h2>Другие курсы</h2>
         <p style="font-size:1rem; color:#475569; font-family:'Inter',sans-serif;">Продолжите путь автора в нашей школе</p>
+      </div>
+      <div class="hi-multi-discount wow fadeInUp" data-wow-delay="0.05s">
+        <div class="hi-multi-discount-icon"><i class="fas fa-percent"></i></div>
+        <div class="hi-multi-discount-text"><strong>Скидка 10 %</strong>на второй и любой следующий курс школы. После оплаты первого — на почту приходит промокод.</div>
       </div>
       <div class="hi-other-grid">
         <a href="/course-design/" class="hi-other-card wow fadeInUp" style="text-decoration:none; color:inherit;">
@@ -615,21 +627,21 @@
   <div class="hi-gc-modal-overlay" id="gc-modal-1" onclick="closeGcModal(event, 'gc-modal-1')">
     <div class="hi-gc-modal-box" onclick="event.stopPropagation();">
       <button class="hi-gc-modal-close" onclick="closeGcModal(event, 'gc-modal-1')">&times;</button>
-      <h3 class="hi-gc-modal-title">Самостоятельный — 9 900 &#8381;</h3>
+      <h3 class="hi-gc-modal-title">Самостоятельный — 8 900 &#8381;</h3>
       <script id="f04d669d8b906afaf815f70fb13f7b4ff168f55b" src="https://hirschindex.getcourse.ru/pl/lite/widget/script?id=1622663"></script>
     </div>
   </div>
   <div class="hi-gc-modal-overlay" id="gc-modal-2" onclick="closeGcModal(event, 'gc-modal-2')">
     <div class="hi-gc-modal-box" onclick="event.stopPropagation();">
       <button class="hi-gc-modal-close" onclick="closeGcModal(event, 'gc-modal-2')">&times;</button>
-      <h3 class="hi-gc-modal-title">Стандартный — 19 900 &#8381;</h3>
+      <h3 class="hi-gc-modal-title">Стандартный — 15 900 &#8381;</h3>
       <script id="f865f7f312b6bb9c0770208157f5aad198bf11c5" src="https://hirschindex.getcourse.ru/pl/lite/widget/script?id=1622670"></script>
     </div>
   </div>
   <div class="hi-gc-modal-overlay" id="gc-modal-3" onclick="closeGcModal(event, 'gc-modal-3')">
     <div class="hi-gc-modal-box" onclick="event.stopPropagation();">
       <button class="hi-gc-modal-close" onclick="closeGcModal(event, 'gc-modal-3')">&times;</button>
-      <h3 class="hi-gc-modal-title">Расширенный — 29 900 &#8381;</h3>
+      <h3 class="hi-gc-modal-title">Расширенный — 24 900 &#8381;</h3>
       <script id="923e2a1378e767e89e1f8e048ba9a067d7618df2" src="https://hirschindex.getcourse.ru/pl/lite/widget/script?id=1622671"></script>
     </div>
   </div>
