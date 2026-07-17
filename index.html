@@ -407,51 +407,71 @@
                 color: #3366CC;
             }
 
-            /* Social cards */
-            .hi-social-card {
-                display: flex;
-                align-items: center;
-                gap: 16px;
-                background: #fff;
-                border: 1px solid #e2e8f0;
-                padding: 18px 28px;
-                border-radius: 12px;
-                transition: 0.3s;
-                text-decoration: none;
-                color: #1e293b;
-            }
-            .hi-social-card:hover {
-                transform: translateY(-3px);
-                box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-                color: #1e293b;
-            }
-            .hi-social-icon {
-                width: 44px;
-                height: 44px;
-                border-radius: 10px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: #fff;
-                font-size: 20px;
-                flex-shrink: 0;
-            }
-            .hi-social-icon.tg { background: #2AABEE; }
-            .hi-social-icon.vk { background: #4C75A3; }
-
-            .hi-social-grid {
-                display: grid;
-                grid-template-columns: repeat(3, minmax(0, 280px));
-                gap: 20px;
-                max-width: 900px;
+            /* Telegram CTA card */
+            .hi-tg-cta {
+                max-width: 720px;
                 margin: 0 auto;
+                padding: 56px 40px;
+                background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+                border: 1px solid #bae6fd;
+                border-radius: 20px;
+                text-align: center;
+                box-shadow: 0 4px 20px rgba(42, 171, 238, 0.08);
+            }
+            .hi-tg-cta-icon {
+                width: 88px;
+                height: 88px;
+                border-radius: 50%;
+                background: #2AABEE;
+                color: #fff;
+                display: inline-flex;
+                align-items: center;
                 justify-content: center;
+                font-size: 42px;
+                margin: 0 auto 24px;
+                box-shadow: 0 6px 16px rgba(42, 171, 238, 0.25);
             }
-            @media (max-width: 991px) {
-                .hi-social-grid { grid-template-columns: repeat(2, minmax(0, 280px)); max-width: 580px; }
+            .hi-tg-cta h2 { color: #0f172a; margin-bottom: 16px; }
+            .hi-tg-cta p {
+                font-family: 'Inter', sans-serif;
+                color: #475569;
+                font-size: 1.05rem;
+                line-height: 1.6;
+                max-width: 520px;
+                margin: 0 auto 32px;
             }
-            @media (max-width: 560px) {
-                .hi-social-grid { grid-template-columns: minmax(0, 320px); }
+            .hi-tg-cta-btn {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                padding: 16px 36px;
+                border-radius: 10px;
+                background: #2AABEE;
+                color: #fff !important;
+                font-family: 'Inter', sans-serif;
+                font-weight: 600;
+                font-size: 1rem;
+                text-decoration: none;
+                transition: 0.3s;
+            }
+            .hi-tg-cta-btn:hover {
+                background: #229ED9;
+                transform: translateY(-2px);
+                box-shadow: 0 6px 16px rgba(42, 171, 238, 0.35);
+                color: #fff !important;
+            }
+            .hi-tg-cta-handle {
+                display: block;
+                margin-top: 20px;
+                font-family: 'Inter', sans-serif;
+                font-size: 0.85rem;
+                color: #64748b;
+            }
+            @media (max-width: 600px) {
+                .hi-tg-cta { padding: 44px 24px; }
+                .hi-tg-cta-icon { width: 72px; height: 72px; font-size: 34px; }
+                .hi-tg-cta h2 { font-size: 1.6rem; }
+                .hi-tg-cta p { font-size: 1rem; }
             }
 
             /* Footer overrides */
@@ -670,59 +690,18 @@
 
 
 
-            <!-- ===== Social Channels ===== -->
+            <!-- ===== Telegram CTA (заменил блок «Мы в соцсетях» 17.07.2026) ===== -->
             <section>
                 <div class="w-100 pt-100 pb-100 position-relative">
                     <div class="container">
-                        <div class="sec-title v2 text-center w-100 wow fadeInUp">
-                            <div class="sec-title-inner d-inline-block">
-                                <h2 class="mb-0 text-color3">Мы в соцсетях</h2>
-                                <p class="mb-0" style="font-family:'Inter',sans-serif; color:#475569;">Образовательный контент о научных публикациях</p>
-                            </div>
-                        </div>
-                        <div class="hi-social-grid">
-                            <a href="https://t.me/hirsch_index_school" target="_blank" class="hi-social-card wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="hi-social-icon tg"><i class="fab fa-telegram"></i></div>
-                                <div>
-                                    <div style="font-weight:600;">Telegram</div>
-                                    <div style="font-size:0.85rem; color:#475569;">@hirsch_index_school</div>
-                                </div>
+                        <div class="hi-tg-cta wow fadeInUp">
+                            <div class="hi-tg-cta-icon"><i class="fab fa-telegram"></i></div>
+                            <h2>Подпишитесь на наш Telegram-канал</h2>
+                            <p>Каждую неделю — новый пост «Азбуки медицинской науки», разборы публикаций, чек-листы для авторов, анонсы курсов и открытых лекций.</p>
+                            <a href="https://t.me/hirsch_index_school" target="_blank" rel="noopener" class="hi-tg-cta-btn">
+                                <i class="fab fa-telegram"></i> Открыть канал в Telegram
                             </a>
-                            <a href="https://vk.com/club235429996" target="_blank" class="hi-social-card wow fadeInUp" data-wow-delay="0.2s">
-                                <div class="hi-social-icon vk"><i class="fab fa-vk"></i></div>
-                                <div>
-                                    <div style="font-weight:600;">ВКонтакте</div>
-                                    <div style="font-size:0.85rem; color:#475569;">Индекс Хирша</div>
-                                </div>
-                            </a>
-                            <a href="https://max.ru/join/TmlfyQ5T5BJu-iLZlOYbZolsFX2vrBDQ8t8jaKfz3P0" target="_blank" class="hi-social-card wow fadeInUp" data-wow-delay="0.3s">
-                                <img src="/assets/icon-max.jpg" alt="MAX" style="width:44px; height:44px; border-radius:10px; object-fit:cover; flex-shrink:0;">
-                                <div>
-                                    <div style="font-weight:600;">MAX</div>
-                                    <div style="font-size:0.85rem; color:#475569;">Индекс Хирша</div>
-                                </div>
-                            </a>
-                            <a href="https://www.instagram.com/hirsch_index_ru" target="_blank" class="hi-social-card wow fadeInUp" data-wow-delay="0.4s">
-                                <div class="hi-social-icon" style="background:radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); color:#fff;"><i class="fab fa-instagram"></i></div>
-                                <div>
-                                    <div style="font-weight:600;">Instagram</div>
-                                    <div style="font-size:0.85rem; color:#475569;">@hirsch_index_ru</div>
-                                </div>
-                            </a>
-                            <a href="https://www.facebook.com/profile.php?id=61590906262853" target="_blank" class="hi-social-card wow fadeInUp" data-wow-delay="0.5s">
-                                <div class="hi-social-icon" style="background:#1877F2; color:#fff;"><i class="fab fa-facebook-f"></i></div>
-                                <div>
-                                    <div style="font-weight:600;">Facebook</div>
-                                    <div style="font-size:0.85rem; color:#475569;">Индекс Хирша</div>
-                                </div>
-                            </a>
-                            <a href="https://www.linkedin.com/company/hirsch-index-school" target="_blank" class="hi-social-card wow fadeInUp" data-wow-delay="0.6s">
-                                <div class="hi-social-icon" style="background:#0A66C2; color:#fff;"><i class="fab fa-linkedin-in"></i></div>
-                                <div>
-                                    <div style="font-weight:600;">LinkedIn</div>
-                                    <div style="font-size:0.85rem; color:#475569;">Hirsch Index School</div>
-                                </div>
-                            </a>
+                            <span class="hi-tg-cta-handle">@hirsch_index_school</span>
                         </div>
                     </div>
                 </div>
