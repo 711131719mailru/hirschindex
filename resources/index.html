@@ -51,6 +51,14 @@
                 background: linear-gradient(135deg, #f8fafc, #eff6ff);
                 text-align: center;
             }
+            /* Section spacing tighten — mobile overrides */
+            @media (max-width: 768px) {
+                .hi-page-hero { padding: 110px 0 44px !important; }
+                .pt-60 { padding-top: 36px !important; }
+                .pb-60 { padding-bottom: 36px !important; }
+                .pt-70 { padding-top: 44px !important; }
+                .pb-40 { padding-bottom: 28px !important; }
+            }
             .hi-page-hero .hi-badge {
                 display: inline-block;
                 background: #eff6ff;
@@ -280,7 +288,7 @@
 
             <!-- Russian Resources -->
             <section id="russian">
-                <div class="w-100 pt-80 pb-80 position-relative">
+                <div class="w-100 pt-60 pb-60 position-relative">
                     <div class="container" style="max-width:800px;">
                         <div class="resource-section wow fadeInUp">
                             <div class="section-icon" style="background:#fff3e0; color:#e65100;"><i class="fas fa-flag"></i></div>
@@ -333,7 +341,7 @@
 
             <!-- International Resources -->
             <section id="international">
-                <div class="w-100 pt-80 pb-80 position-relative" style="background:#f8fafc;">
+                <div class="w-100 pt-60 pb-60 position-relative" style="background:#f8fafc;">
                     <div class="container" style="max-width:800px;">
                         <div class="resource-section wow fadeInUp">
                             <div class="section-icon" style="background:#ecfdf5; color:#2BB5A0;"><i class="fas fa-globe"></i></div>
@@ -386,7 +394,7 @@
 
             <!-- Infrastructure Resources -->
             <section id="infrastructure">
-                <div class="w-100 pt-80 pb-80 position-relative">
+                <div class="w-100 pt-60 pb-60 position-relative">
                     <div class="container" style="max-width:800px;">
                         <div class="resource-section wow fadeInUp">
                             <div class="section-icon" style="background:#f3e8ff; color:#7c3aed;"><i class="fas fa-tools"></i></div>
@@ -471,7 +479,7 @@
 
             <!-- Downloads -->
             <section id="downloads">
-                <div class="w-100 pt-80 pb-80 position-relative" style="background:#f8fafc;">
+                <div class="w-100 pt-60 pb-60 position-relative" style="background:#f8fafc;">
                     <div class="container" style="max-width:800px;">
                         <div class="resource-section wow fadeInUp">
                             <div class="section-icon" style="background:#fef2f2; color:#dc2626;"><i class="fas fa-file-download"></i></div>
@@ -482,7 +490,7 @@
                                 <div class="download-icon"><i class="fas fa-file-pdf"></i></div>
                                 <div class="download-body">
                                     <h4>Чек-лист SUCCEED (рус.)</h4>
-                                    <p>Чек-лист отчётности SUCCEED (EQUATOR-Network) об исследованиях масштабирования из 33 пунктов, полностью переведённый на русский язык.</p>
+                                    <p>Чек-лист отчётности SUCCEED (EQUATOR-Network) об исследованиях масштабирования, полностью переведённый на русский язык.</p>
                                     <span class="download-meta">PDF · 291 KB · RU</span>
                                 </div>
                                 <a class="download-btn" href="/assets/downloads/SUCCEED_checklist_RU.pdf" download>
@@ -496,7 +504,7 @@
 
             <!-- Footer -->
             <footer>
-                <div class="w-100 pt-90 pb-50 position-relative hi-footer" style="background:#0f172a;">
+                <div class="w-100 pt-70 pb-40 position-relative hi-footer" style="background:#0f172a;">
                     <div class="container">
                         <div class="row" style="gap:0;">
                             <div class="col-md-6 col-lg-4" style="margin-bottom:30px;">
