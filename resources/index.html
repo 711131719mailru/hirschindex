@@ -120,6 +120,59 @@
                 box-shadow: 0 4px 12px rgba(0,0,0,0.08); transform: translateY(-2px);
                 border-color: #3366CC;
             }
+
+            /* Download cards */
+            .download-card {
+                display: flex; gap: 20px; align-items: center;
+                background: #fff; border: 1px solid #e2e8f0;
+                border-radius: 12px; padding: 24px;
+                margin-bottom: 12px; transition: 0.3s;
+                flex-wrap: wrap;
+            }
+            .download-card:hover {
+                box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+                border-color: #dc2626;
+                transform: translateY(-2px);
+            }
+            .download-icon {
+                width: 52px; height: 52px; border-radius: 12px;
+                background: #fef2f2; color: #dc2626;
+                display: flex; align-items: center; justify-content: center;
+                font-size: 22px; flex-shrink: 0;
+            }
+            .download-body { flex: 1 1 240px; min-width: 0; }
+            .download-body h4 {
+                margin: 0 0 4px; font-size: 1rem;
+                color: #0f172a; font-family: 'Playfair Display', serif;
+            }
+            .download-body p {
+                margin: 0; font-size: 0.88rem; color: #475569;
+                line-height: 1.5; font-family: 'Inter', sans-serif;
+            }
+            .download-meta {
+                font-size: 0.75rem; color: #94a3b8;
+                font-family: 'Inter', sans-serif;
+                margin-top: 6px; display: block;
+                letter-spacing: 0.02em;
+            }
+            .download-btn {
+                display: inline-flex; align-items: center; gap: 8px;
+                padding: 12px 20px; border-radius: 8px;
+                background: #dc2626; color: #fff !important;
+                font-family: 'Inter', sans-serif;
+                font-size: 0.9rem; font-weight: 500;
+                text-decoration: none;
+                transition: 0.2s;
+                flex-shrink: 0;
+            }
+            .download-btn:hover {
+                background: #b91c1c; color: #fff !important;
+                transform: translateY(-1px);
+                box-shadow: 0 4px 10px rgba(220, 38, 38, 0.25);
+            }
+            @media (max-width: 560px) {
+                .download-btn { width: 100%; justify-content: center; }
+            }
             .resource-num {
                 width: 36px; height: 36px; border-radius: 8px;
                 display: flex; align-items: center; justify-content: center;
@@ -219,6 +272,7 @@
                             <a href="#russian">Российские</a>
                             <a href="#international">Международные</a>
                             <a href="#infrastructure">Инфраструктурные</a>
+                            <a href="#downloads">Документы</a>
                         </div>
                     </div>
                 </div>
@@ -409,6 +463,31 @@
                                     <h4><a href="https://clincalc.com/stats/samplesize.aspx" target="_blank">ClinCalc Sample Size Calculator<i class="fas fa-external-link-alt ext-icon"></i></a></h4>
                                     <p>Бесплатный калькулятор размера выборки для клинических исследований: сравнение средних и пропорций, парные тесты, выживаемость. Указываете параметры — получаете расчёт.</p>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Downloads -->
+            <section id="downloads">
+                <div class="w-100 pt-80 pb-80 position-relative" style="background:#f8fafc;">
+                    <div class="container" style="max-width:800px;">
+                        <div class="resource-section wow fadeInUp">
+                            <div class="section-icon" style="background:#fef2f2; color:#dc2626;"><i class="fas fa-file-download"></i></div>
+                            <h2>Документы для скачивания</h2>
+                            <p class="section-desc">Материалы, чек-листы и шаблоны от школы</p>
+
+                            <div class="download-card wow fadeInUp" data-wow-delay="0.05s">
+                                <div class="download-icon"><i class="fas fa-file-pdf"></i></div>
+                                <div class="download-body">
+                                    <h4>SUCCEED — чек-лист автора</h4>
+                                    <p>Пошаговый чек-лист по подготовке рукописи и подаче в рецензируемый журнал.</p>
+                                    <span class="download-meta">PDF · 291 KB · RU</span>
+                                </div>
+                                <a class="download-btn" href="/assets/downloads/SUCCEED_checklist_RU.pdf" download>
+                                    <i class="fas fa-download"></i> Скачать PDF
+                                </a>
                             </div>
                         </div>
                     </div>
