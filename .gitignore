@@ -3,3 +3,8 @@ _backups/
 _preview_*.html
 Аудит_сайта_*.md
 Аудит_сайта_*.docx
+
+# Blog build pipeline — sources + generators, not for deploy
+blog_data.json
+extract_blog.py
+gen_blog.py
