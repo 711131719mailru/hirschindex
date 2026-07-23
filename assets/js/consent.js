@@ -33,7 +33,7 @@
     box.setAttribute('role', 'region');
     box.setAttribute('aria-label', 'Уведомление об обработке данных');
     box.innerHTML =
-        '<p>Мы используем cookies и Яндекс.Метрику для аналитики. Продолжая пользоваться сайтом, вы соглашаетесь с <a href="/privacy/#cookies">Политикой конфиденциальности</a>.</p>' +
+        '<p>Мы используем файлы cookies. Продолжая пользоваться сайтом, вы соглашаетесь с <a href="/privacy/#cookies">Политикой конфиденциальности</a>.</p>' +
         '<button type="button" id="hi-consent-ok">Хорошо</button>';
     document.body.appendChild(box);
 
