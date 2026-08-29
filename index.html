@@ -459,6 +459,45 @@
             }
 
             /* Telegram CTA card */
+            /* Баннер бесплатного видеокурса */
+            .hi-free-banner {
+                max-width: 960px;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                gap: 28px;
+                padding: 32px 36px;
+                background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+                border: 1px solid #bbf7d0;
+                border-radius: 20px;
+                text-decoration: none;
+                color: inherit;
+                transition: 0.3s;
+                box-shadow: 0 4px 20px rgba(22, 163, 74, 0.08);
+            }
+            .hi-free-banner:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(22, 163, 74, 0.16); color: inherit; }
+            .hi-free-banner-icon {
+                flex-shrink: 0; width: 72px; height: 72px; border-radius: 50%;
+                background: #16a34a; color: #fff; display: inline-flex;
+                align-items: center; justify-content: center; font-size: 26px;
+                box-shadow: 0 6px 16px rgba(22, 163, 74, 0.25);
+            }
+            .hi-free-banner-text { flex: 1; }
+            .hi-free-banner-tag {
+                font-family: 'Inter', sans-serif; font-size: 0.72rem; font-weight: 700;
+                letter-spacing: 0.14em; text-transform: uppercase; color: #16a34a; margin-bottom: 6px;
+            }
+            .hi-free-banner h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: #0f172a; margin: 0 0 8px; }
+            .hi-free-banner p { font-family: 'Inter', sans-serif; font-size: 0.95rem; color: #475569; margin: 0; line-height: 1.55; }
+            .hi-free-banner-btn {
+                flex-shrink: 0; padding: 14px 28px; border-radius: 10px; background: #16a34a;
+                color: #fff; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.95rem; white-space: nowrap;
+            }
+            @media (max-width: 768px) {
+                .hi-free-banner { flex-direction: column; text-align: center; padding: 28px 24px; gap: 20px; }
+                .hi-free-banner-btn { width: 100%; text-align: center; }
+            }
+
             .hi-tg-cta {
                 max-width: 720px;
                 margin: 0 auto;
@@ -770,6 +809,23 @@
 
 
 
+
+            <!-- ===== Бесплатный видеокурс ===== -->
+            <section>
+                <div class="w-100 pt-70 pb-0 position-relative">
+                    <div class="container">
+                        <a href="/mini-course/" class="hi-free-banner wow fadeInUp">
+                            <div class="hi-free-banner-icon"><i class="fas fa-play"></i></div>
+                            <div class="hi-free-banner-text">
+                                <div class="hi-free-banner-tag">Бесплатный видеокурс</div>
+                                <h3>Как стать мастером публикаций</h3>
+                                <p>Пять уроков о том, с чего начать, если Вы ещё не публиковались. На выходе — заполненная «Карта публикации» и план из пяти шагов до рукописи.</p>
+                            </div>
+                            <span class="hi-free-banner-btn">Смотреть бесплатно</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
 
             <!-- ===== Telegram CTA (заменил блок «Мы в соцсетях» 17.07.2026) ===== -->
             <section>
