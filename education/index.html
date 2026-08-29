@@ -117,6 +117,7 @@
             .hi-course-visual.blue { background: linear-gradient(135deg, #eff6ff, #dbeafe); }
             .hi-course-visual.gold { background: linear-gradient(135deg, #fef9ee, #fbe6b3); }
             .hi-course-visual.purple { background: linear-gradient(135deg, #f3e8ff, #e9d5ff); }
+            .hi-course-visual.green { background: linear-gradient(135deg, #f0fdf4, #dcfce7); }
             .hi-course-visual img {
                 width: 80px;
                 height: 80px;
@@ -192,6 +193,8 @@
             .hi-btn-blue:hover { background: #2952a3; color: #fff; }
             .hi-btn-gold { background: #c5a065; color: #fff; }
             .hi-btn-gold:hover { background: #b8944d; color: #fff; }
+            .hi-btn-green { background: #16a34a; color: #fff; }
+            .hi-btn-green:hover { background: #15803d; color: #fff; }
             .hi-btn-purple { background: #7c3aed; color: #fff; }
             .hi-btn-purple:hover { background: #6d28d9; color: #fff; }
             .hi-btn-outline { background: #fff; border: 1px solid #e2e8f0; color: #1e293b; }
@@ -329,6 +332,7 @@
             .hi-course-nav .dot.blue { background: #3366CC; }
             .hi-course-nav .dot.gold { background: #c5a065; }
             .hi-course-nav .dot.purple { background: #7c3aed; }
+            .hi-course-nav .dot.green { background: #16a34a; }
 
             /* Anchor offset for fixed nav */
             .hi-anchor { scroll-margin-top: 90px; }
@@ -374,8 +378,6 @@
                         </ul>
                         <div class="hi-nav-social">
                             <a href="https://t.me/hirsch_index_school" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
-                            <a href="https://www.instagram.com/hirsch_index_ru" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.facebook.com/profile.php?id=61590906262853" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                             <a href="https://www.linkedin.com/company/hirsch-index-school" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                         <button class="hi-burger" onclick="document.getElementById('hiMobile').classList.toggle('open')" aria-label="Меню">
@@ -391,8 +393,6 @@
                 <a href="/blog/">Блог</a>
                 <a href="/resources/">Ресурсы</a>
                 <a href="https://t.me/hirsch_index_school" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
-                <a href="https://www.instagram.com/hirsch_index_ru" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-                <a href="https://www.facebook.com/profile.php?id=61590906262853" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
                 <a href="https://www.linkedin.com/company/hirsch-index-school" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
             </div>
 
@@ -404,6 +404,7 @@
                         <h1>Курсы для исследователей</h1>
                         <p>Пошаговые курсы: от дизайна исследования до публикации в рецензируемом журнале</p>
                         <nav class="hi-course-nav" aria-label="Список курсов">
+                            <a href="#mini-course"><span class="dot green"></span>Мини-курс (бесплатно)</a>
                             <a href="#course-design"><span class="dot teal"></span>Дизайн исследования</a>
                             <a href="#course-data"><span class="dot purple"></span>Сбор данных</a>
                             <a href="#course-case-report"><span class="dot gold"></span>Клинический случай</a>
@@ -413,9 +414,41 @@
                 </div>
             </section>
 
+            <!-- Course 0: Free mini-course -->
+            <section id="mini-course" class="hi-anchor">
+                <div class="w-100 pt-80 pb-80 position-relative">
+                    <div class="container">
+                        <div class="hi-course-card wow fadeInUp">
+                            <div class="hi-course-visual green">
+                                <img src="/assets/logo-edu.jpg" alt="Мини-курс" loading="lazy" decoding="async">
+                                <div class="hi-course-tag" style="color:#16a34a;">Бесплатный мини-курс</div>
+                                <h3>Как стать мастером публикаций</h3>
+                                <div class="hi-course-meta">5 видеоуроков &middot; около 2 часов</div>
+                            </div>
+                            <div class="hi-course-info">
+                                <p>С чего начать, если Вы ещё не публиковались. Виды исследований, исследовательский вопрос, поиск литературы и структура статьи — за пять коротких уроков.</p>
+                                <ul class="hi-course-features">
+                                    <li><i class="fas fa-check"></i> 5 видеоуроков</li>
+                                    <li><i class="fas fa-check"></i> «Карта публикации» — рабочий файл курса</li>
+                                    <li><i class="fas fa-check"></i> Чек-лист «Мой дизайн готов?»</li>
+                                    <li><i class="fas fa-check"></i> Результат — план из пяти шагов до рукописи</li>
+                                </ul>
+                                <div class="hi-course-price">
+                                    <span class="val">Бесплатно</span>
+                                </div>
+                                <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                                    <a href="/mini-course/" class="hi-btn hi-btn-green">Подробнее</a>
+                                    <a href="/mini-course/#enroll" class="hi-btn hi-btn-outline">Записаться</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- Course 1: Research Design -->
             <section id="course-design" class="hi-anchor">
-                <div class="w-100 pt-80 pb-80 position-relative">
+                <div class="w-100 pt-0 pb-80 position-relative">
                     <div class="container">
                         <div class="hi-course-card wow fadeInUp">
                             <div class="hi-course-visual teal">

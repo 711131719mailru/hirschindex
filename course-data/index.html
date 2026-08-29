@@ -146,13 +146,14 @@
     .hi-club-price { font-family:'Playfair Display',serif; font-size:1.5rem; font-weight:700; color:#c5a065; }
 
     /* Other courses cross-sell */
-    .hi-other-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; max-width:1100px; margin:0 auto; }
+    .hi-other-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; max-width:800px; margin:0 auto; }
     .hi-other-card { background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:28px; transition:0.3s; display:flex; flex-direction:column; }
     .hi-other-card:hover { box-shadow:0 10px 25px rgba(0,0,0,0.08); transform:translateY(-2px); }
     .hi-other-tag { font-size:0.7rem; font-weight:bold; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:8px; font-family:'Inter',sans-serif; }
     .hi-other-tag.teal { color:#2BB5A0; }
     .hi-other-tag.blue { color:#3366CC; }
     .hi-other-tag.gold { color:#c5a065; }
+    .hi-other-tag.green { color:#16a34a; }
     .hi-other-tag.purple { color:#7c3aed; }
     .hi-other-card h3 { font-size:1.15rem; margin-bottom:8px; color:#0f172a; }
     .hi-other-card p { font-size:0.9rem; color:#475569; font-family:'Inter',sans-serif; margin-bottom:16px; flex:1; }
@@ -273,8 +274,6 @@
         </ul>
         <div class="hi-nav-social">
           <a href="https://t.me/hirsch_index_school" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
-          <a href="https://www.instagram.com/hirsch_index_ru" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.facebook.com/profile.php?id=61590906262853" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
           <a href="https://www.linkedin.com/company/hirsch-index-school" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         </div>
         <button class="hi-burger" onclick="document.getElementById('hiMobile').classList.toggle('open')" aria-label="Меню">
@@ -290,8 +289,6 @@
     <a href="/blog/">Блог</a>
     <a href="/resources/">Ресурсы</a>
     <a href="https://t.me/hirsch_index_school" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
-    <a href="https://www.instagram.com/hirsch_index_ru" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-    <a href="https://www.facebook.com/profile.php?id=61590906262853" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
     <a href="https://www.linkedin.com/company/hirsch-index-school" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
   </div>
 
@@ -532,6 +529,13 @@
         <p style="font-size:1rem; color:#475569; font-family:'Inter',sans-serif;">Продолжите путь автора в нашей школе</p>
       </div>
       <div class="hi-other-grid">
+        <a href="/mini-course/" class="hi-other-card wow fadeInUp" style="text-decoration:none; color:inherit;">
+          <div class="hi-other-tag green">Бесплатно &middot; Мини-курс</div>
+          <h3>Как стать мастером публикаций</h3>
+          <div class="hi-other-meta">5 видеоуроков &middot; около 2 часов</div>
+          <p>С чего начать, если Вы ещё не публиковались: виды исследований, исследовательский вопрос, поиск литературы и структура статьи.</p>
+          <span class="hi-btn hi-btn-outline hi-btn-sm" style="align-self:flex-start;">Смотреть бесплатно</span>
+        </a>
         <a href="/course-design/" class="hi-other-card wow fadeInUp" style="text-decoration:none; color:inherit;">
           <div class="hi-other-tag teal">Видеокурс &middot; Дизайн</div>
           <h3>Как подготовить хороший дизайн исследования</h3>
