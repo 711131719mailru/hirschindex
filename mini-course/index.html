@@ -1,12 +1,641 @@
 <!doctype html>
 <html lang="ru">
 <head>
-<meta charset="utf-8">
-<meta name="robots" content="noindex">
-<link rel="canonical" href="https://hirschindex.ru/education/">
-<meta http-equiv="refresh" content="0; url=/education/">
-<title>Индекс Хирша — Обучение</title>
-<script>location.replace('/education/');</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Бесплатный мини-курс «Как стать мастером публикаций» — 5 видеоуроков для врачей: как выбрать тип первой статьи, сформулировать вопрос и составить план до рукописи.">
+  <title>Бесплатный мини-курс: Как стать мастером публикаций — Индекс Хирша</title>
+  <link rel="icon" href="/assets/logo-main.jpg" sizes="35x35" type="image/jpeg">
+  <link rel="canonical" href="https://hirschindex.ru/mini-course/">
+  <!-- Open Graph / social share -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hirschindex.ru/mini-course/">
+  <meta property="og:title" content="Бесплатный мини-курс: Как стать мастером публикаций — Индекс Хирша">
+  <meta property="og:description" content="Бесплатный мини-курс «Как стать мастером публикаций» — 5 видеоуроков для врачей: как выбрать тип первой статьи, сформулировать вопрос и составить план до рукописи.">
+  <meta property="og:image" content="https://hirschindex.ru/assets/og/og-cover-mini-course.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="Индекс Хирша">
+  <meta name="twitter:card" content="summary_large_image">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://mc.yandex.ru">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/all.min.css">
+  <link rel="stylesheet" href="/assets/css/flaticon.css">
+  <link rel="stylesheet" href="/assets/css/animate.min.css">
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/responsive.css">
+  <link rel="stylesheet" href="/assets/css/color-hirsch.css">
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
+
+    /* Nav */
+    .hi-nav { position:fixed; top:0; left:0; right:0; height:70px; background:#fff; border-bottom:1px solid #e2e8f0; z-index:9999; display:flex; align-items:center; }
+    .hi-nav-inner { max-width:1150px; margin:0 auto; padding:0 20px; width:100%; display:flex; align-items:center; justify-content:space-between; }
+    .hi-nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+    .hi-nav-logo img { width:36px; height:36px; border-radius:6px; }
+    .logo-text-hi { font-family:'Playfair Display',serif; font-size:1.15rem; font-weight:bold; color:#3366CC; margin-left:10px; }
+    .hi-nav-menu { display:flex; align-items:center; gap:28px; list-style:none; margin:0; padding:0; }
+    .hi-nav-menu a { font-family:'Inter',sans-serif; font-size:0.9rem; font-weight:500; color:#475569; text-decoration:none; transition:color 0.2s; }
+    .hi-nav-menu a:hover, .hi-nav-menu a.active { color:#3366CC; }
+    .hi-nav-social { display:flex; align-items:center; gap:14px; }
+    .hi-nav-social a { color:#475569; font-size:0.95rem; transition:color 0.2s; display:inline-flex; align-items:center; line-height:1; }
+    .hi-nav-social a:hover { color:#3366CC; }
+    .hi-nav-right { display:flex; align-items:center; gap:28px; }
+    .hi-burger { display:none; background:none; border:none; font-size:1.5rem; color:#1e293b; cursor:pointer; }
+    .hi-mobile-menu { display:none; position:fixed; top:70px; left:0; right:0; background:#fff; border-bottom:1px solid #e2e8f0; padding:20px; z-index:9998; flex-direction:column; gap:16px; }
+    .hi-mobile-menu.open { display:flex; }
+    .hi-mobile-menu a { font-family:'Inter',sans-serif; font-size:1rem; font-weight:500; color:#1e293b; text-decoration:none; padding:8px 0; }
+    .hi-mobile-menu a:hover { color:#3366CC; }
+    @media (max-width:991px) { .hi-nav-menu { display:none; } .hi-burger { display:block; } .hi-nav-social { display:none !important; } }
+
+    /* Hero - green gradient */
+    .hi-page-hero { padding:140px 0 70px; background:linear-gradient(135deg, #f0fdf4, #dcfce7); text-align:center; }
+    .hi-page-hero .hi-badge { display:inline-block; background:#f0fdf4; color:#16a34a; font-size:0.75rem; font-weight:bold; text-transform:uppercase; padding:6px 16px; border-radius:50px; margin-bottom:16px; letter-spacing:0.05em; font-family:'Inter',sans-serif; }
+    .hi-page-hero h1 { font-size:2.5rem; margin-bottom:16px; color:#0f172a; max-width:780px; margin-left:auto; margin-right:auto; }
+    .hi-page-hero p { font-size:1.1rem; color:#475569; max-width:620px; margin:0 auto; font-family:'Inter',sans-serif; }
+    .hi-page-hero .hi-meta { font-size:0.9rem; color:#64748b; margin-bottom:28px; font-family:'Inter',sans-serif; }
+    .hi-page-hero .hi-meta span { margin:0 8px; }
+
+    /* Result box */
+    .hi-result-box { background:#fff; border:2px solid #16a34a; border-radius:12px; padding:28px; text-align:center; max-width:660px; margin:0 auto; }
+    .hi-result-box i { font-size:2rem; color:#16a34a; margin-bottom:12px; display:block; }
+    .hi-result-box h3 { margin-bottom:8px; }
+    .hi-result-box p { color:#475569; font-size:0.95rem; font-family:'Inter',sans-serif; margin:0; }
+
+    /* Buttons */
+    .hi-btn { display:inline-block; padding:13px 28px; border-radius:8px; font-weight:500; font-size:0.95rem; font-family:'Inter',sans-serif; text-decoration:none; transition:all 0.3s; cursor:pointer; border:none; }
+    .hi-btn-teal { background:#2BB5A0; color:#fff; }
+    .hi-btn-teal:hover { background:#239688; color:#fff; }
+    .hi-btn-blue { background:#3366CC; color:#fff; }
+    .hi-btn-blue:hover { background:#2952a3; color:#fff; }
+    .hi-btn-gold { background:#c5a065; color:#fff; }
+    .hi-btn-gold:hover { background:#b8944d; color:#fff; }
+    .hi-btn-green { background:#16a34a; color:#fff; }
+    .hi-btn-green:hover { background:#15803d; color:#fff; }
+    .hi-btn-outline { background:#fff; border:1px solid #e2e8f0; color:#1e293b; }
+    .hi-btn-outline:hover { border-color:#16a34a; color:#16a34a; }
+    .hi-btn-sm { padding:10px 20px; font-size:0.85rem; }
+    @media (max-width:768px) { .hi-btn-sm { min-height:44px; display:inline-flex; align-items:center; justify-content:center; } }
+    .hi-btn-lg { padding:16px 36px; font-size:1.05rem; }
+
+    /* Cards */
+    .hi-card { background:#fff; padding:32px; border-radius:12px; border:1px solid #e2e8f0; transition:0.3s; height:100%; }
+    .hi-card:hover { transform:translateY(-4px); box-shadow:0 10px 25px rgba(0,0,0,0.1); }
+    .hi-card-icon { width:56px; height:56px; border-radius:8px; display:flex; align-items:center; justify-content:center; margin-bottom:20px; font-size:24px; }
+    .hi-card-icon.teal { background:#ecfdf5; color:#2BB5A0; }
+    .hi-card-icon.blue { background:#eff6ff; color:#3366CC; }
+    .hi-card-icon.gold { background:#fef9ee; color:#c5a065; }
+    .hi-card-icon.green { background:#f0fdf4; color:#16a34a; }
+
+    /* Pricing */
+    .hi-pricing-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; align-items:stretch; }
+    .hi-pricing-card { background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:36px 28px; text-align:center; transition:0.3s; position:relative; display:flex; flex-direction:column; }
+    .hi-pricing-card:hover { box-shadow:0 10px 25px rgba(0,0,0,0.1); }
+    .hi-pricing-card.featured { border-color:#16a34a; box-shadow:0 0 0 1px #16a34a, 0 4px 12px rgba(0,0,0,0.08); }
+    .hi-pricing-card.featured::before { content:'Популярный'; position:absolute; top:-12px; left:50%; transform:translateX(-50%); background:#16a34a; color:#fff; font-size:0.7rem; font-weight:bold; text-transform:uppercase; padding:4px 16px; border-radius:50px; letter-spacing:0.05em; font-family:'Inter',sans-serif; }
+    .hi-pricing-name { font-size:1.1rem; font-weight:600; color:#475569; margin-bottom:12px; font-family:'Inter',sans-serif; }
+    .hi-pricing-price { font-family:'Playfair Display',serif; font-size:2rem; font-weight:700; color:#1e293b; margin-bottom:24px; }
+    .hi-pricing-price span { font-size:1rem; font-weight:400; color:#475569; }
+    .hi-pricing-features { list-style:none; text-align:left; margin-bottom:28px; font-size:0.9rem; color:#475569; padding:0; flex:1; font-family:'Inter',sans-serif; }
+    .hi-pricing-features li { padding:8px 0; border-bottom:1px solid #f1f5f9; display:flex; align-items:center; gap:10px; }
+    .hi-pricing-features li:last-child { border-bottom:none; }
+    .hi-pricing-features .check { color:#2BB5A0; font-weight:bold; }
+    .hi-pricing-features .dash { color:#64748b; }
+    @media (max-width:900px) { .hi-pricing-grid { grid-template-columns:1fr; max-width:420px; margin:0 auto; } }
+
+    /* Module accordion */
+    .hi-module-block { margin-bottom:8px; border:1px solid #e2e8f0; border-radius:12px; overflow:hidden; background:#fff; }
+    .hi-module-header { padding:16px 24px; font-weight:600; font-size:0.95rem; color:#1e293b; cursor:pointer; display:flex; justify-content:space-between; align-items:center; font-family:'Inter',sans-serif; }
+    .hi-module-header:hover { background:#f8fafc; }
+    .hi-module-body { padding:0 24px; max-height:0; overflow:hidden; transition:max-height 0.3s; }
+    .hi-module-body.open { max-height:1000px; padding:16px 24px; }
+    .hi-lesson-item { padding:10px 0; border-bottom:1px solid #f1f5f9; font-size:0.9rem; color:#475569; display:flex; gap:12px; font-family:'Inter',sans-serif; }
+    .hi-lesson-item:last-child { border-bottom:none; }
+    .hi-lesson-num { color:#16a34a; font-weight:600; min-width:28px; }
+
+    /* About author */
+    .hi-author-section { padding:60px 0; background:#fff; }
+    .hi-author-card { background:#fff; border:1px solid #e2e8f0; border-radius:16px; padding:36px; display:grid; grid-template-columns:1.2fr 1fr; gap:36px; align-items:center; box-shadow:0 1px 3px rgba(0,0,0,0.04); }
+    .hi-author-card h3 { margin:0 0 16px; font-size:1.5rem; color:#0f172a; }
+    .hi-author-roles { list-style:none; padding:0; margin:0 0 24px; }
+    .hi-author-roles li { position:relative; padding:5px 0 5px 18px; font-family:'Inter',sans-serif; font-size:0.95rem; color:#475569; }
+    .hi-author-roles li::before { content:''; position:absolute; left:0; top:13px; width:6px; height:6px; border-radius:50%; background:var(--accent); }
+    .hi-author-stats { display:flex; gap:32px; }
+    .hi-stat-value { font-family:'Playfair Display',serif; font-size:2.5rem; font-weight:700; color:var(--accent); line-height:1; }
+    .hi-stat-label { font-family:'Inter',sans-serif; font-size:0.85rem; color:#64748b; margin-top:4px; }
+    .hi-author-links { display:flex; flex-direction:column; gap:12px; }
+    .hi-author-link { display:flex; align-items:center; gap:16px; padding:14px 18px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; text-decoration:none; color:inherit; transition:0.2s; }
+    .hi-author-link:hover { border-color:var(--accent); background:#fff; transform:translateX(2px); }
+    .hi-author-link i { font-size:1.4rem; color:var(--accent); width:28px; text-align:center; }
+    .hi-link-label { font-family:'Inter',sans-serif; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.08em; color:#64748b; margin-bottom:2px; }
+    .hi-link-value { font-family:'Inter',sans-serif; font-size:0.92rem; font-weight:600; color:#0f172a; }
+    @media (max-width:768px) { .hi-author-card { grid-template-columns:1fr; padding:28px; gap:28px; } .hi-author-stats { gap:24px; } }
+
+    /* Club banner */
+    .hi-club-banner { background:linear-gradient(135deg,#0f172a,#1e293b); color:#fff; padding:32px; border-radius:16px; display:flex; align-items:center; gap:24px; }
+    .hi-club-banner img { width:64px; height:64px; border-radius:12px; flex-shrink:0; }
+    .hi-club-banner p { opacity:0.9; font-size:0.95rem; margin-bottom:12px; font-family:'Inter',sans-serif; }
+    .hi-club-price { font-family:'Playfair Display',serif; font-size:1.5rem; font-weight:700; color:#c5a065; }
+
+    /* Other courses cross-sell */
+    .hi-other-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; max-width:800px; margin:0 auto; }
+    .hi-other-card { background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:28px; transition:0.3s; display:flex; flex-direction:column; }
+    .hi-other-card:hover { box-shadow:0 10px 25px rgba(0,0,0,0.08); transform:translateY(-2px); }
+    .hi-other-tag { font-size:0.7rem; font-weight:bold; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:8px; font-family:'Inter',sans-serif; }
+    .hi-other-tag.teal { color:#2BB5A0; }
+    .hi-other-tag.blue { color:#3366CC; }
+    .hi-other-tag.gold { color:#c5a065; }
+    .hi-other-tag.green { color:#16a34a; }
+    .hi-other-tag.purple { color:#7c3aed; }
+    .hi-other-card h3 { font-size:1.15rem; margin-bottom:8px; color:#0f172a; }
+    .hi-other-card p { font-size:0.9rem; color:#475569; font-family:'Inter',sans-serif; margin-bottom:16px; flex:1; }
+    .hi-other-meta { font-size:0.8rem; color:#64748b; margin-bottom:16px; font-family:'Inter',sans-serif; }
+    @media (max-width:991px) { .hi-other-grid { grid-template-columns:1fr; } }
+
+    /* Multi-course discount notice */
+    .hi-multi-discount { display:flex; align-items:center; gap:16px; max-width:1100px; margin:32px auto 0; padding:16px 22px; background:linear-gradient(135deg, #fefce8 0%, #fef3c7 100%); border:1px solid #fde68a; border-radius:12px; box-shadow:0 2px 8px rgba(245,158,11,0.06); }
+    .hi-multi-discount-icon { flex-shrink:0; width:40px; height:40px; border-radius:50%; background:#f59e0b; color:#fff; display:flex; align-items:center; justify-content:center; font-size:1rem; }
+    .hi-multi-discount-text { font-family:'Inter',sans-serif; font-size:0.92rem; color:#475569; line-height:1.5; }
+    .hi-multi-discount-text strong { color:#0f172a; font-weight:600; }
+    @media (max-width:600px) { .hi-multi-discount { flex-direction:column; text-align:center; padding:20px; gap:12px; } }
+
+
+    /* Подсказка после записи */
+    .hi-after-signup { font-family:'Inter',sans-serif; font-size:0.88rem; color:#475569; text-align:center; line-height:1.6; margin:16px 0 0; }
+    .hi-after-signup a { color:#16a34a; font-weight:600; text-decoration:none; }
+    .hi-after-signup a:hover { text-decoration:underline; }
+    .hi-after-signup span { font-size:0.8rem; color:#64748b; }
+
+    /* GC Modals */
+    .hi-gc-modal-overlay { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:10000; justify-content:center; align-items:center; }
+    .hi-gc-modal-overlay.active { display:flex; }
+    .hi-gc-modal-box { background:#fff; border-radius:16px; padding:40px; max-width:460px; width:90%; position:relative; box-shadow:0 20px 60px rgba(0,0,0,0.2); max-height:90vh; overflow-y:auto; }
+    .hi-gc-modal-close { position:absolute; top:12px; right:16px; background:none; border:none; font-size:1.8rem; color:#64748b; cursor:pointer; line-height:1; }
+    .hi-gc-modal-close:hover { color:#1e293b; }
+    .hi-gc-modal-title { font-family:'Playfair Display',serif; font-size:1.25rem; font-weight:700; text-align:center; margin-bottom:20px; color:#1e293b; }
+
+    /* Footer */
+    .hi-footer a { color:#94a3b8; text-decoration:none; }
+    .hi-footer a:hover { color:#fff; }
+    .hi-footer h4 { color:#fff; margin-bottom:16px; font-size:0.95rem; }
+    .hi-footer-links { display:flex; flex-direction:column; gap:8px; font-size:0.9rem; }
+    .hi-footer-bottom { border-top:1px solid rgba(255,255,255,0.1); margin-top:40px; padding-top:20px; display:flex; justify-content:space-between; font-size:0.8rem; color:#94a3b8; flex-wrap:wrap; gap:10px; }
+
+    @media (max-width:991px) {
+        .hi-club-banner { flex-direction:column; text-align:center; }
+        .hi-footer-bottom { flex-direction:column; text-align:center; }
+    }
+  </style>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+      (function(m,e,t,r,i,k,a){
+          m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+          m[i].l=1*new Date();
+          for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+          k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+      })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109109287', 'ym');
+
+      ym(109109287, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/109109287" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Как стать мастером публикаций",
+    "description": "Бесплатный мини-курс из 5 видеоуроков: как выбрать тип первой публикации, сформулировать исследовательский вопрос, искать литературу и составить план до рукописи.",
+    "url": "https://hirschindex.ru/mini-course/",
+    "image": "https://hirschindex.ru/assets/og/og-cover-mini-course.jpg",
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": "Индекс Хирша",
+      "sameAs": "https://hirschindex.ru/"
+    },
+    "inLanguage": "ru",
+    "educationalLevel": "Professional",
+    "numberOfCredits": 5,
+    "timeRequired": "PT2H15M",
+    "hasCourseInstance": [
+      {
+        "@type": "CourseInstance",
+        "courseMode": "online",
+        "inLanguage": "ru"
+      }
+    ],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "RUB",
+      "availability": "https://schema.org/InStock",
+      "url": "https://hirschindex.ru/mini-course/#enroll"
+    }
+  }
+</script>
 </head>
-<body><a href="/education/">Перейти к курсам</a></body>
+<body>
+  <main>
+
+  <!-- Navigation -->
+  <div class="hi-nav">
+    <div class="hi-nav-inner">
+      <a href="/" class="hi-nav-logo">
+        <img src="/assets/logo-main.jpg" alt="Индекс Хирша">
+        <span class="logo-text-hi">Индекс Хирша</span>
+      </a>
+      <div class="hi-nav-right">
+        <ul class="hi-nav-menu">
+          <li><a href="/education/" class="active">Обучение</a></li>
+          <li><a href="/consulting/">Консалтинг</a></li>
+          <li><a href="/club/">Клуб</a></li>
+          <li><a href="/blog/">Блог</a></li>
+          <li><a href="/resources/">Ресурсы</a></li>
+        </ul>
+        <div class="hi-nav-social">
+          <a href="https://t.me/hirsch_index_school" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+          <a href="https://www.linkedin.com/company/hirsch-index-school" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <button class="hi-burger" onclick="document.getElementById('hiMobile').classList.toggle('open')" aria-label="Меню">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="hi-mobile-menu" id="hiMobile">
+    <a href="/education/">Обучение</a>
+    <a href="/consulting/">Консалтинг</a>
+    <a href="/club/">Клуб</a>
+    <a href="/blog/">Блог</a>
+    <a href="/resources/">Ресурсы</a>
+    <a href="https://t.me/hirsch_index_school" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
+    <a href="https://www.linkedin.com/company/hirsch-index-school" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="hi-page-hero">
+    <div class="container wow fadeInUp">
+      <div class="hi-meta">
+        <i class="fas fa-play-circle"></i> 5 видеоуроков
+      </div>
+      <h1>Как стать мастером публикаций</h1>
+      <p>Бесплатный мини-курс для врачей, которые хотят опубликоваться, но не знают, с чего начать. За пять уроков Вы заполните «Карту публикации» и получите план до рукописи</p>
+      <div style="margin-top:24px;">
+        <a href="#enroll" class="hi-btn hi-btn-green hi-btn-lg">Смотреть бесплатно</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Result -->
+  <section style="padding:50px 0; background:#fff;">
+    <div class="container">
+      <div class="hi-result-box wow fadeInUp">
+        <i class="fas fa-map-signs"></i>
+        <h3>Результат мини-курса</h3>
+        <p>Заполненная «Карта публикации»: тип статьи, которую Вам по силам написать первой, Ваш исследовательский вопрос в одно предложение, ключевые источники, журналы-кандидаты и план из пяти шагов до рукописи с Вашими сроками</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- For whom -->
+  <section style="padding:60px 0;">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:40px;">
+        <h2>Для кого этот мини-курс</h2>
+      </div>
+      <div class="row" style="gap:0;">
+        <div class="col-md-4" style="margin-bottom:24px;">
+          <div class="hi-card wow fadeInUp" style="text-align:center;">
+            <div class="hi-card-icon green" style="margin:0 auto 16px;"><i class="fas fa-user-md"></i></div>
+            <h4 style="margin-bottom:8px;">Ещё не публиковались</h4>
+            <p style="font-size:0.9rem; color:#475569; font-family:'Inter',sans-serif; margin:0;">Хотите заниматься наукой, но не понимаете, с какой стороны подойти и что писать первым</p>
+          </div>
+        </div>
+        <div class="col-md-4" style="margin-bottom:24px;">
+          <div class="hi-card wow fadeInUp" style="text-align:center;">
+            <div class="hi-card-icon blue" style="margin:0 auto 16px;"><i class="fas fa-graduation-cap"></i></div>
+            <h4 style="margin-bottom:8px;">Нужна публикация к сроку</h4>
+            <p style="font-size:0.9rem; color:#475569; font-family:'Inter',sans-serif; margin:0;">Аспирантура, диссертация или аттестация — статья нужна к конкретной дате, а плана нет</p>
+          </div>
+        </div>
+        <div class="col-md-4" style="margin-bottom:24px;">
+          <div class="hi-card wow fadeInUp" style="text-align:center;">
+            <div class="hi-card-icon teal" style="margin:0 auto 16px;"><i class="fas fa-folder-open"></i></div>
+            <h4 style="margin-bottom:8px;">Материал лежит без движения</h4>
+            <p style="font-size:0.9rem; color:#475569; font-family:'Inter',sans-serif; margin:0;">Есть интересный случай или собранные данные, но дальше замысла дело не пошло</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Program -->
+  <section id="program" style="padding:60px 0; background:#fff;">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:40px;">
+        <h2>Программа мини-курса</h2>
+        <p style="font-size:1rem; color:#475569; font-family:'Inter',sans-serif;">5 видеоуроков — после каждого Вы заполняете свой блок «Карты публикации»</p>
+      </div>
+      <div style="max-width:750px; margin:0 auto;">
+        <div class="hi-module-block wow fadeInUp">
+          <div class="hi-module-header" onclick="this.nextElementSibling.classList.toggle('open'); this.querySelector('.arrow').classList.toggle('fa-chevron-up');">
+            <span><strong>5 уроков</strong> &middot; от «зачем» до плана до рукописи</span>
+            <i class="fas fa-chevron-up arrow" style="font-size:0.8rem; color:#64748b;"></i>
+          </div>
+          <div class="hi-module-body open">
+            <div class="hi-lesson-item"><span class="hi-lesson-num">01</span> Как Вы ограничиваете себя, не занимаясь наукой</div>
+            <div class="hi-lesson-item"><span class="hi-lesson-num">02</span> Как не запутаться в видах исследований</div>
+            <div class="hi-lesson-item"><span class="hi-lesson-num">03</span> Дизайн исследования</div>
+            <div class="hi-lesson-item"><span class="hi-lesson-num">04</span> Поиск литературы и структура статьи</div>
+            <div class="hi-lesson-item"><span class="hi-lesson-num">05</span> С чего начать свой путь</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About author -->
+  <section class="hi-author-section" style="--accent:#16a34a;">
+    <div class="container" style="max-width:850px;">
+      <div style="text-align:center; margin-bottom:40px;">
+        <h2>Об авторе курса</h2>
+      </div>
+      <div class="hi-author-card wow fadeInUp">
+        <div>
+          <h3>Константин Жигалов</h3>
+          <ul class="hi-author-roles">
+            <li>Врач-кардиохирург (Германия)</li>
+            <li>PhD (Charité, Berlin), Prof h.c.</li>
+            <li>Научный консультант, преподаватель</li>
+          </ul>
+          <div class="hi-author-stats">
+            <div>
+              <div class="hi-stat-value">78</div>
+              <div class="hi-stat-label">публикаций</div>
+            </div>
+            <div>
+              <div class="hi-stat-value">16</div>
+              <div class="hi-stat-label">h-index (Scopus)</div>
+            </div>
+          </div>
+        </div>
+        <div class="hi-author-links">
+          <a href="https://www.scopus.com/authid/detail.uri?authorId=57517490500" target="_blank" class="hi-author-link">
+            <i class="fas fa-chart-line"></i>
+            <div>
+              <div class="hi-link-label">Scopus</div>
+              <div class="hi-link-value">ID 57517490500</div>
+            </div>
+          </a>
+          <a href="https://orcid.org/0000-0002-6440-3736" target="_blank" class="hi-author-link">
+            <i class="fab fa-orcid"></i>
+            <div>
+              <div class="hi-link-label">ORCID</div>
+              <div class="hi-link-value">0000-0002-6440-3736</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enroll -->
+  <section id="enroll" style="padding:60px 0;">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:40px;">
+        <h2>Участие</h2>
+        <p style="font-size:0.85rem; color:#64748b; margin-top:12px; font-family:'Inter',sans-serif;">
+          <i class="fas fa-info-circle" style="margin-right:4px;"></i>
+          Материалы размещены на платформе <a href="https://hirschindex.getcourse.ru" target="_blank" style="color:#16a34a; font-weight:500;">GetCourse</a>.
+          Аккаунт создаётся автоматически при регистрации.
+        </p>
+      </div>
+      <div style="max-width:420px; margin:0 auto;">
+        <div class="hi-pricing-card featured">
+          <div class="hi-pricing-name">Бесплатный доступ</div>
+          <div class="hi-pricing-price">0 <span>&#8381;</span></div>
+          <ul class="hi-pricing-features">
+            <li><span class="check"><i class="fas fa-check"></i></span> 5 видеоуроков</li>
+            <li><span class="check"><i class="fas fa-check"></i></span> «Карта публикации» — рабочий файл курса</li>
+            <li><span class="check"><i class="fas fa-check"></i></span> Чек-лист «Мой дизайн готов?»</li>
+            <li><span class="check"><i class="fas fa-check"></i></span> Задание после каждого урока</li>
+            <li><span class="check"><i class="fas fa-check"></i></span> Разбор заполненной карты автором курса</li>
+          </ul>
+          <button class="hi-btn hi-btn-green" style="width:100%;" onclick="openGcModal('gc-modal-free')">Записаться бесплатно</button>
+        </div>
+        <p class="hi-after-signup" style="margin-top:16px;">После заполнения формы курс сразу открывается<br>
+          в личном кабинете: <a href="https://hirschindex.getcourse.ru/teach/control/stream/view/id/935788551" target="_blank" rel="noopener">открыть курс</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other courses -->
+  <section style="padding:70px 0; background:#f8fafc;">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:40px;">
+        <h2>Что дальше</h2>
+        <p style="font-size:1rem; color:#475569; font-family:'Inter',sans-serif;">Мини-курс покажет маршрут — последующие курсы проведут по нему до готовой рукописи</p>
+      </div>
+      <div class="hi-other-grid">
+        <a href="/course-design/" class="hi-other-card wow fadeInUp" style="text-decoration:none; color:inherit;">
+          <div class="hi-other-tag teal">Курс &middot; Дизайн</div>
+          <h3>Как подготовить хороший дизайн исследования</h3>
+          <div class="hi-other-meta">10 уроков &middot; 2 недели</div>
+          <p>Основы планирования клинического исследования: гипотеза, выбор дизайна, расчёт выборки, конечные точки и протокол.</p>
+          <span class="hi-btn hi-btn-outline hi-btn-sm" style="align-self:flex-start;">Подробнее</span>
+        </a>
+        <a href="/course-data/" class="hi-other-card wow fadeInUp" data-wow-delay="0.05s" style="text-decoration:none; color:inherit;">
+          <div class="hi-other-tag purple">Курс &middot; Сбор данных</div>
+          <h3>Как собрать данные для оригинального исследования</h3>
+          <div class="hi-other-meta">8 уроков &middot; 3 модуля &middot; 2 недели</div>
+          <p>От утверждённого дизайна — к словарю переменных, заполненной базе и очищенной таблице для статистика.</p>
+          <span class="hi-btn hi-btn-outline hi-btn-sm" style="align-self:flex-start;">Подробнее</span>
+        </a>
+        <a href="/course-case-report/" class="hi-other-card wow fadeInUp" data-wow-delay="0.1s" style="text-decoration:none; color:inherit;">
+          <div class="hi-other-tag gold">Курс &middot; Клинический случай</div>
+          <h3>Как опубликовать клинический случай</h3>
+          <div class="hi-other-meta">15 уроков &middot; 4 модуля &middot; 3 недели</div>
+          <p>Полный цикл подготовки клинического случая: от выбора темы и чек-листа CARE до подачи рукописи и работы с рецензентами.</p>
+          <span class="hi-btn hi-btn-outline hi-btn-sm" style="align-self:flex-start;">Подробнее</span>
+        </a>
+        <a href="/course-review/" class="hi-other-card wow fadeInUp" data-wow-delay="0.15s" style="text-decoration:none; color:inherit;">
+          <div class="hi-other-tag blue">Видеокурс &middot; Обзор</div>
+          <h3>Как написать хороший нарративный обзор</h3>
+          <div class="hi-other-meta">30 уроков &middot; 5 модулей &middot; 6 недель</div>
+          <p>Полный цикл подготовки обзорной статьи: от выбора темы и литературного поиска до подачи в журнал и работы с рецензентами.</p>
+          <span class="hi-btn hi-btn-outline hi-btn-sm" style="align-self:flex-start;">Подробнее</span>
+        </a>
+      </div>
+      <div class="hi-multi-discount wow fadeInUp" data-wow-delay="0.1s">
+        <div class="hi-multi-discount-icon"><i class="fas fa-percent"></i></div>
+        <div class="hi-multi-discount-text"><strong>Скидка 10 %</strong> для выпускников на второй и последующие курсы школы.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Club banner -->
+  <section style="padding:60px 0; background:#fff;">
+    <div class="container" style="max-width:850px;">
+      <div class="hi-club-banner wow fadeInUp">
+        <img src="/assets/logo-club.jpg" alt="Клуб" loading="lazy" decoding="async">
+        <div style="flex:1;">
+          <div style="color:#c5a065; font-family:'Inter',sans-serif; font-weight:600; font-size:0.75rem; letter-spacing:0.18em; text-transform:uppercase; margin-bottom:8px;">Сообщество выпускников</div>
+          <h3 style="font-family:'Playfair Display',serif; color:#fff; font-size:1.4rem; font-weight:700; margin-bottom:12px;">Научный клуб «Индекс Хирша»</h3>
+          <p style="margin-bottom:12px;">После курса вы получите приглашение в закрытое сообщество школы — научный клуб «Индекс Хирша». Там продолжается практика, ищутся соавторы и формируются команды для совместных публикаций.</p>
+          <a href="/club/" class="hi-btn hi-btn-gold hi-btn-sm">Подробнее о клубе</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="padding:60px 0; background:#fff;">
+    <div class="container" style="max-width:750px;">
+      <div style="text-align:center; margin-bottom:40px;">
+        <h2>Часто задаваемые вопросы</h2>
+      </div>
+
+      <div class="hi-module-block">
+        <div class="hi-module-header" onclick="this.nextElementSibling.classList.toggle('open');">
+          <span>Это правда бесплатно?</span>
+          <i class="fas fa-chevron-down" style="font-size:0.8rem; color:#64748b;"></i>
+        </div>
+        <div class="hi-module-body">
+          <p style="font-size:0.9rem; color:#475569; padding:8px 0; font-family:'Inter',sans-serif;">Да. Регистрация на платформе, пять видеоуроков и все рабочие файлы — без оплаты. В конце курса Вы можете прислать заполненную «Карту публикации», и автор курса разберёт Вашу ситуацию.</p>
+        </div>
+      </div>
+
+      <div class="hi-module-block">
+        <div class="hi-module-header" onclick="this.nextElementSibling.classList.toggle('open');">
+          <span>Нужен ли опыт публикаций?</span>
+          <i class="fas fa-chevron-down" style="font-size:0.8rem; color:#64748b;"></i>
+        </div>
+        <div class="hi-module-body">
+          <p style="font-size:0.9rem; color:#475569; padding:8px 0; font-family:'Inter',sans-serif;">Нет. Мини-курс рассчитан на тех, кто ещё не публиковался или пробовал и остановился. Если у Вас уже вышло пять статей — здесь для Вас, скорее всего, ничего нового.</p>
+        </div>
+      </div>
+
+      <div class="hi-module-block">
+        <div class="hi-module-header" onclick="this.nextElementSibling.classList.toggle('open');">
+          <span>Сколько времени это займёт?</span>
+          <i class="fas fa-chevron-down" style="font-size:0.8rem; color:#64748b;"></i>
+        </div>
+        <div class="hi-module-body">
+          <p style="font-size:0.9rem; color:#475569; padding:8px 0; font-family:'Inter',sans-serif;">Пять уроков, от 21 до 32 минут каждый, суммарно около двух часов. Плюс 5–10 минут после каждого урока на заполнение своего блока карты.</p>
+        </div>
+      </div>
+
+      <div class="hi-module-block">
+        <div class="hi-module-header" onclick="this.nextElementSibling.classList.toggle('open');">
+          <span>Что такое «Карта публикации»?</span>
+          <i class="fas fa-chevron-down" style="font-size:0.8rem; color:#64748b;"></i>
+        </div>
+        <div class="hi-module-body">
+          <p style="font-size:0.9rem; color:#475569; padding:8px 0; font-family:'Inter',sans-serif;">Рабочий файл, который Вы заполняете по ходу курса — по одному блоку за урок. К концу в нём будет тип Вашей первой публикации, исследовательский вопрос, ключевые источники, журналы-кандидаты и план из пяти шагов до рукописи.</p>
+        </div>
+      </div>
+
+      <div class="hi-module-block">
+        <div class="hi-module-header" onclick="this.nextElementSibling.classList.toggle('open');">
+          <span>В каком формате уроки?</span>
+          <i class="fas fa-chevron-down" style="font-size:0.8rem; color:#64748b;"></i>
+        </div>
+        <div class="hi-module-body">
+          <p style="font-size:0.9rem; color:#475569; padding:8px 0; font-family:'Inter',sans-serif;">Видеоуроки с презентацией и разбором. К урокам приложены «Карта публикации» и чек-лист «Мой дизайн готов?» — оба в формате для заполнения.</p>
+        </div>
+      </div>
+
+      <div class="hi-module-block">
+        <div class="hi-module-header" onclick="this.nextElementSibling.classList.toggle('open');">
+          <span>Что будет после мини-курса?</span>
+          <i class="fas fa-chevron-down" style="font-size:0.8rem; color:#64748b;"></i>
+        </div>
+        <div class="hi-module-body">
+          <p style="font-size:0.9rem; color:#475569; padding:8px 0; font-family:'Inter',sans-serif;">Вы получите план и поймёте, какой следующий шаг нужен именно Вам: обзорная статья, клинический случай или собственное исследование. Под каждый из этих маршрутов в школе есть отдельный курс.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="w-100 pt-90 pb-50 position-relative hi-footer" style="background:#0f172a;">
+      <div class="container">
+        <div class="row" style="gap:0;">
+          <div class="col-md-6 col-lg-4" style="margin-bottom:30px;">
+            <h4 style="font-family:'Playfair Display',serif;">Индекс Хирша</h4>
+            <div class="hi-footer-links">
+              <a href="/education/">Обучение</a>
+              <a href="/consulting/">Консалтинг</a>
+              <a href="/club/">Клуб</a>
+              <a href="/blog/">Блог</a>
+              <a href="/resources/">Ресурсы</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" style="margin-bottom:30px;">
+            <h4 style="font-family:'Playfair Display',serif;">Контакты</h4>
+            <div class="hi-footer-links">
+              <a href="https://t.me/+79854770449"><i class="fab fa-telegram" style="width:18px;"></i> Telegram</a>
+              <a href="https://wa.me/79854770449"><i class="fab fa-whatsapp" style="width:18px;"></i> WhatsApp</a>
+              <a href="mailto:info@hirschindex.ru"><i class="fas fa-envelope" style="width:18px;"></i> info@hirschindex.ru</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" style="margin-bottom:30px;">
+            <h4 style="font-family:'Playfair Display',serif;">Соцсети</h4>
+            <div class="hi-footer-links">
+              <a href="https://t.me/hirsch_index_school" target="_blank"><i class="fab fa-telegram" style="width:18px;"></i> Telegram-канал</a>
+              <a href="https://vk.com/club235429996" target="_blank"><i class="fab fa-vk" style="width:18px;"></i> ВКонтакте</a>
+              <a href="https://max.ru/join/TmlfyQ5T5BJu-iLZlOYbZolsFX2vrBDQ8t8jaKfz3P0" target="_blank"><i class="fas fa-comment-dots" style="width:18px;"></i> MAX</a>
+            </div>
+          </div>
+        </div>
+        <div class="hi-footer-bottom">
+          <span>&copy; 2026 Индекс Хирша. Все права защищены.</span>
+          <span><a href="/offer/">Публичная оферта</a> &middot; <a href="/privacy/">Политика конфиденциальности</a></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  </main>
+
+  <!-- GetCourse widget modal -->
+  <div class="hi-gc-modal-overlay" id="gc-modal-free" onclick="closeGcModal(event, 'gc-modal-free')">
+    <div class="hi-gc-modal-box" onclick="event.stopPropagation();">
+      <button class="hi-gc-modal-close" onclick="closeGcModal(event, 'gc-modal-free')">&times;</button>
+      <h3 class="hi-gc-modal-title">Бесплатный мини-курс</h3>
+      <script id="0000467a302e4b5702dfee9fdcfa4c42de27c808" src="https://hirschindex.getcourse.ru/pl/lite/widget/script?id=1649664"></script>
+      <p class="hi-after-signup">После отправки формы доступ открывается сразу — курс будет здесь:<br>
+        <a href="https://hirschindex.getcourse.ru/teach/control/stream/view/id/935788551" target="_blank" rel="noopener">Открыть курс</a><br>
+        <span>Ссылка и данные для входа также придут на почту. Если письма нет — проверьте папку «Спам».</span>
+      </p>
+    </div>
+  </div>
+
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/popper.min.js"></script>
+  <script src="/assets/js/bootstrap.min.js"></script>
+  <script src="/assets/js/wow.min.js"></script>
+  <script src="/assets/js/custom-scripts.js"></script>
+  <script>
+    function openGcModal(id) {
+      document.getElementById(id).classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeGcModal(e, id) {
+      document.getElementById(id).classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  </script>
+<script src="/assets/js/consent.js" defer></script>
+</body>
 </html>
