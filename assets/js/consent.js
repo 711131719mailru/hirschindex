@@ -1,4 +1,4 @@
-/* Cookie/tracking consent banner — hirschindex.ru
+/* Cookie/tracking consent banner – hirschindex.ru
    152-ФЗ + Y.Metrika disclosure. Shows once per browser (localStorage). */
 (function () {
     var KEY = 'hi-consent-v1';
