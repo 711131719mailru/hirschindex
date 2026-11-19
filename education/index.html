@@ -91,6 +91,27 @@
                 font-family: 'Inter', sans-serif;
             }
 
+            /* Мини-курс и записи вебинаров */
+            .hi-sub-head { text-align:center; margin-bottom:32px; }
+            .hi-sub-head h2 { color:#0f172a; margin-bottom:8px; }
+            .hi-sub-head p { color:#475569; font-family:'Inter',sans-serif; max-width:600px; margin:0 auto; }
+            .hi-sub-head a { color:#3366CC; }
+            .hi-web-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+            .hi-web-card { background:#fff; border:1px solid #e2e8f0; border-radius:16px; overflow:hidden; display:flex; flex-direction:column; transition:0.3s; }
+            .hi-web-card:hover { box-shadow:0 10px 25px rgba(0,0,0,0.1); }
+            .hi-web-top { position:relative; height:110px; display:flex; align-items:center; justify-content:center; font-size:2.4rem; }
+            .hi-web-top.green { background:linear-gradient(135deg,#f0fdf4,#dcfce7); color:#16a34a; }
+            .hi-web-top.teal { background:linear-gradient(135deg,#ecfdf5,#d1fae5); color:#2BB5A0; }
+            .hi-web-top.gold { background:linear-gradient(135deg,#fef9ee,#fbe6b3); color:#c08a1e; }
+            .hi-web-top.blue { background:linear-gradient(135deg,#eff6ff,#dbeafe); color:#3366CC; }
+            .hi-web-price { position:absolute; top:12px; right:12px; background:#fff; border-radius:999px; padding:4px 12px; font-size:0.8rem; font-weight:700; font-family:'Inter',sans-serif; color:#0f172a; }
+            .hi-web-body { padding:20px; display:flex; flex-direction:column; flex:1; }
+            .hi-web-body h3 { font-size:1.05rem; line-height:1.35; margin-bottom:8px; }
+            .hi-web-meta { font-size:0.85rem; color:#64748b; font-family:'Inter',sans-serif; margin-bottom:16px; flex:1; }
+            .hi-web-body .hi-btn { align-self:flex-start; }
+            @media (max-width:991px) { .hi-web-grid { grid-template-columns:repeat(2,1fr); } }
+            @media (max-width:575px) { .hi-web-grid { grid-template-columns:1fr; } }
+
             /* Course cards */
             .hi-course-card {
                 display: grid;
@@ -333,6 +354,7 @@
             .hi-course-nav .dot.gold { background: #c5a065; }
             .hi-course-nav .dot.purple { background: #7c3aed; }
             .hi-course-nav .dot.green { background: #16a34a; }
+            .hi-course-nav .dot.slate { background: #475569; }
 
             /* Anchor offset for fixed nav */
             .hi-anchor { scroll-margin-top: 90px; }
@@ -404,51 +426,20 @@
                         <h1>Курсы для исследователей</h1>
                         <p>Пошаговые курсы: от дизайна исследования до публикации в рецензируемом журнале</p>
                         <nav class="hi-course-nav" aria-label="Список курсов">
-                            <a href="#mini-course"><span class="dot green"></span>Мастер публикаций</a>
                             <a href="#course-design"><span class="dot teal"></span>Дизайн исследования</a>
                             <a href="#course-data"><span class="dot purple"></span>Сбор данных</a>
                             <a href="#course-case-report"><span class="dot gold"></span>Клинический случай</a>
                             <a href="#course-review"><span class="dot blue"></span>Нарративный обзор</a>
+                            <a href="#mini-course"><span class="dot green"></span>Мини-курс</a>
+                            <a href="#webinars"><span class="dot slate"></span>Записи вебинаров</a>
                         </nav>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Course 0: Видеокурс «Как стать мастером публикаций», 1 390 ₽ -->
-            <section id="mini-course" class="hi-anchor">
-                <div class="w-100 pt-80 pb-80 position-relative">
-                    <div class="container">
-                        <div class="hi-course-card wow fadeInUp">
-                            <div class="hi-course-visual green">
-                                <img src="/assets/logo-edu.jpg" alt="Как стать мастером публикаций" loading="lazy" decoding="async">
-                                <div class="hi-course-tag" style="color:#16a34a;">Видеокурс</div>
-                                <h3>Как стать мастером публикаций</h3>
-                                <div class="hi-course-meta">5 уроков</div>
-                            </div>
-                            <div class="hi-course-info">
-                                <p>С чего начать, если Вы ещё не публиковались. Виды исследований, исследовательский вопрос, поиск литературы и структура статьи – за пять уроков.</p>
-                                <ul class="hi-course-features">
-                                    <li><i class="fas fa-check"></i> 5 видеоуроков</li>
-                                    <li><i class="fas fa-check"></i> «Карта публикации» – рабочий файл курса</li>
-                                    <li><i class="fas fa-check"></i> Чек-лист «Мой дизайн готов?»</li>
-                                    <li><i class="fas fa-check"></i> Результат – план из пяти шагов до рукописи</li>
-                                </ul>
-                                <div class="hi-course-price">
-                                    <span class="val">1 390 ₽</span>
-                                </div>
-                                <div style="display:flex; gap:10px; flex-wrap:wrap;">
-                                    <a href="/master-course/" class="hi-btn hi-btn-green">Подробнее</a>
-                                    <a href="/master-course/#enroll" class="hi-btn hi-btn-outline">Записаться</a>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </section>
 
             <!-- Course 1: Research Design -->
             <section id="course-design" class="hi-anchor">
-                <div class="w-100 pt-0 pb-80 position-relative">
+                <div class="w-100 pt-80 pb-80 position-relative">
                     <div class="container">
                         <div class="hi-course-card wow fadeInUp">
                             <div class="hi-course-visual teal">
@@ -578,6 +569,82 @@
             </section>
 
             <!-- Who it's for -->
+            <!-- Course 0: Видеокурс «Как стать мастером публикаций», 1 390 ₽ -->
+            <section id="mini-course" class="hi-anchor">
+                <div class="w-100 pt-0 pb-80 position-relative">
+                    <div class="container">
+                        <div class="hi-sub-head wow fadeInUp"><h2>Мини-курс</h2><p>Если Вы только начинаете, это самый простой первый шаг</p></div>
+                        <div class="hi-course-card wow fadeInUp">
+                            <div class="hi-course-visual green">
+                                <img src="/assets/logo-edu.jpg" alt="Как стать мастером публикаций" loading="lazy" decoding="async">
+                                <div class="hi-course-tag" style="color:#16a34a;">Видеокурс</div>
+                                <h3>Как стать мастером публикаций</h3>
+                                <div class="hi-course-meta">5 уроков</div>
+                            </div>
+                            <div class="hi-course-info">
+                                <p>С чего начать, если Вы ещё не публиковались. Виды исследований, исследовательский вопрос, поиск литературы и структура статьи – за пять уроков.</p>
+                                <ul class="hi-course-features">
+                                    <li><i class="fas fa-check"></i> 5 видеоуроков</li>
+                                    <li><i class="fas fa-check"></i> «Карта публикации» – рабочий файл курса</li>
+                                    <li><i class="fas fa-check"></i> Чек-лист «Мой дизайн готов?»</li>
+                                    <li><i class="fas fa-check"></i> Результат – план из пяти шагов до рукописи</li>
+                                </ul>
+                                <div class="hi-course-price">
+                                    <span class="val">1 390 ₽</span>
+                                </div>
+                                <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                                    <a href="/master-course/" class="hi-btn hi-btn-green">Подробнее</a>
+                                    <a href="/master-course/#enroll" class="hi-btn hi-btn-outline">Записаться</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Webinars: записи -->
+            <section id="webinars" class="hi-anchor">
+                <div class="w-100 pt-0 pb-80 position-relative">
+                    <div class="container">
+                        <div class="hi-sub-head wow fadeInUp"><h2>Записи вебинаров</h2><p>Бесплатные записи открываются сразу после регистрации. Анонсы новых эфиров – в нашем <a href="https://t.me/hirsch_index_school" target="_blank" rel="noopener">Telegram-канале</a></p></div>
+                        <div class="hi-web-grid">
+                            <div class="hi-web-card wow fadeInUp">
+                                <div class="hi-web-top green"><i class="fas fa-play-circle"></i><span class="hi-web-price">Бесплатно</span></div>
+                                <div class="hi-web-body">
+                                    <h3>Как написать хорошую медицинскую статью</h3>
+                                    <div class="hi-web-meta">11 февраля 2026 · платформа ФАР</div>
+                                    <a href="https://hirschindex.getcourse.ru/pl/lite/widget/widget?id=1686533" target="_blank" rel="noopener" class="hi-btn hi-btn-outline">Смотреть запись</a>
+                                </div>
+                            </div>
+                            <div class="hi-web-card wow fadeInUp">
+                                <div class="hi-web-top teal"><i class="fas fa-play-circle"></i><span class="hi-web-price">Бесплатно</span></div>
+                                <div class="hi-web-body">
+                                    <h3>Как подготовить дизайн исследования</h3>
+                                    <div class="hi-web-meta">22 апреля 2026 · платформа ФАР</div>
+                                    <a href="https://hirschindex.getcourse.ru/pl/lite/widget/widget?id=1686535" target="_blank" rel="noopener" class="hi-btn hi-btn-outline">Смотреть запись</a>
+                                </div>
+                            </div>
+                            <div class="hi-web-card wow fadeInUp">
+                                <div class="hi-web-top gold"><i class="fas fa-play-circle"></i><span class="hi-web-price">Бесплатно</span></div>
+                                <div class="hi-web-body">
+                                    <h3>Как опубликовать клинический случай</h3>
+                                    <div class="hi-web-meta">14 мая 2026 · «МедНео»</div>
+                                    <a href="https://hirschindex.getcourse.ru/pl/lite/widget/widget?id=1686537" target="_blank" rel="noopener" class="hi-btn hi-btn-outline">Смотреть запись</a>
+                                </div>
+                            </div>
+                            <div class="hi-web-card wow fadeInUp">
+                                <div class="hi-web-top blue"><i class="fas fa-play-circle"></i><span class="hi-web-price">490 ₽</span></div>
+                                <div class="hi-web-body">
+                                    <h3>Почему ваши статьи отклоняют</h3>
+                                    <div class="hi-web-meta">22 октября 2026 · запись, чек-лист и гайд</div>
+                                    <a href="https://hirschindex.getcourse.ru/pl/lite/widget/widget?id=1666723" target="_blank" rel="noopener" class="hi-btn hi-btn-outline">Получить запись</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section>
                 <div class="w-100 pt-80 pb-100 position-relative" style="background:#f8fafc;">
                     <div class="container">
@@ -731,25 +798,6 @@
 
                     <div style="text-align:center; margin-top:36px; font-family:'Inter',sans-serif; font-size:0.92rem; color:#64748b;">
                         Хотите оставить отзыв? Напишите на <a href="mailto:info@hirschindex.ru" style="color:#3366CC; text-decoration:none; font-weight:500;">info@hirschindex.ru</a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Webinars -->
-            <section style="padding:60px 0; background:#fff;">
-                <div class="container" style="max-width:720px; text-align:center;">
-                    <div class="wow fadeInUp">
-                        <div style="display:inline-flex; align-items:center; justify-content:center; width:48px; height:48px; border-radius:50%; background:#eff6ff; color:#3366CC; margin-bottom:16px;">
-                            <i class="fas fa-video" style="font-size:1.1rem;"></i>
-                        </div>
-                        <h2 style="color:#0f172a; margin-bottom:12px;">Вебинары</h2>
-                        <p style="font-size:1rem; color:#475569; font-family:'Inter',sans-serif; max-width:540px; margin:0 auto 24px;">
-                            Регулярно проводим бесплатные образовательные вебинары по темам курсов.
-                            Анонсы публикуем в нашем Telegram-канале.
-                        </p>
-                        <a href="https://t.me/hirsch_index_school" target="_blank" class="hi-btn hi-btn-blue">
-                            <i class="fab fa-telegram" style="margin-right:6px;"></i>Telegram-канал
-                        </a>
                     </div>
                 </div>
             </section>
